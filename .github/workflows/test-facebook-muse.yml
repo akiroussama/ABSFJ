@@ -1,0 +1,58 @@
+name: Test · Facebook public + Muse Spark
+
+on:
+  workflow_dispatch:
+
+jobs:
+  public-facebook:
+    name: Test lecture publique Facebook
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe public page without credentials
+        env:
+          PAGE_URL: https://www.facebook.com/people/Association-des-b%C3%A9n%C3%A9ficiaires-des-sessions-de-formation-de-la-JICA-au-Japon/61573098115073/
+        run: |
+          python - <<'PY'
+          import os, re, urllib.request
+          req = urllib.request.Request(os.environ['PAGE_URL'], headers={'User-Agent': 'Mozilla/5.0'})
+          with urllib.request.urlopen(req, timeout=30) as response:
+              body = response.read().decode('utf-8', 'replace')
+              print('HTTP status:', response.status)
+              print('Response bytes:', len(body))
+              print('Login wall:', 'Se connecter' in body and 'Mot de passe' in body)
+              ids = set(re.findall(r'story_fbid[=\\%3D]+([^&\\"\\\']+)', body))
+              print('Stable post identifiers visible to GitHub:', len(ids))
+          PY
+
+  muse-spark:
+    name: Test clé Muse Spark
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call model with a harmless deterministic prompt
+        env:
+          MUSE_SPARK_API_KEY: ${{ secrets.MUSE_SPARK_API_KEY }}
+          MUSE_SPARK_BASE_URL: https://api.meta.ai/v1
+          MUSE_SPARK_MODEL: muse-spark-1.3-contributor
+        run: |
+          python - <<'PY'
+          import json, os, urllib.error, urllib.request
+          if not os.environ.get('MUSE_SPARK_API_KEY'):
+              raise SystemExit('MUSE_SPARK_API_KEY is missing')
+          payload = {'model': os.environ['MUSE_SPARK_MODEL'], 'messages': [{'role': 'user', 'content': 'Réponds uniquement par OK.'}], 'temperature': 0}
+          request = urllib.request.Request(
+              os.environ['MUSE_SPARK_BASE_URL'].rstrip('/') + '/chat/completions',
+              data=json.dumps(payload).encode(),
+              headers={'Authorization': 'Bearer ' + os.environ['MUSE_SPARK_API_KEY'], 'Content-Type': 'application/json'},
+          )
+          try:
+              with urllib.request.urlopen(request, timeout=60) as response:
+                  result = json.load(response)
+              choices = result.get('choices') or []
+              print('Muse Spark HTTP status: 200')
+              print('Model response received:', bool(choices))
+              if choices:
+                  print('Returned model:', choices[0].get('message', {}).get('role', 'unknown'))
+          except urllib.error.HTTPError as error:
+              print('Muse Spark HTTP status:', error.code)
+              raise SystemExit('Muse Spark rejected the request; response body intentionally hidden')
+          PY

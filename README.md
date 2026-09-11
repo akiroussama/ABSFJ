@@ -97,3 +97,5 @@ Les maisons du diorama reprennent les portes cobalt cloutées, les auvents, la f
 ### Suivi des publications Facebook
 
 Un contrôle toutes les 48 heures est configuré dans la tâche Codex du projet pour récupérer les nouvelles publications de la page officielle et actualiser le site. Le registre de dédoublonnage et la procédure sont documentés dans [ops/facebook-sync.md](ops/facebook-sync.md). Cette planification dépend de l’ordinateur allumé, de Codex ouvert et de l’accès à Facebook ; elle ne s’exécute pas sur les serveurs Vercel. Le formulaire d’adhésion reste un téléchargement local, sans envoi d’email.
+
+Pour tester les accès GitHub sans modifier le site, lancer manuellement le workflow [Test · Facebook public + Muse Spark](.github/workflows/test-facebook-muse.yml) depuis l’onglet **Actions**. Le premier job indique si GitHub voit des identifiants de publications sur la page publique ; le second confirme que `MUSE_SPARK_API_KEY` est accepté sans afficher la clé ni la réponse complète.
