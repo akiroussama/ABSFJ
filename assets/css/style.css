@@ -595,135 +595,6 @@ html {
   position: relative;
   min-width: 0;
 }
-.hero-sun {
-  position: absolute;
-  width: 208px;
-  height: 208px;
-  border-radius: 50%;
-  background: #ae343b;
-  right: -30px;
-  top: -30px;
-  opacity: 0.95;
-}
-.fuji-frame {
-  position: absolute;
-  inset: 20px 20px 65px 32px;
-  margin: 0;
-  overflow: hidden;
-  background: #98adac;
-}
-.fuji-frame:after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, #22342f05 30%, #152d3d65);
-  pointer-events: none;
-}
-.fuji-frame img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  object-position: 52% 50%;
-  filter: saturate(0.62) sepia(0.12);
-  transition: transform 1.8s ease;
-}
-.hero-visual:hover .fuji-frame img {
-  transform: scale(1.035);
-}
-.photo-japanese {
-  position: absolute;
-  top: 34px;
-  right: 25px;
-  writing-mode: vertical-rl;
-  font-family: var(--font-jp);
-  font-size: 20px;
-  letter-spacing: 8px;
-  color: #fff;
-  z-index: 1;
-  text-shadow: 0 1px 10px #32475355;
-}
-.fuji-frame figcaption {
-  position: absolute;
-  bottom: 25px;
-  left: 27px;
-  right: 22px;
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
-  color: white;
-  font-size: 9px;
-  letter-spacing: 1.6px;
-}
-.fuji-frame figcaption span:last-child {
-  font-family: var(--font-serif);
-  font-size: 18px;
-  font-style: italic;
-  letter-spacing: 0.3px;
-}
-.tunis-frame {
-  position: absolute;
-  left: -38px;
-  bottom: 0;
-  width: 207px;
-  height: 179px;
-  border: 7px solid var(--bg-body);
-  margin: 0;
-  background: var(--bg-body);
-  box-shadow: 0 12px 30px #24322b12;
-  z-index: 2;
-}
-.tunis-frame img {
-  width: 100%;
-  height: 137px;
-  object-fit: cover;
-  filter: saturate(0.65);
-}
-.tunis-frame figcaption {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 8px;
-  letter-spacing: 1.2px;
-  padding: 10px 4px;
-  color: var(--text-main);
-}
-.tunis-frame figcaption span {
-  font-family: var(--font-jp);
-  font-size: 8px;
-}
-.visual-note {
-  position: absolute;
-  right: 24px;
-  bottom: 0;
-  display: flex;
-  gap: 15px;
-  align-items: center;
-}
-.visual-note > span {
-  font-size: 48px;
-  font-family: var(--font-jp);
-  font-weight: 400;
-  color: var(--gold-accent);
-}
-.visual-note p {
-  font-size: 9px;
-  letter-spacing: 2px;
-  line-height: 2;
-}
-.visual-note small {
-  font-size: 9px;
-  letter-spacing: 0;
-  color: var(--text-muted);
-}
-.visual-edition {
-  position: absolute;
-  right: -13px;
-  top: 245px;
-  writing-mode: vertical-rl;
-  font-size: 7px;
-  letter-spacing: 1.6px;
-  color: var(--text-muted);
-}
 .hero-bottom {
   display: flex;
   justify-content: space-between;
@@ -847,26 +718,6 @@ html {
   .hero-visual {
     height: 510px;
   }
-  .fuji-frame {
-    left: 20px;
-    right: 10px;
-  }
-  .hero-sun {
-    right: -15px;
-    width: 160px;
-    height: 160px;
-  }
-  .tunis-frame {
-    left: -22px;
-    width: 175px;
-    height: 150px;
-  }
-  .tunis-frame img {
-    height: 110px;
-  }
-  .visual-note {
-    right: 5px;
-  }
   .hero-section {
     padding-top: 55px;
   }
@@ -952,59 +803,6 @@ html {
     width: calc(100% - 15px);
     margin-left: 15px;
     margin-top: 15px;
-  }
-  .fuji-frame {
-    inset: 12px 15px 54px 16px;
-  }
-  .hero-sun {
-    top: -10px;
-    right: 0;
-    width: 140px;
-    height: 140px;
-  }
-  .photo-japanese {
-    font-size: 17px;
-    top: 20px;
-    right: 20px;
-  }
-  .tunis-frame {
-    width: 157px;
-    height: 139px;
-    left: -15px;
-    bottom: 0;
-    border-width: 5px;
-  }
-  .tunis-frame img {
-    height: 105px;
-  }
-  .tunis-frame figcaption {
-    font-size: 7px;
-    padding-top: 8px;
-  }
-  .visual-note {
-    right: 16px;
-    gap: 10px;
-    bottom: 0;
-  }
-  .visual-note > span {
-    font-size: 39px;
-  }
-  .visual-note p {
-    font-size: 8px;
-  }
-  .visual-note small {
-    font-size: 8px;
-  }
-  .visual-edition {
-    right: -6px;
-    top: 125px;
-  }
-  .fuji-frame figcaption {
-    left: 19px;
-    bottom: 23px;
-  }
-  .fuji-frame figcaption span:last-child {
-    font-size: 15px;
   }
   .hero-bottom {
     padding: 24px 0;
@@ -3019,5 +2817,424 @@ html {
   .hero-cta-group .text-link {
     font-size: 9px;
     gap: 9px;
+  }
+}
+
+/* Kizuna diorama — separate SVG planes in a CSS 3D space. */
+.diorama {
+  --scene-rx: 0deg;
+  --scene-ry: 0deg;
+  --scene-depth: 1;
+  height: 565px;
+  align-self: center;
+  isolation: isolate;
+}
+.diorama-heading {
+  position: absolute;
+  top: 0;
+  inset-inline: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 7px;
+  color: var(--text-muted);
+  letter-spacing: 1.4px;
+}
+.diorama-heading-line {
+  height: 1px;
+  background: var(--border-color);
+  flex: 1;
+}
+.diorama-heading > span:last-child {
+  font-family: var(--font-jp);
+  letter-spacing: 1px;
+}
+.diorama-viewport {
+  position: absolute;
+  inset: 15px -15px 42px -25px;
+  perspective: 1100px;
+  perspective-origin: 50% 40%;
+  touch-action: auto;
+}
+.diorama-float,
+.diorama-world {
+  position: absolute;
+  inset: 0;
+  transform-style: preserve-3d;
+}
+.diorama-world {
+  transform: rotateX(calc(9deg + var(--scene-rx)))
+    rotateY(calc(-12deg + var(--scene-ry)));
+  transform-origin: 50% 58%;
+}
+.scene-layer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  transform: translateZ(calc(var(--z) * var(--scene-depth)));
+  pointer-events: none;
+}
+.scene-halo {
+  --z: -80px;
+}
+.scene-sun {
+  --z: -49px;
+}
+.scene-clouds {
+  --z: -24px;
+}
+.scene-mountain {
+  --z: 8px;
+}
+.scene-base {
+  --z: 17px;
+}
+.scene-wave-back {
+  --z: 33px;
+}
+.scene-tunisia {
+  --z: 56px;
+}
+.scene-wave-front {
+  --z: 76px;
+}
+.scene-crane {
+  --z: 104px;
+}
+.diorama-shadow {
+  position: absolute;
+  bottom: 17px;
+  left: 13%;
+  width: 76%;
+  height: 47px;
+  border-radius: 50%;
+  background: radial-gradient(
+    ellipse,
+    #29463821 0%,
+    #2946380b 45%,
+    transparent 73%
+  );
+  transform: rotate(-3deg);
+  pointer-events: none;
+}
+.scene-calligraphy {
+  position: absolute;
+  top: 28%;
+  left: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 4px;
+  transform: translateZ(-15px);
+  color: #8f7b53;
+}
+.scene-calligraphy > span {
+  font-family: var(--font-jp);
+  font-size: 43px;
+  line-height: 1.3;
+}
+.scene-calligraphy > small {
+  font-size: 6px;
+  letter-spacing: 2px;
+}
+.diorama-side-note {
+  position: absolute;
+  right: 10px;
+  top: 29%;
+  writing-mode: vertical-rl;
+  font-family: var(--font-jp);
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold-accent);
+  pointer-events: none;
+}
+.diorama-caption {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  right: 10px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.diorama-caption-kicker {
+  font-size: 7px;
+  letter-spacing: 1.5px;
+  color: var(--text-muted);
+}
+.diorama-caption p {
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-style: italic;
+  line-height: 1.1;
+  margin-top: 7px;
+  color: var(--text-main);
+}
+.scene-motion-toggle {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: transparent;
+  color: var(--text-muted);
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border-color 0.3s;
+}
+.scene-motion-toggle:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: var(--bg-card);
+}
+.scene-play-icon {
+  display: none;
+}
+.diorama[data-paused="true"] .scene-play-icon {
+  display: block;
+}
+.diorama[data-paused="true"] .scene-pause-icon {
+  display: none;
+}
+.diorama.is-animated .diorama-float {
+  animation: diorama-drift 18s ease-in-out infinite;
+}
+.diorama.is-animated .cloud {
+  animation: diorama-cloud 18s ease-in-out infinite alternate;
+}
+.diorama.is-animated .cloud-two {
+  animation-duration: 24s;
+  animation-direction: alternate-reverse;
+}
+.diorama.is-animated .crane-flight {
+  animation: diorama-crane 10s ease-in-out infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.diorama.is-animated .crane-wing {
+  animation: diorama-wing 10s ease-in-out infinite;
+  transform-origin: 12% 95%;
+  transform-box: fill-box;
+}
+.diorama.is-animated .scene-wave-front > path:nth-child(2) {
+  stroke-dasharray: 580 45;
+  animation: diorama-water 22s linear infinite;
+}
+.diorama[data-paused="true"] *,
+.diorama[data-visible="false"] * {
+  animation-play-state: paused !important;
+}
+[data-theme="dark"] .diorama-shadow {
+  background: radial-gradient(
+    ellipse,
+    #00000050 0%,
+    #00000010 50%,
+    transparent 73%
+  );
+}
+[data-theme="dark"] .scene-halo {
+  opacity: 0.93;
+}
+@keyframes diorama-drift {
+  0%,
+  100% {
+    transform: translateY(3px) rotateY(-2deg) rotateZ(-0.4deg);
+  }
+  50% {
+    transform: translateY(-9px) rotateY(3deg) rotateZ(0.7deg);
+  }
+}
+@keyframes diorama-cloud {
+  from {
+    transform: translateX(-7px);
+  }
+  to {
+    transform: translateX(9px);
+  }
+}
+@keyframes diorama-crane {
+  0%,
+  100% {
+    transform: translate(0, 2px) rotate(-3deg);
+  }
+  50% {
+    transform: translate(-8px, -8px) rotate(3deg);
+  }
+}
+@keyframes diorama-wing {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-9deg);
+  }
+}
+@keyframes diorama-water {
+  to {
+    stroke-dashoffset: -625;
+  }
+}
+@media (max-width: 1120px) {
+  .diorama {
+    height: 475px;
+    --scene-depth: 0.75;
+  }
+  .diorama-viewport {
+    inset: 10px -12px 40px -20px;
+  }
+  .diorama-heading {
+    font-size: 6px;
+    gap: 8px;
+    letter-spacing: 1px;
+  }
+  .diorama-caption p {
+    font-size: 27px;
+  }
+  .diorama-caption-kicker {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+  .scene-calligraphy {
+    top: 29%;
+    left: 20%;
+  }
+  .scene-calligraphy > span {
+    font-size: 34px;
+  }
+  .diorama-side-note {
+    right: 2px;
+    font-size: 10px;
+  }
+}
+@media (min-width: 761px) and (max-width: 900px) {
+  .diorama {
+    height: 445px;
+  }
+  .diorama-viewport {
+    inset: 4px -22px 36px -25px;
+  }
+  .scene-calligraphy {
+    top: 34%;
+    left: 18%;
+  }
+  .scene-calligraphy > span {
+    font-size: 27px;
+  }
+  .diorama-side-note {
+    right: 0;
+    font-size: 8px;
+  }
+  .diorama-caption-kicker {
+    font-size: 5px;
+  }
+}
+@media (max-width: 760px) {
+  .diorama {
+    --scene-depth: 0.55;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1.11;
+    margin: 15px 0 0;
+  }
+  .diorama-viewport {
+    inset: 12px -8px 43px -10px;
+    perspective: 850px;
+  }
+  .diorama-heading {
+    font-size: 6px;
+    left: 0;
+    right: 0;
+    gap: 12px;
+    letter-spacing: 1px;
+  }
+  .diorama-world {
+    transform: rotateX(calc(7deg + var(--scene-rx)))
+      rotateY(calc(-10deg + var(--scene-ry)));
+  }
+  .diorama-caption {
+    left: 0;
+    right: 0;
+    padding-top: 10px;
+    gap: 10px;
+  }
+  .diorama-caption p {
+    font-size: 26px;
+    margin-top: 6px;
+  }
+  .diorama-caption-kicker {
+    font-size: 5.5px;
+    letter-spacing: 1px;
+  }
+  .diorama-side-note {
+    right: 3px;
+    top: 29%;
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+  .scene-calligraphy {
+    top: 24%;
+    left: 20%;
+  }
+  .scene-calligraphy > span {
+    font-size: 29px;
+  }
+  .scene-calligraphy > small {
+    font-size: 5px;
+    letter-spacing: 1.3px;
+  }
+  .diorama-shadow {
+    bottom: 6px;
+    height: 35px;
+  }
+}
+@media (max-width: 380px) {
+  .diorama {
+    --scene-depth: 0.45;
+    aspect-ratio: 1 / 1.2;
+  }
+  .diorama-heading {
+    font-size: 5px;
+    letter-spacing: 0.7px;
+  }
+  .scene-calligraphy {
+    top: 28%;
+    left: 19%;
+  }
+  .scene-calligraphy > span {
+    font-size: 25px;
+  }
+  .diorama-caption p {
+    font-size: 24px;
+  }
+  .diorama-caption-kicker {
+    font-size: 5px;
+    letter-spacing: 0.7px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .diorama *,
+  .diorama *::before,
+  .diorama *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .stat-number {
+    font-size: 40px;
+    white-space: nowrap;
+  }
+  .stat-number span {
+    font-size: 24px;
   }
 }

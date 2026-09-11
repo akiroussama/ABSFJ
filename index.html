@@ -42,7 +42,7 @@
     />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260911-kizuna" />
+    <link rel="stylesheet" href="assets/css/style.css?v=20260911-diorama" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Aller au contenu</a>
@@ -240,39 +240,707 @@
               </p>
             </div>
           </div>
-          <div class="hero-visual">
-            <span class="hero-sun" aria-hidden="true"></span>
-            <figure class="fuji-frame">
-              <img
-                src="assets/images/gallery-mount-fuji.jpg"
-                alt="Le mont Fuji se reflète dans les eaux paisibles d’un lac au lever du soleil"
-                fetchpriority="high"
-                width="1200"
-                height="800"
-              />
-              <span class="photo-japanese" lang="ja"
+          <div
+            class="hero-visual diorama"
+            id="kizuna-scene"
+            data-paused="false"
+            data-visible="true"
+          >
+            <div class="diorama-heading">
+              <span>風景 · PAYSAGE D’UNE AMITIÉ</span
+              ><span class="diorama-heading-line"></span
+              ><span>日本 × تونس</span>
+            </div>
+            <div
+              class="diorama-viewport"
+              role="img"
+              aria-label="Diorama en relief : le soleil levant et le mont Fuji surplombent des vagues méditerranéennes, les maisons blanches et bleues de Sidi Bou Saïd, une coupole, un palmier, un petit drapeau tunisien à une fenêtre et une grue en origami. La scène s’incline doucement au mouvement du pointeur."
+            >
+              <div class="diorama-shadow" aria-hidden="true"></div>
+              <div class="diorama-float" aria-hidden="true">
+                <div class="diorama-world">
+                  <svg
+                    class="scene-layer scene-halo"
+                    viewBox="0 0 600 580"
+                    fill="none"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="scene-paper"
+                        x1="120"
+                        y1="70"
+                        x2="510"
+                        y2="440"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#fcfaf0" />
+                        <stop offset="1" stop-color="#e1d8c3" />
+                      </linearGradient>
+                    </defs>
+                    <circle
+                      cx="308"
+                      cy="252"
+                      r="208"
+                      fill="url(#scene-paper)"
+                    />
+                    <circle
+                      cx="308"
+                      cy="252"
+                      r="207"
+                      stroke="#b2a080"
+                      stroke-opacity=".5"
+                    />
+                    <circle
+                      cx="308"
+                      cy="252"
+                      r="190"
+                      stroke="#b2a080"
+                      stroke-opacity=".22"
+                    />
+                    <path
+                      d="M308 45V60M101 252H117M499 252H515"
+                      stroke="#a9966f"
+                    />
+                  </svg>
+                  <svg
+                    class="scene-layer scene-sun"
+                    viewBox="0 0 600 580"
+                    fill="none"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="scene-vermilion"
+                        x1="340"
+                        y1="85"
+                        x2="470"
+                        y2="255"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#c6514d" />
+                        <stop offset="1" stop-color="#972d35" />
+                      </linearGradient>
+                    </defs>
+                    <circle
+                      cx="381"
+                      cy="179"
+                      r="79"
+                      fill="#732d31"
+                      opacity=".13"
+                      transform="translate(5 9)"
+                    />
+                    <circle
+                      cx="381"
+                      cy="172"
+                      r="79"
+                      fill="url(#scene-vermilion)"
+                    />
+                    <path
+                      d="M320 151A65 65 0 0 1 402 111"
+                      stroke="#ebada0"
+                      stroke-opacity=".3"
+                    />
+                  </svg>
+                  <svg
+                    class="scene-layer scene-clouds"
+                    viewBox="0 0 600 580"
+                    fill="none"
+                  >
+                    <g class="cloud cloud-one">
+                      <path
+                        d="M106 182H203M89 190H229M115 198H187"
+                        stroke="#b9ac93"
+                        stroke-width="1"
+                        stroke-opacity=".5"
+                      />
+                      <path
+                        d="M117 171H192"
+                        stroke="#fffdf5"
+                        stroke-width="9"
+                        stroke-linecap="round"
+                        opacity=".85"
+                      />
+                    </g>
+                    <g class="cloud cloud-two">
+                      <path
+                        d="M395 258H516M419 266H542M405 274H492"
+                        stroke="#b9ac93"
+                        stroke-width="1"
+                        stroke-opacity=".55"
+                      />
+                    </g>
+                  </svg>
+                  <svg
+                    class="scene-layer scene-mountain"
+                    viewBox="0 0 600 580"
+                    fill="none"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="scene-mountain-color"
+                        x1="209"
+                        y1="206"
+                        x2="364"
+                        y2="370"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#819697" />
+                        <stop offset="1" stop-color="#34565c" />
+                      </linearGradient>
+                      <linearGradient
+                        id="scene-snow"
+                        x1="273"
+                        y1="173"
+                        x2="333"
+                        y2="247"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#fffdf4" />
+                        <stop offset="1" stop-color="#dce3dc" />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M64 373L154 328L216 270L270 195L292 165L307 161L326 186L383 273L441 325L533 373Z"
+                      fill="#263f44"
+                      opacity=".16"
+                      transform="translate(4 8)"
+                    />
+                    <path
+                      d="M64 365L154 320L216 262L270 187L292 157L307 153L326 178L383 265L441 317L533 365Z"
+                      fill="url(#scene-mountain-color)"
+                    />
+                    <path
+                      d="M64 365L154 320L216 262L292 157L258 257L220 316L199 365Z"
+                      fill="#9caeaa"
+                      opacity=".6"
+                    />
+                    <path
+                      d="M307 153L326 178L383 265L441 317L533 365H369L340 273Z"
+                      fill="#24474e"
+                      opacity=".65"
+                    />
+                    <path
+                      d="M243 226L270 187L292 157L307 153L326 178L359 228L335 218L331 240L311 219L294 235L281 218L266 230L257 221Z"
+                      fill="url(#scene-snow)"
+                    />
+                    <path
+                      d="M307 154L311 219L294 235L301 197L288 207L292 158Z"
+                      fill="#b4c7c8"
+                      opacity=".7"
+                    />
+                    <path
+                      d="M279 238L253 280L218 304M307 241L324 305L341 329M346 255L368 289L414 329M240 282L222 326L178 348"
+                      stroke="#b3c4bd"
+                      stroke-opacity=".32"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M292 158L270 215M307 156L324 195"
+                      stroke="#fffdf5"
+                      stroke-width="1.5"
+                      stroke-opacity=".8"
+                    />
+                  </svg>
+                  <svg
+                    class="scene-layer scene-base"
+                    viewBox="0 0 600 580"
+                    fill="none"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="scene-base-side"
+                        x1="70"
+                        y1="402"
+                        x2="530"
+                        y2="454"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#284c4f" />
+                        <stop offset=".48" stop-color="#4a7372" />
+                        <stop offset="1" stop-color="#173b42" />
+                      </linearGradient>
+                      <linearGradient
+                        id="scene-water"
+                        x1="170"
+                        y1="329"
+                        x2="355"
+                        y2="463"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#91b3ae" />
+                        <stop offset="1" stop-color="#467c81" />
+                      </linearGradient>
+                    </defs>
+                    <path
+                      d="M56 394C56 349 167 315 304 315C441 315 552 349 552 394V419C552 462 441 496 304 496C167 496 56 462 56 419Z"
+                      fill="url(#scene-base-side)"
+                    />
+                    <ellipse
+                      cx="304"
+                      cy="393"
+                      rx="248"
+                      ry="78"
+                      fill="url(#scene-water)"
+                    />
+                    <path
+                      d="M57 399C67 440 172 471 304 471C436 471 541 440 551 399"
+                      stroke="#d0bb85"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M88 438C128 465 210 482 304 482C398 482 479 465 520 438"
+                      stroke="#acc0a4"
+                      stroke-opacity=".2"
+                    />
+                  </svg>
+                  <svg
+                    class="scene-layer scene-wave-back"
+                    viewBox="0 0 600 580"
+                    fill="none"
+                  >
+                    <path
+                      d="M74 374C124 324 163 398 225 367C282 335 300 372 349 370C421 367 464 316 534 373C507 422 422 442 309 444C194 447 113 417 74 374Z"
+                      fill="#68989a"
+                    />
+                    <path
+                      d="M74 374C124 324 163 398 225 367C282 335 300 372 349 370C421 367 464 316 534 373"
+                      stroke="#e1ddbf"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M112 377C153 363 175 405 236 381M384 385C422 370 464 351 499 373"
+                      stroke="#bcd2c6"
+                      stroke-width="1"
+                      opacity=".6"
+                    />
+                  </svg>
+                  <svg
+                    class="scene-layer scene-tunisia"
+                    viewBox="0 0 600 580"
+                    fill="none"
+                  >
+                    <defs>
+                      <linearGradient
+                        id="scene-wall"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="1"
+                      >
+                        <stop stop-color="#fffefb" />
+                        <stop offset="1" stop-color="#f1eedf" />
+                      </linearGradient>
+                      <linearGradient
+                        id="scene-door"
+                        x1="0"
+                        y1="0"
+                        x2="1"
+                        y2="0"
+                      >
+                        <stop stop-color="#0758b6" />
+                        <stop offset=".5" stop-color="#0874cf" />
+                        <stop offset="1" stop-color="#064993" />
+                      </linearGradient>
+                      <radialGradient id="scene-dome" cx="32%" cy="24%" r="85%">
+                        <stop stop-color="#ffffff" />
+                        <stop offset=".64" stop-color="#f9f8ef" />
+                        <stop offset="1" stop-color="#d8dfd5" />
+                      </radialGradient>
+                    </defs>
+                    <ellipse
+                      cx="189"
+                      cy="411"
+                      rx="104"
+                      ry="21"
+                      fill="#23494b"
+                      opacity=".15"
+                    />
+                    <!-- Palm and climbing bougainvillea frame the whitewashed village. -->
+                    <g class="scene-palm">
+                      <path
+                        d="M280 399C279 369 288 334 290 309"
+                        stroke="#a89972"
+                        stroke-width="5"
+                      />
+                      <path
+                        d="M282 386L279 381M285 370L282 365M287 353L284 348M289 336L286 331"
+                        stroke="#7e7956"
+                        stroke-width="1.3"
+                      />
+                      <path
+                        d="M290 313Q263 289 242 313Q266 304 289 318Z"
+                        fill="#738c68"
+                      />
+                      <path
+                        d="M290 310Q271 276 252 286Q275 291 290 316Z"
+                        fill="#526f56"
+                      />
+                      <path
+                        d="M290 310Q289 280 304 272Q301 292 291 315Z"
+                        fill="#7e9567"
+                      />
+                      <path
+                        d="M291 311Q316 282 330 295Q310 298 291 317Z"
+                        fill="#567751"
+                      />
+                      <path
+                        d="M290 313Q321 299 338 321Q313 311 290 319Z"
+                        fill="#7b9367"
+                      />
+                      <path
+                        d="M289 314Q271 310 259 338Q262 314 289 313Z"
+                        fill="#526f56"
+                      />
+                      <path
+                        d="M290 315Q310 307 321 340Q303 318 289 318Z"
+                        fill="#577956"
+                      />
+                      <path
+                        d="M289 314Q280 290 268 287M291 314Q307 299 321 297M292 316Q317 309 330 320"
+                        stroke="#a6af83"
+                        stroke-width=".7"
+                      />
+                    </g>
+                    <!-- Main house: blue terrace balustrade, studded arched door and a window flag. -->
+                    <path
+                      d="M102 291L162 265L221 294V389L163 418L102 385Z"
+                      fill="#d4dece"
+                    />
+                    <path
+                      d="M102 291L163 322V418L102 385Z"
+                      fill="url(#scene-wall)"
+                    />
+                    <path d="M163 322L221 294V389L163 418Z" fill="#e0e5d9" />
+                    <path d="M97 287L160 258L227 291L163 324Z" fill="#fffef7" />
+                    <path d="M97 287V295L163 330V324Z" fill="#f0eedf" />
+                    <path d="M163 324L227 291V298L163 330Z" fill="#c6d2c5" />
+                    <path
+                      d="M101 295L163 328L226 296"
+                      stroke="#176bb4"
+                      stroke-width="2"
+                    />
+                    <g
+                      stroke="#1265a7"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                    >
+                      <path
+                        d="M104 275L163 306L219 278M104 287L163 318L219 290"
+                      />
+                      <path
+                        d="M104 273V288M118 281V295M133 288V303M148 296V311M163 303V319M177 297V312M191 290V305M205 283V298M219 276V291"
+                      />
+                      <path
+                        d="M105 277L117 294M105 286L117 283M119 285L132 301M119 294L132 290M134 291L147 309M134 302L147 298M149 299L162 316M149 310L162 306M164 309L176 310M164 317L176 299M178 301L190 303M178 310L190 292M192 294L204 296M192 303L204 285M206 287L218 289M206 296L218 278"
+                        stroke-width=".8"
+                      />
+                    </g>
+                    <g transform="matrix(1 .52 0 1 113 298)">
+                      <path d="M0 87V39C0 12 38 12 38 39V87Z" fill="#d9cfaf" />
+                      <path d="M3 87V39C3 17 35 17 35 39V87Z" fill="#fffdf5" />
+                      <path
+                        d="M6 87V39C6 21 32 21 32 39V87Z"
+                        fill="url(#scene-door)"
+                      />
+                      <path
+                        d="M19 27V87M8 42H30M8 80H30"
+                        stroke="#013f85"
+                        stroke-width="1.2"
+                      />
+                      <path
+                        d="M11 44V78M27 44V78"
+                        stroke="#65a1d4"
+                        stroke-width=".7"
+                      />
+                      <g fill="#c6b576">
+                        <circle cx="10" cy="41" r=".7" />
+                        <circle cx="28" cy="41" r=".7" />
+                        <circle cx="10" cy="48" r=".7" />
+                        <circle cx="28" cy="48" r=".7" />
+                        <circle cx="10" cy="59" r=".7" />
+                        <circle cx="28" cy="59" r=".7" />
+                        <circle cx="10" cy="68" r=".7" />
+                        <circle cx="28" cy="68" r=".7" />
+                        <circle cx="10" cy="77" r=".7" />
+                        <circle cx="28" cy="77" r=".7" />
+                        <circle cx="15" cy="33" r=".7" />
+                        <circle cx="23" cy="33" r=".7" />
+                      </g>
+                      <circle
+                        cx="14"
+                        cy="55"
+                        r="2"
+                        stroke="#d2bd7e"
+                        stroke-width="1"
+                      />
+                      <circle
+                        cx="24"
+                        cy="55"
+                        r="2"
+                        stroke="#d2bd7e"
+                        stroke-width="1"
+                      />
+                      <path
+                        d="M12 8Q7 13 12 19M26 15Q31 20 26 25"
+                        stroke="#17588a"
+                        stroke-width="1"
+                      />
+                    </g>
+                    <path
+                      d="M108 321L126 313L159 331L145 342Z"
+                      fill="#0872c4"
+                    />
+                    <path d="M108 321V325L145 346V342Z" fill="#075399" />
+                    <path d="M145 342L159 331V335L145 346Z" fill="#043f77" />
+                    <path
+                      d="M109 325L114 329L118 330L123 334L128 335L132 339L138 340L143 344"
+                      stroke="#67a2cf"
+                      stroke-width="1.2"
+                    />
+                    <g transform="matrix(1 -.48 0 1 176 335)">
+                      <path d="M-3 33V7C-3-10 30-10 30 7V33Z" fill="#fffef8" />
+                      <path d="M0 31V7C0-6 27-6 27 7V31Z" fill="#064c92" />
+                      <path
+                        d="M4 0V27M13.5-3V29M23 0V27M0 9H27"
+                        stroke="#438bba"
+                        stroke-width="1"
+                      />
+                      <path
+                        d="M-5 2L-10-1V30L-5 34ZM32 2L37-1V30L32 34Z"
+                        fill="#0873c8"
+                      />
+                      <path
+                        d="M-8 6V27M35 6V27"
+                        stroke="#b1d7e7"
+                        stroke-width=".6"
+                      />
+                      <svg
+                        class="scene-window-flag"
+                        x="2"
+                        y="16"
+                        width="23"
+                        height="15.33"
+                        viewBox="0 0 300 200"
+                      >
+                        <path fill="#e70013" d="M0 0h300v200H0z" />
+                        <circle cx="150" cy="100" r="50" fill="#fff" />
+                        <circle cx="150" cy="100" r="37.5" fill="#e70013" />
+                        <circle cx="161" cy="100" r="30" fill="#fff" />
+                        <path
+                          d="M188.75 100L175.82 104.23L175.79 117.83L167.78 106.85L154.83 111.02L162.8 100L154.83 88.98L167.78 93.15L175.79 82.17L175.82 95.77Z"
+                          fill="#e70013"
+                        />
+                      </svg>
+                    </g>
+                    <!-- White cupola and another cobalt door recall the village's hillside cafés. -->
+                    <path
+                      d="M207 350L244 331L281 350V407L242 428L207 409Z"
+                      fill="#dce3d6"
+                    />
+                    <path d="M207 350L242 369V428L207 409Z" fill="#fffef7" />
+                    <path
+                      d="M203 346L241 326L285 348L243 371Z"
+                      fill="#fffef7"
+                    />
+                    <path d="M203 346V353L243 375V371Z" fill="#e6e8d9" />
+                    <path d="M243 371L285 348V355L243 375Z" fill="#c4d1c4" />
+                    <path
+                      d="M217 344C217 321 227 302 243 298C260 302 273 318 274 342C263 355 230 357 217 344Z"
+                      fill="url(#scene-dome)"
+                    />
+                    <path
+                      d="M217 344Q244 357 274 342"
+                      stroke="#d1dccb"
+                      stroke-width="1"
+                    />
+                    <path
+                      d="M243 299V293"
+                      stroke="#b3a17a"
+                      stroke-width="1.2"
+                    />
+                    <path
+                      d="M210 402V380Q218 365 231 389V415Z"
+                      fill="#086cbe"
+                    />
+                    <path
+                      d="M220 383V409M214 387L227 394"
+                      stroke="#68a9d1"
+                      stroke-width=".8"
+                    />
+                    <path
+                      d="M251 400V385Q258 369 269 378V391Z"
+                      fill="#0964ac"
+                    />
+                    <path d="M259 380V396" stroke="#79b2d2" stroke-width="1" />
+                    <path
+                      d="M205 365L217 359L237 372L225 379Z"
+                      fill="#187dca"
+                    />
+                    <path d="M205 365V369L225 382V379Z" fill="#085398" />
+                    <!-- Stone steps, glazed pots and the characteristic bougainvillea. -->
+                    <path d="M99 386L163 419L163 425L95 390Z" fill="#e7dec6" />
+                    <path d="M96 395L160 428L160 434L92 399Z" fill="#f9f4e6" />
+                    <path d="M95 404L156 436L151 439L90 408Z" fill="#d7cfb6" />
+                    <path
+                      d="M104 385C94 365 104 344 99 325C96 312 99 297 105 287"
+                      stroke="#667a56"
+                      stroke-width="2"
+                    />
+                    <g fill="#647f56">
+                      <ellipse cx="98" cy="343" rx="6" ry="4" />
+                      <ellipse cx="104" cy="321" rx="7" ry="4" />
+                      <ellipse cx="97" cy="304" rx="5" ry="7" />
+                      <ellipse cx="105" cy="291" rx="8" ry="5" />
+                      <ellipse cx="94" cy="359" rx="5" ry="7" />
+                    </g>
+                    <g fill="#b13a76">
+                      <circle cx="96" cy="304" r="4" />
+                      <circle cx="105" cy="299" r="5" />
+                      <circle cx="109" cy="289" r="4" />
+                      <circle cx="99" cy="318" r="4" />
+                      <circle cx="95" cy="335" r="3.5" />
+                      <circle cx="103" cy="345" r="3.5" />
+                    </g>
+                    <g fill="#d879a1">
+                      <circle cx="98" cy="300" r="2.5" />
+                      <circle cx="108" cy="297" r="2.5" />
+                      <circle cx="105" cy="317" r="2.5" />
+                      <circle cx="101" cy="332" r="3" />
+                    </g>
+                    <path
+                      d="M92 381H107L105 398Q100 402 95 398Z"
+                      fill="#dec69a"
+                    />
+                    <path
+                      d="M94 386H106M95 394H105"
+                      stroke="#166cb0"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M183 401H197L195 415Q190 419 185 415Z"
+                      fill="#efdfb9"
+                    />
+                    <path
+                      d="M185 406H195M186 412H194"
+                      stroke="#176aab"
+                      stroke-width="1.7"
+                    />
+                    <path
+                      d="M190 402Q177 387 183 381Q192 385 190 402Q198 381 202 385Q206 394 190 402Z"
+                      fill="#7b956c"
+                    />
+                  </svg>
+                  <svg
+                    class="scene-layer scene-wave-front"
+                    viewBox="0 0 600 580"
+                    fill="none"
+                  >
+                    <path
+                      d="M90 421C152 398 186 450 263 421C321 399 343 444 412 410C446 394 480 384 526 402C502 443 418 466 311 467C213 469 135 451 90 421Z"
+                      fill="#376a73"
+                    />
+                    <path
+                      d="M90 421C152 398 186 450 263 421C321 399 343 444 412 410C446 394 480 384 526 402"
+                      stroke="#e1cc96"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M137 427C188 450 213 446 263 433C319 416 344 455 414 422M190 453C238 460 255 440 304 447C365 465 415 438 449 429M442 411C463 401 481 400 498 404"
+                      stroke="#8eb3ad"
+                      stroke-width="1"
+                      opacity=".75"
+                    />
+                  </svg>
+                  <svg
+                    class="scene-layer scene-crane"
+                    viewBox="0 0 600 580"
+                    fill="none"
+                  >
+                    <g class="crane-flight">
+                      <path
+                        d="M435 217L384 202L420 217L437 228L466 216L481 190L473 209L452 213Z"
+                        fill="#ddd5bd"
+                      />
+                      <path
+                        class="crane-wing-back"
+                        d="M435 217L395 163L442 198L452 213Z"
+                        fill="#e4decc"
+                        stroke="#b9a886"
+                        stroke-width=".7"
+                      />
+                      <path
+                        class="crane-wing"
+                        d="M435 217L474 143L465 205L452 213Z"
+                        fill="#fffdf4"
+                        stroke="#c8b594"
+                        stroke-width=".7"
+                      />
+                      <path
+                        d="M435 217L465 205L452 220L437 228L420 217Z"
+                        fill="#faf5e7"
+                      />
+                      <path
+                        d="M452 220L475 210L481 190L487 190L478 214L458 226Z"
+                        fill="#fffdf4"
+                      />
+                      <path
+                        d="M481 190L487 190L493 194L481 194Z"
+                        fill="#a34341"
+                      />
+                      <path
+                        d="M435 217L474 143"
+                        stroke="#d2c4a8"
+                        stroke-width=".7"
+                      />
+                    </g>
+                  </svg>
+                  <div class="scene-calligraphy">
+                    <span lang="ja">絆</span><small>KIZUNA</small>
+                  </div>
+                </div>
+              </div>
+              <span class="diorama-side-note" lang="ja"
                 >二つの国、一つの未来。</span
               >
-              <figcaption>
-                <span>日本 · JAPON</span><span>Le voyage nous relie.</span>
-              </figcaption>
-            </figure>
-            <figure class="tunis-frame">
-              <img
-                src="assets/images/gallery-sidi-bou-said.jpg"
-                alt="Architecture blanche et bleue de Sidi Bou Saïd, en Tunisie"
-                width="800"
-                height="600"
-              />
-              <figcaption>TUNISIE <span>チュニジア</span></figcaption>
-            </figure>
-            <div class="visual-note">
-              <span lang="ja">絆</span>
-              <p>KIZUNA<br /><small>Le lien qui nous unit</small></p>
             </div>
-            <span class="visual-edition"
-              >35°21′ N · 138°43′ E &nbsp; / &nbsp; 36°52′ N · 10°20′ E</span
-            >
+            <div class="diorama-caption">
+              <div>
+                <span class="diorama-caption-kicker"
+                  >DU MONT FUJI À SIDI BOU SAÏD</span
+                >
+                <p>Un même horizon.</p>
+              </div>
+              <button
+                class="scene-motion-toggle"
+                type="button"
+                aria-label="Mettre la scène en pause"
+                aria-pressed="false"
+                hidden
+              >
+                <svg
+                  class="scene-pause-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 3v10M11 3v10"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                  /></svg
+                ><svg
+                  class="scene-play-icon"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path d="m5 3 8 5-8 5V3Z" fill="currentColor" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
         <div class="container hero-bottom">
@@ -2429,6 +3097,7 @@
     </div>
 
     <!-- Scripts -->
-    <script src="assets/js/main.js?v=20260911-kizuna"></script>
+    <script src="assets/js/main.js?v=20260911-diorama"></script>
+    <script src="assets/js/hero-scene.js?v=20260911-diorama"></script>
   </body>
 </html>

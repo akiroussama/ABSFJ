@@ -73,7 +73,7 @@ L'ensemble des publications de la page officielle Facebook ([facebook.com/615730
 
 ## Direction artistique — Kizuna (septembre 2026)
 
-La page adopte une composition éditoriale japonaise : papier ivoire `#F7F5EF`, rouge sceau `#A52F36`, vert encre `#263A31` et or patiné `#9C8050`. Cormorant Garamond compose les titres, Manrope les interfaces et Noto Serif JP les caractères japonais. Les images existantes du Fuji et de Sidi Bou Saïd ouvrent le récit ; le portrait du président, les quatre panneaux des missions et les archives photographiques prolongent cette identité.
+La page adopte une composition éditoriale japonaise : papier ivoire `#F7F5EF`, rouge sceau `#A52F36`, vert encre `#263A31` et or patiné `#9C8050`. Cormorant Garamond compose les titres, Manrope les interfaces et Noto Serif JP les caractères japonais. Un diorama en relief associe le Fuji, le soleil levant, les vagues méditerranéennes, les maisons de Sidi Bou Saïd et une grue en origami ; le portrait du président, les quatre panneaux des missions et les archives photographiques prolongent cette identité.
 
 Le site reste intégralement statique : `index.html`, `assets/css/style.css`, `assets/js/main.js`. Aucun framework ni compilation ne sont nécessaires. Les 12 événements, les 21 fiches de galerie, les liens sources et les photographies originales sont conservés.
 
@@ -85,3 +85,11 @@ Le site reste intégralement statique : `index.html`, `assets/css/style.css`, `a
 - **Adhésion :** le formulaire prépare et télécharge un fichier texte sur l’appareil. Le visiteur doit le transmettre à l’association via sa page officielle. Aucun enregistrement distant, envoi automatique ou carte validée n’est simulé. Les données saisies ne sont pas enregistrées dans le stockage local.
 
 Pour un aperçu local : `python -m http.server 4173 --bind 127.0.0.1`, puis ouvrir `http://127.0.0.1:4173/`. Vérification de syntaxe : `node --check assets/js/main.js`.
+
+### Diorama interactif du hero
+
+L’illustration du premier écran est composée de neuf plans SVG dans un espace CSS 3D, sans bibliothèque ni image supplémentaire. `assets/js/hero-scene.js` gère une parallaxe amortie au pointeur fin et le bouton de pause ; les mouvements ambiants de la scène, des nuages, de la grue et de l’eau sont réalisés en CSS. Sur mobile, l’animation reste autonome et ne capture pas les gestes de défilement ou de zoom.
+
+Les animations s’arrêtent lorsque la scène sort de l’écran ou que l’onglet est masqué. La préférence `prefers-reduced-motion` désactive également la parallaxe et conserve une composition statique en relief. Le bouton ne contrôle que l’illustration ; l’animation de pétales reste indépendante. L’illustration reste visible sans JavaScript.
+
+Les maisons du diorama reprennent les portes cobalt cloutées, les auvents, la ferronnerie de terrasse, une coupole blanche, un palmier et un bougainvillier. Un petit drapeau tunisien complet est intégré à une fenêtre.
