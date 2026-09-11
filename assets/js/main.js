@@ -28,12 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. MENU MOBILE HAMBURGER
+  // 2. MENU MOBILE HAMBURGER & DIPLOMATIC SCROLL SPY
   const menuToggle = document.getElementById('menu-toggle');
   const navLinks = document.getElementById('nav-links');
+  const siteHeader = document.querySelector('.site-header');
 
   if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       navLinks.classList.toggle('show');
     });
 
@@ -42,7 +44,47 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.classList.remove('show');
       });
     });
+
+    document.addEventListener('click', (e) => {
+      if (navLinks.classList.contains('show') && !navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('show');
+      }
+    });
   }
+
+  // Active Navigation Scroll Spy & Header Elevation
+  const trackedSections = document.querySelectorAll('section[id], footer[id]');
+  const allNavLinks = document.querySelectorAll('.nav-link');
+
+  window.addEventListener('scroll', () => {
+    if (siteHeader) {
+      if (window.scrollY > 40) {
+        siteHeader.classList.add('scrolled');
+      } else {
+        siteHeader.classList.remove('scrolled');
+      }
+    }
+
+    let activeId = '';
+    const scrollPosition = window.scrollY + 140;
+
+    trackedSections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        activeId = section.getAttribute('id');
+      }
+    });
+
+    if (activeId) {
+      allNavLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${activeId}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+  }, { passive: true });
 
   // 3. EFFET DE PÉTALES SAKURA FLOTTANTS (Canvas)
   const canvas = document.getElementById('sakura-canvas');

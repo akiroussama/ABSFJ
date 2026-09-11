@@ -30,6 +30,26 @@
   <!-- Canvas discret pour les pétales de cerisiers (Sakura) -->
   <canvas id="sakura-canvas"></canvas>
 
+  <!-- ==================== BARRE DIPLOMATIQUE SUPÉRIEURE ==================== -->
+  <div class="diplomatic-top-bar">
+    <div class="container top-bar-container">
+      <div class="top-bar-left">
+        <span class="diplomatic-emblem">🇹🇳 🇯🇵</span>
+        <span>Sous le Haut Patronage du Partenariat Tuniso-Japonais • JICA Alumni Network</span>
+      </div>
+      <div class="top-bar-right">
+        <span class="status-pill">
+          <span class="status-dot"></span>
+          <span>Portail Officiel Actif</span>
+        </span>
+        <a href="https://www.facebook.com/61573098115073/" target="_blank" rel="noopener noreferrer" class="top-bar-link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          Facebook Officiel ABSFJ
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- ==================== HEADER & NAVIGATION ==================== -->
   <header class="site-header">
     <div class="container nav-container">
@@ -39,20 +59,20 @@
         <div class="brand-text">
           <span class="brand-acronym">ABSFJ</span>
           <span class="brand-sub">JICA Alumni • Tunisie</span>
+          <span class="brand-japanese">チュニジアJICA研修生同窓会</span>
         </div>
       </a>
 
       <!-- Navigation Links -->
       <ul class="nav-links" id="nav-links">
-        <li><a href="#accueil" class="nav-link active">Accueil</a></li>
-        <li><a href="#a-propos" class="nav-link">À Propos</a></li>
-        <li><a href="#piliers" class="nav-link">Missions & Buts</a></li>
-        <li><a href="#evenements" class="nav-link">Événements</a></li>
-        <li><a href="#galerie" class="nav-link">Galerie</a></li>
-        <li><a href="#logo-section" class="nav-link">Notre Logo</a></li>
-        <li><a href="#adhesion" class="nav-link">Adhésion</a></li>
-        <li><a href="#partenaires" class="nav-link">Partenaires</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#accueil" class="nav-link active"><span class="nav-link-kanji">ホーム</span>Accueil</a></li>
+        <li><a href="#a-propos" class="nav-link"><span class="nav-link-kanji">概要</span>À Propos</a></li>
+        <li><a href="#piliers" class="nav-link"><span class="nav-link-kanji">使命</span>Missions</a></li>
+        <li><a href="#evenements" class="nav-link"><span class="nav-link-kanji">活動</span>Événements</a></li>
+        <li><a href="#galerie" class="nav-link"><span class="nav-link-kanji">写真</span>Galerie</a></li>
+        <li><a href="#logo-section" class="nav-link"><span class="nav-link-kanji">紋章</span>Notre Logo</a></li>
+        <li><a href="#partenaires" class="nav-link"><span class="nav-link-kanji">連携</span>Partenaires</a></li>
+        <li><a href="#contact" class="nav-link"><span class="nav-link-kanji">連絡</span>Contact</a></li>
       </ul>
 
       <!-- Action Buttons & Dark Mode Toggle -->
@@ -63,8 +83,12 @@
           </svg>
         </button>
 
-        <a href="#adhesion" class="btn btn-primary" style="display: none;">Rejoindre</a>
-        <a href="#adhesion" class="btn btn-primary">Espace Membre</a>
+        <div class="nav-divider"></div>
+
+        <a href="#adhesion" class="btn-nav-cta">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          Espace Membre
+        </a>
 
         <button class="menu-toggle" id="menu-toggle" aria-label="Menu Mobile">
           ☰
@@ -75,25 +99,30 @@
 
   <!-- ==================== HERO SECTION ==================== -->
   <section id="accueil" class="hero-section">
+    <div class="hero-kanji-bg">絆</div>
     <div class="container hero-grid">
       <div class="hero-content">
         <!-- Badges de culture et diplomatie -->
-        <div class="hero-badge-row">
+        <div class="hero-tag-group">
+          <div class="hanko-seal" title="Sceau Officiel ABSFJ - 友好 (Amitié)">
+            <span>友</span>
+            <span>好</span>
+          </div>
           <span class="hero-tag hero-tag-japan">🇹🇳 Tunisie × 🇯🇵 Japon</span>
-          <span class="hero-tag hero-tag-kanji">改善 • KAIZEN</span>
-          <span class="hero-tag hero-tag-kanji">絆 • KIZUNA (Amitié)</span>
+          <span class="hero-tag hero-tag-gold">改善 • KAIZEN</span>
+          <span class="hero-tag hero-tag-japan">絆 • KIZUNA (Amitié)</span>
         </div>
 
         <h1 class="hero-title">
           Unir les Compétences, <br>
-          <span class="gradient-text">Bâtir l'Avenir</span> entre la Tunisie et le Japon.
+          <span class="title-accent">Bâtir l'Avenir</span> entre la Tunisie et le Japon.
         </h1>
 
-        <p class="hero-subtitle">
+        <p class="hero-description">
           Bienvenue sur le portail officiel de l'<strong>Association des Bénéficiaires des Sessions de Formation de la JICA au Japon (ABSFJ)</strong>. Nous fédérons plus de <strong>1 800 cadres, ingénieurs et chercheurs tunisiens</strong> formés au Japon, pour mettre l'excellence et la rigueur nippone au service du développement économique et durable de la Tunisie.
         </p>
 
-        <div class="hero-actions">
+        <div class="hero-cta-group">
           <a href="#evenements" class="btn btn-primary">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18"/></svg>
             Découvrir nos Actions
@@ -108,7 +137,7 @@
           </a>
         </div>
 
-        <div class="hero-meta-strip">
+        <div class="hero-meta">
           <div class="hero-meta-item">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             <span>Lancée le <strong>14 Février 2025</strong></span>
@@ -147,18 +176,22 @@
   <section class="stats-section">
     <div class="container stats-grid">
       <div class="stat-item">
+        <div class="stat-kanji-bg">人</div>
         <div class="stat-number">1 800+</div>
         <div class="stat-label">Bénéficiaires Tunisiens Formés au Japon</div>
       </div>
       <div class="stat-item">
+        <div class="stat-kanji-bg">年</div>
         <div class="stat-number">50+</div>
         <div class="stat-label">Années de Coopération Technique JICA</div>
       </div>
       <div class="stat-item">
+        <div class="stat-kanji-bg">領</div>
         <div class="stat-number">15+</div>
         <div class="stat-label">Pôles & Domaines d'Expertise</div>
       </div>
       <div class="stat-item">
+        <div class="stat-kanji-bg">心</div>
         <div class="stat-number">100%</div>
         <div class="stat-label">Engagement pour la Qualité & l'Amitié</div>
       </div>
@@ -245,6 +278,7 @@
       <div class="pillars-grid">
         <!-- Pilier 1 : KIZUNA -->
         <div class="pillar-card">
+          <div class="pillar-kanji-bg">絆</div>
           <div class="pillar-kanji-badge">絆</div>
           <h3 class="pillar-title">1. Réseau & Synergie (KIZUNA)</h3>
           <p class="pillar-desc">
@@ -255,6 +289,7 @@
 
         <!-- Pilier 2 : KAIZEN -->
         <div class="pillar-card">
+          <div class="pillar-kanji-bg">改善</div>
           <div class="pillar-kanji-badge">改善</div>
           <h3 class="pillar-title">2. Philosophie KAIZEN</h3>
           <p class="pillar-desc">
@@ -265,6 +300,7 @@
 
         <!-- Pilier 3 : ÉCOLOGIE -->
         <div class="pillar-card">
+          <div class="pillar-kanji-bg">環境</div>
           <div class="pillar-kanji-badge">環境</div>
           <h3 class="pillar-title">3. Transition Écologique</h3>
           <p class="pillar-desc">
@@ -275,6 +311,7 @@
 
         <!-- Pilier 4 : COOPERATION -->
         <div class="pillar-card">
+          <div class="pillar-kanji-bg">友好</div>
           <div class="pillar-kanji-badge">友好</div>
           <h3 class="pillar-title">4. Amitié & Coopération</h3>
           <p class="pillar-desc">

@@ -1,4 +1,4 @@
-﻿# 🇹🇳 ABSFJ - Association des Bénéficiaires des Sessions de Formation de la JICA au Japon 🇯🇵
+# 🇹🇳 ABSFJ - Association des Bénéficiaires des Sessions de Formation de la JICA au Japon 🇯🇵
 
 <p align="center">
   <img src="assets/images/logo-absfj.svg" alt="Logo Officiel ABSFJ Tunisie" width="220" />
@@ -50,10 +50,13 @@ L'ensemble des publications de la page officielle Facebook ([facebook.com/615730
 
 ---
 
-## 💻 Fonctionnalités Techniques du Portail
+## 💻 Fonctionnalités & Raffinement Diplomatique (Ambassade-Grade)
 
-- **Design biculturel sur-mesure** : Harmonie des couleurs tunisiennes (rouge carmin, bleu Sidi Bou Saïd) et japonaises (indigo, or, sakura).
-- **Visionneuse Lightbox HD Plein Écran** : Navigation tactile et clavier (Flèches & Échap) sur les 21 photos avec légendes complètes et liens Facebook.
+- **Esthétique Biculturelle & Diplomatique Impériale** : Palette Shu-iro (朱色, vermillon), Aizome (藍染, indigo profond), Kin-iro (金色, or pur) et Washi (和紙).
+- **Barre Diplomatique Supérieure & Navigation Zéro-Collision** : Bandeau d'honneur bilatéral 🇹🇳 🇯🇵, séparation nette des actions, sous-titre kanji (`チュニジアJICA研修生同窓会`) et collapse adaptatif à 1120px sans chevauchement.
+- **Sceau Traditionnel Hanko (印鑑) & Filigranes Kanji** : Sceau rouge officiel `友好` (Amitié) et filigranes d'arrière-plan en kanji impériaux (`絆`, `改善`, `環境`, `友好`).
+- **Scroll Spy Dynamique & Élévation** : Détection active de la section visible avec mise en valeur dorée et ombre portée adaptative au défilement.
+- **Visionneuse Lightbox HD Plein Écran** : Navigation tactile et clavier (Flèches & Échap) sur les 21 photos avec légendes complètes et liens Facebook originaux.
 - **Modals d'Événements Multi-Photos** : Galerie miniature interactive pour basculer instantanément entre les photos d'un même événement.
 - **Système de Double Filtrage** : Filtres thématiques pour les 12 actualités et pour la médiathèque photo.
 - **Thème Sombre / Thème Clair** avec bascule instantanée et persistance locale.
