@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://akiroussama.github.io/ABSFJ/"><img src="https://img.shields.io/badge/Site%20Web-Live%20Demo-0078D4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Site Web Live"></a>
+  <a href="https://absfj.vercel.app/"><img src="https://img.shields.io/badge/Site%20Web-Live%20Demo-0078D4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Site Web Live"></a>
   <a href="https://www.facebook.com/61573098115073/"><img src="https://img.shields.io/badge/Facebook-Page%20Officielle-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Page Facebook"></a>
   <img src="https://img.shields.io/badge/JICA-Coop%C3%A9ration%20Tunisie--Japon-E60012?style=for-the-badge" alt="JICA Tunisie">
 </p>
@@ -68,7 +68,7 @@ L'ensemble des publications de la page officielle Facebook ([facebook.com/615730
 
 ## 🚀 Accès & Déploiement
 
-- **Site Web en Ligne (GitHub Pages) :** [https://akiroussama.github.io/ABSFJ/](https://akiroussama.github.io/ABSFJ/)
+- **Site Web en Ligne (Vercel) :** [https://absfj.vercel.app/](https://absfj.vercel.app/)
 - **Visualisation Locale :** Ouvrez simplement le fichier `index.html` dans un navigateur web moderne.
 
 ## Direction artistique — Kizuna (septembre 2026)
