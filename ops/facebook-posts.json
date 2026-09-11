@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "page_id": "61573098115073",
+  "page_url": "https://www.facebook.com/61573098115073/",
+  "monitoring_started_at": "2026-09-11T11:49:55Z",
+  "baseline_commit": "fcc48ed",
+  "baseline_event_count": 12,
+  "baseline_gallery_count": 21,
+  "page_only_event_ids": [
+    "ag-ordinaire-utica",
+    "lancement-solennel-cite-sciences"
+  ],
+  "posts": [
+    {
+      "post_id": "pfbid03365BHg6MCskR3cQGZighBeLAMiJzPuHVYPVgSzcRXndG4tev4z2DqgvicR4hC5dSl",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid03365BHg6MCskR3cQGZighBeLAMiJzPuHVYPVgSzcRXndG4tev4z2DqgvicR4hC5dSl&id=61573098115073",
+      "event_ids": [
+        "ia-distinction-akir"
+      ],
+      "gallery_ids": [
+        "p1"
+      ],
+      "photo_ids": [
+        "122186560898769937"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid0cWLTgJZrcYGrdKxGyNbzbs3fqoN5xAwS65VeMA9mSgV5wJEyBUVzsLuGPav398bql",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0cWLTgJZrcYGrdKxGyNbzbs3fqoN5xAwS65VeMA9mSgV5wJEyBUVzsLuGPav398bql&id=61573098115073",
+      "event_ids": [
+        "dejeuner-abe-jica"
+      ],
+      "gallery_ids": [
+        "p2"
+      ],
+      "photo_ids": [
+        "122185797686769937"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid0o6eEX5K2rJ56En7RdsaYdxuMhbunr3xfAZKA2RgSF2NBTHqmxChp8H3pQqb2jS4rl",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0o6eEX5K2rJ56En7RdsaYdxuMhbunr3xfAZKA2RgSF2NBTHqmxChp8H3pQqb2jS4rl&id=61573098115073",
+      "event_ids": [
+        "reseau-afrique-alumni"
+      ],
+      "gallery_ids": [
+        "p4"
+      ],
+      "photo_ids": [
+        "122184892514769937"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid0exxtBkcRDugkZjxgrxXVhifPZ7m2HPyckeTd3CKHcYdd4vgisBaa6u6oadRcQn1Jl",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0exxtBkcRDugkZjxgrxXVhifPZ7m2HPyckeTd3CKHcYdd4vgisBaa6u6oadRcQn1Jl&id=61573098115073",
+      "event_ids": [
+        "accueil-volontaires-japon"
+      ],
+      "gallery_ids": [
+        "p5"
+      ],
+      "photo_ids": [
+        "122184036554769937"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid02L5awBmikF5eNhBFQy3diERNtGv9wevAoZLZtfKhVZ6ThwDnXAQCsErFobu2Y4JMtl",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02L5awBmikF5eNhBFQy3diERNtGv9wevAoZLZtfKhVZ6ThwDnXAQCsErFobu2Y4JMtl&id=61573098115073",
+      "event_ids": [
+        "felicitations-laureats"
+      ],
+      "gallery_ids": [
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "p11"
+      ],
+      "photo_ids": [
+        "1352334837016043",
+        "1352334830349377",
+        "1352334820349378",
+        "1352334823682711",
+        "1352334827016044",
+        "122182593866769937"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid02KkN9FLXWgwf2mXo8hjpYvqZW3fbQA8bTqoWnw26oDtnJ7BVCzkK3QjrFjnfXMfLvl",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02KkN9FLXWgwf2mXo8hjpYvqZW3fbQA8bTqoWnw26oDtnJ7BVCzkK3QjrFjnfXMfLvl&id=61573098115073",
+      "event_ids": [
+        "seminaire-penthouse-kaizen"
+      ],
+      "gallery_ids": [
+        "p12"
+      ],
+      "photo_ids": [
+        "122180433800769937"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid0yEQrD4wBBC6gY9NUrUAVgNkR48BYjPLFaKtHR3289yo4Ma2NFzxz8fWSJDNDKorKl",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0yEQrD4wBBC6gY9NUrUAVgNkR48BYjPLFaKtHR3289yo4Ma2NFzxz8fWSJDNDKorKl&id=61573098115073",
+      "event_ids": [
+        "football-amitie-japon"
+      ],
+      "gallery_ids": [
+        "p13"
+      ],
+      "photo_ids": [
+        "122178574154769937"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid0NRzPn8HRD9NWRgxMMLVgKpPaS5oUX3tAdqqvMy7cms3xERrfZShyHLRSGZyaRVGpl",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0NRzPn8HRD9NWRgxMMLVgKpPaS5oUX3tAdqqvMy7cms3xERrfZShyHLRSGZyaRVGpl&id=61573098115073",
+      "event_ids": [
+        "visite-mitsui-yoko-jica"
+      ],
+      "gallery_ids": [
+        "p15"
+      ],
+      "photo_ids": [
+        "122178214784769937"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid0K3JYnMeR4FddESuTLHZnYUzuhzttBNFKw6f3dPaGsnLCdPXSwwxkqdnmG4oeyXAol",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0K3JYnMeR4FddESuTLHZnYUzuhzttBNFKw6f3dPaGsnLCdPXSwwxkqdnmG4oeyXAol&id=61573098115073",
+      "event_ids": [
+        "reception-70-ans-empereur"
+      ],
+      "gallery_ids": [
+        "p17",
+        "p18",
+        "p19",
+        "p20",
+        "p21"
+      ],
+      "photo_ids": [
+        "122170759898769937",
+        "122170760918769937",
+        "122170759646769937",
+        "122170759712769937",
+        "122170759574769937"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid0g4XQQwWMNcWnNEr2V9haeewjtftvUSuMRokf5C5DdhFUatdY7jZS3MzC2xLY93AKl",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0g4XQQwWMNcWnNEr2V9haeewjtftvUSuMRokf5C5DdhFUatdY7jZS3MzC2xLY93AKl&id=61573098115073",
+      "event_ids": [
+        "projet-decharge-beja"
+      ],
+      "gallery_ids": [
+        "p3"
+      ],
+      "photo_ids": [
+        "1038482885850153"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid02RByv7p55qh8pcFdp2RnSMCKSVNX2CpsmHRTV3bWysNW83J7RCQMVwUPzxa3TjiPql",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02RByv7p55qh8pcFdp2RnSMCKSVNX2CpsmHRTV3bWysNW83J7RCQMVwUPzxa3TjiPql&id=61573098115073",
+      "event_ids": [],
+      "gallery_ids": [
+        "p14"
+      ],
+      "photo_ids": [
+        "122176625234769937"
+      ],
+      "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid06z964sqFdjUQDB9A6kS7sMKmukwL9ai5oJ4QsA7CvCApxbTRiLuWJYg29br18zxbl",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid06z964sqFdjUQDB9A6kS7sMKmukwL9ai5oJ4QsA7CvCApxbTRiLuWJYg29br18zxbl&id=61573098115073",
+      "event_ids": [],
+      "gallery_ids": [
+        "p16"
+      ],
+      "photo_ids": [
+        "122176323434769937"
+      ],
+      "origin": "existing_site"
+    }
+  ]
+}

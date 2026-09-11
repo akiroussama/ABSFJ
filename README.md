@@ -93,3 +93,7 @@ L’illustration du premier écran est composée de neuf plans SVG dans un espac
 Les animations s’arrêtent lorsque la scène sort de l’écran ou que l’onglet est masqué. La préférence `prefers-reduced-motion` désactive également la parallaxe et conserve une composition statique en relief. Le bouton ne contrôle que l’illustration ; l’animation de pétales reste indépendante. L’illustration reste visible sans JavaScript.
 
 Les maisons du diorama reprennent les portes cobalt cloutées, les auvents, la ferronnerie de terrasse, une coupole blanche, un palmier et un bougainvillier. Un petit drapeau tunisien complet est intégré à une fenêtre.
+
+### Suivi des publications Facebook
+
+Un contrôle toutes les 48 heures est configuré dans la tâche Codex du projet pour récupérer les nouvelles publications de la page officielle et actualiser le site. Le registre de dédoublonnage et la procédure sont documentés dans [ops/facebook-sync.md](ops/facebook-sync.md). Cette planification dépend de l’ordinateur allumé, de Codex ouvert et de l’accès à Facebook ; elle ne s’exécute pas sur les serveurs Vercel. Le formulaire d’adhésion reste un téléchargement local, sans envoi d’email.
