@@ -33,23 +33,31 @@ Présidée par **S.E. M. Jamel Boujdaria**, diplomate de carrière décoré par 
 
 ---
 
-## 📸 Contenu & Médias Intégrés
+## 📸 Médiathèque & 21 Photographies Officielles Facebook
 
-- **Logo Officiel Vectoriel HD :** `assets/images/logo-absfj.svg`
-- **Sceau Circulaire Officiel :** `assets/images/logo-absfj-badge.svg`
-- **Couverture Officielle Facebook :** `assets/images/hero-fb-banner.jpg`
-- **Portrait Officiel du Président :** `assets/images/president-jamel-boujdaria.jpg`
-- **Visuels d'Événements :** Lancement à la Cité des Sciences, Séminaire Décarbonation, Méthode Fukuoka à Béja, Kaizen Hospitalier.
-- **Galerie Photographique & Patrimoine :** Mont Fuji, Sidi Bou Saïd, Fleurs de Cerisiers (Sakura).
+L'ensemble des publications de la page officielle Facebook ([facebook.com/61573098115073](https://www.facebook.com/61573098115073/)) a été extrait avec ses **21 photographies authentiques**, toutes reliées à leurs événements respectifs :
+
+- **Accueil & Distinction de M. Oussama Akir** (Premier Prix d'IA à Tokyo parmi 25 000 candidats de 120 pays).
+- **Déjeuner de Travail Initiative ABE & Diplomatie** (Mme Miyata Mayumi JICA, 1ère Secrétaire de l'Ambassade du Japon, jeunes talents tunisiens).
+- **Réception des 70 Ans de Relations Diplomatiques & Fête de l'Empereur** (5 photographies officielles d'exception).
+- **Célébration des Lauréats Tunisiens des Sessions JICA** (6 photographies de remise de certificats).
+- **Séminaire National Kaizen & Décarbonation Climatique** à l'Hôtel The Penthouse.
+- **Rencontre Footballistique d'Amitié Tuniso-Japonaise** (Juventus Academy, avec l'Ambassadeur Saito Jun).
+- **Déjeuner Stratégique avec Mme Mitsui Yoko**, Senior Vice President de la JICA Tokyo.
+- **Réunion Panafricaine en Ligne des Réseaux Alumni JICA** (Djibouti, Tunisie, Gabon, Burkina Faso, Mali, RDC).
+- **Projet Pilote d'Enfouissement Semi-Aérobie Fukuoka à Béja** (ANGED & EX Research).
+- **Accueil des Volontaires et Coopérants Japonais en Tunisie**.
 
 ---
 
-## 💻 Fonctionnalités du Site
+## 💻 Fonctionnalités Techniques du Portail
 
 - **Design biculturel sur-mesure** : Harmonie des couleurs tunisiennes (rouge carmin, bleu Sidi Bou Saïd) et japonaises (indigo, or, sakura).
+- **Visionneuse Lightbox HD Plein Écran** : Navigation tactile et clavier (Flèches & Échap) sur les 21 photos avec légendes complètes et liens Facebook.
+- **Modals d'Événements Multi-Photos** : Galerie miniature interactive pour basculer instantanément entre les photos d'un même événement.
+- **Système de Double Filtrage** : Filtres thématiques pour les 12 actualités et pour la médiathèque photo.
 - **Thème Sombre / Thème Clair** avec bascule instantanée et persistance locale.
 - **Animation poétique de pétales de cerisiers (Sakura)** en arrière-plan.
-- **Filtres interactifs** pour explorer les événements par catégorie (Assemblées, Kaizen, Environnement, Réseau).
 - **Générateur interactif de carte de membre numérique en temps réel** avec puce dorée et badge personnalisé.
 - **Téléchargement direct du logo** en format vectoriel SVG haute résolution.
 
