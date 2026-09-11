@@ -154,37 +154,44 @@ document.addEventListener('DOMContentLoaded', () => {
   const modalTitle = document.getElementById('modal-title');
   const modalDate = document.getElementById('modal-date');
   const modalDesc = document.getElementById('modal-description');
+  const modalImg = document.getElementById('modal-img');
   const modalClose = document.getElementById('modal-close');
 
   const eventDetailsData = {
     'ag-2026': {
       title: "1ère Assemblée Générale Ordinaire de l'ABSFJ",
       date: "29 Janvier 2026 • Siège de l'UTICA, Tunis",
+      image: "assets/images/event-cite-sciences.jpg",
       desc: "L'ABSFJ a tenu sa première assemblée générale avec une forte mobilisation des anciens stagiaires de la JICA. M. Jamel Boujdaria a exposé le bilan moral et financier de l'association un an après son lancement. Des comités thématiques ont été constitués pour déployer des initiatives concrètes : guide d'accueil touristique spécialisé pour les visiteurs japonais en Tunisie, développement d'émulsifiants naturels à haute valeur ajoutée, et renforcement du réseau d'entraide."
     },
     'kaizen-climat': {
       title: "Séminaire National : Approche Kaizen pour le Climat & Décarbonation",
       date: "29 Juin 2026 • Tunis (Partenariat JICA & Ministère de l'Industrie)",
+      image: "assets/images/event-decarbonation.jpg",
       desc: "Co-organisé avec le Bureau de la JICA en Tunisie, ce séminaire d'envergure a mis en lumière la contribution déterminante de la méthodologie japonaise KAIZEN (5S, chasse aux gaspillages Muda, efficience énergétique) pour aider les entreprises industrielles et de services tunisiennes à réussir leur transition verte et leur décarbonation."
     },
     'fukuoka-beja': {
       title: "Projet Pilote : Méthode Fukuoka à la Décharge de Béja",
       date: "Mission Continue 2025-2026 • Béja, Tunisie",
+      image: "assets/images/event-fukuoka-beja.jpg",
       desc: "En collaboration avec l'ANGED et l'institut nippon EX Research Institute, l'ABSFJ appuie le projet d'enfouissement semi-aérobie des déchets dit 'Méthode de Fukuoka'. Cette technique japonaise éprouvée permet d'accélérer la décomposition des déchets tout en réduisant drastiquement les émanations de gaz méthane."
     },
     'lancement-2025': {
       title: "Cérémonie Officielle de Lancement de l'ABSFJ",
       date: "14 Février 2025 • Cité des Sciences à Tunis",
+      image: "assets/images/event-cite-sciences.jpg",
       desc: "Événement fondateur marquant la naissance officielle de l'association, en présence de l'Ambassadeur du Japon en Tunisie, du Représentant Résident de la JICA et de plus de 200 hauts cadres, ingénieurs et chercheurs tunisiens formés au Japon. L'association scelle le trait d'union entre 50 ans de coopération et l'avenir bilatéral."
     },
     'kaizen-sante': {
       title: "Atelier KAIZEN dans le Management Hospitalier",
       date: "Octobre 2025 • Hôpitaux Universitaires & ENSIT",
+      image: "assets/images/event-kaizen-hospital.jpg",
       desc: "Transfert des outils d'amélioration continue et de gestion des flux patients dans les structures hospitalières tunisiennes, animé par des experts tunisiens formés au Japon dans le cadre du programme JICA Santé."
     },
     'reseau-afrique': {
       title: "Forum Panafricain des Associations Alumni JICA",
       date: "Novembre 2025 • Plateforme Virtuelle & Présentielle",
+      image: "assets/images/hero-fb-banner.jpg",
       desc: "Rencontre d'échanges d'expertises entre l'ABSFJ et les associations de bénéficiaires de la JICA à travers toute l'Afrique, renforçant la coopération Sud-Sud et triangulaire (Tunisie-Japon-Afrique) initiée lors de la TICAD."
     }
   };
@@ -198,6 +205,10 @@ document.addEventListener('DOMContentLoaded', () => {
         modalTitle.textContent = data.title;
         modalDate.textContent = data.date;
         modalDesc.textContent = data.desc;
+        if (modalImg) {
+          modalImg.src = data.image;
+          modalImg.alt = data.title;
+        }
         modalOverlay.classList.add('active');
       }
     });
