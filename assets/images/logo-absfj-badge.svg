@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="badgeGoldRing" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="30%" stop-color="#FBBF24" />
+      <stop offset="70%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#78350F" />
+    </linearGradient>
+
+    <linearGradient id="badgeNavyBase" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+
+    <linearGradient id="fujiBadgeRed" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#DC2626" />
+      <stop offset="100%" stop-color="#991B1B" />
+    </linearGradient>
+
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#0F172A" flood-opacity="0.25" />
+    </filter>
+
+    <!-- Circular text paths -->
+    <path id="textCircleTop" d="M 60,250 A 190,190 0 1,1 440,250" fill="none" />
+    <path id="textCircleBottom" d="M 440,250 A 190,190 0 0,1 60,250" fill="none" />
+  </defs>
+
+  <!-- External Golden Ring with Shadow -->
+  <circle cx="250" cy="250" r="240" fill="url(#badgeGoldRing)" filter="url(#badgeShadow)" />
+  <circle cx="250" cy="250" r="230" fill="url(#badgeNavyBase)" />
+
+  <!-- Circular Outer Text Top -->
+  <text font-family="'Montserrat', 'Segoe UI', sans-serif" font-weight="800" font-size="14.5" letter-spacing="3.2" fill="#F8FAFC">
+    <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">
+      ★ ABSFJ TUNISIE • JICA ALUMNI ★
+    </textPath>
+  </text>
+
+  <!-- Circular Outer Text Bottom -->
+  <text font-family="'Montserrat', 'Segoe UI', sans-serif" font-weight="700" font-size="12.5" letter-spacing="2" fill="#FCD34D">
+    <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">
+      COOPÉRATION TUNISIE - JAPON • 1975-2025
+    </textPath>
+  </text>
+
+  <!-- Inner Concentric Ring -->
+  <circle cx="250" cy="250" r="160" fill="#FFFFFF" stroke="url(#badgeGoldRing)" stroke-width="4" />
+  <circle cx="250" cy="250" r="152" fill="#F8FAFC" />
+
+  <!-- Inner Elements: Mount Fuji -->
+  <g transform="translate(50, 45) scale(0.5)">
+    <!-- Fuji Body -->
+    <path d="M 400,60 
+             C 415,110 435,160 475,205 
+             C 525,260 600,295 675,305 
+             C 590,290 520,255 460,235 
+             C 435,228 415,230 400,245 
+             C 385,230 365,228 340,235 
+             C 280,255 210,290 125,305 
+             C 200,295 275,260 325,205 
+             C 365,160 385,110 400,60 Z" 
+          fill="url(#fujiBadgeRed)" />
+
+    <!-- Fuji Snow -->
+    <path d="M 400,60 
+             C 405,78 412,98 424,118 
+             L 418,122 L 426,132 L 413,138 L 418,154 L 406,150 L 400,156 L 394,150 L 382,154 L 387,138 L 374,132 L 382,122 L 376,118 
+             C 388,98 395,78 400,60 Z" 
+          fill="#FFFFFF" />
+
+    <!-- Wave Lines -->
+    <path d="M 230,270 C 310,245 360,232 400,250 C 440,232 490,245 570,270 C 505,260 450,254 400,266 C 350,254 295,260 230,270 Z" fill="#0D9488" />
+    <path d="M 125,305 C 215,298 290,275 350,256 C 375,248 390,248 400,252 C 410,248 425,248 450,256 C 510,275 585,298 675,305 C 610,300 540,280 470,265 C 435,258 415,260 400,275 C 385,260 365,258 330,265 C 260,280 190,300 125,305 Z" fill="#0F172A" />
+  </g>
+
+  <!-- Center Acronym -->
+  <text x="250" y="278" text-anchor="middle" font-family="'Cinzel', 'Noto Serif JP', serif" font-weight="900" font-size="44" font-style="italic" letter-spacing="4" fill="#0F172A">
+    ABSFJ
+  </text>
+
+  <!-- Flags inside Badge -->
+  <!-- Tunisian Flag -->
+  <g transform="translate(180, 296)">
+    <circle cx="16" cy="16" r="16" fill="#E70013" />
+    <circle cx="16" cy="16" r="8" fill="#FFFFFF" />
+    <circle cx="16" cy="16" r="6" fill="#E70013" />
+    <circle cx="18" cy="16" r="5" fill="#FFFFFF" />
+    <polygon points="16,12 17,14.5 19.5,14.5 17.5,16 18.5,18.5 16,17 13.5,18.5 14.5,16 12.5,14.5 15,14.5" fill="#E70013" />
+  </g>
+
+  <!-- Japanese Flag -->
+  <g transform="translate(288, 296)">
+    <circle cx="16" cy="16" r="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.5" />
+    <circle cx="16" cy="16" r="9.6" fill="#BC002D" />
+  </g>
+
+  <!-- Kanji Kizuna & Kaizen Banner in Inner Center -->
+  <text x="250" y="350" text-anchor="middle" font-family="'Noto Sans JP', sans-serif" font-weight="700" font-size="13" letter-spacing="4" fill="#0D9488">
+    改善 • KAIZEN | 絆 • KIZUNA
+  </text>
+</svg>

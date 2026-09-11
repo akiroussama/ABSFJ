@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABSFJ Tunisie | Association des Bénéficiaires des Sessions de Formation au Japon (JICA)</title>
+  <meta name="description" content="Site officiel de l'Association des Bénéficiaires des Sessions de Formation de la JICA au Japon en Tunisie (ABSFJ). Fédérer plus de 1800 alumni tunisiens formés au Japon, promouvoir la philosophie KAIZEN et renforcer la coopération tuniso-japonaise.">
+  <meta name="keywords" content="ABSFJ, JICA Tunisie, Jamel Boujdaria, Kaizen Tunisie, Boursiers Japon Tunisie, Coopération Tunisie Japon, Méthode Fukuoka Béja, TICAD">
+  
+  <!-- Open Graph / Facebook Metadata -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.facebook.com/61573098115073/">
+  <meta property="og:title" content="ABSFJ Tunisie | Association des Bénéficiaires des Sessions de Formation au Japon">
+  <meta property="og:description" content="Réseau d'excellence des cadres et experts tunisiens formés au Japon par la JICA. Valeurs de Kaizen, Kizuna et développement durable.">
+  <meta property="og:image" content="assets/images/logo-absfj.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Typography: Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Montserrat:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Canvas discret pour les pétales de cerisiers (Sakura) -->
+  <canvas id="sakura-canvas"></canvas>
+
+  <!-- ==================== HEADER & NAVIGATION ==================== -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#accueil" class="brand-wrapper">
+        <img src="assets/images/logo-absfj.svg" alt="Logo Officiel ABSFJ" class="brand-logo-img">
+        <div class="brand-text">
+          <span class="brand-acronym">ABSFJ</span>
+          <span class="brand-sub">JICA Alumni • Tunisie</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+        <li><a href="#a-propos" class="nav-link">À Propos</a></li>
+        <li><a href="#piliers" class="nav-link">Missions & Buts</a></li>
+        <li><a href="#evenements" class="nav-link">Événements</a></li>
+        <li><a href="#logo-section" class="nav-link">Notre Logo</a></li>
+        <li><a href="#adhesion" class="nav-link">Adhésion</a></li>
+        <li><a href="#partenaires" class="nav-link">Partenaires</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Action Buttons & Dark Mode Toggle -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="btn-icon" title="Changer de thème (Clair/Sombre)" aria-label="Toggle Theme">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+
+        <a href="#adhesion" class="btn btn-primary" style="display: none;">Rejoindre</a>
+        <a href="#adhesion" class="btn btn-primary">Espace Membre</a>
+
+        <button class="menu-toggle" id="menu-toggle" aria-label="Menu Mobile">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="accueil" class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <!-- Badges de culture et diplomatie -->
+        <div class="hero-badge-row">
+          <span class="hero-tag hero-tag-japan">🇹🇳 Tunisie × 🇯🇵 Japon</span>
+          <span class="hero-tag hero-tag-kanji">改善 • KAIZEN</span>
+          <span class="hero-tag hero-tag-kanji">絆 • KIZUNA (Amitié)</span>
+        </div>
+
+        <h1 class="hero-title">
+          Unir les Compétences, <br>
+          <span class="gradient-text">Bâtir l'Avenir</span> entre la Tunisie et le Japon.
+        </h1>
+
+        <p class="hero-subtitle">
+          Bienvenue sur le portail officiel de l'<strong>Association des Bénéficiaires des Sessions de Formation de la JICA au Japon (ABSFJ)</strong>. Nous fédérons plus de <strong>1 800 cadres, ingénieurs et chercheurs tunisiens</strong> formés au Japon, pour mettre l'excellence et la rigueur nippone au service du développement économique et durable de la Tunisie.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#evenements" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM16 2v4M8 2v4M3 10h18"/></svg>
+            Découvrir nos Actions
+          </a>
+          <a href="#adhesion" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            Rejoindre l'ABSFJ
+          </a>
+          <a href="https://www.facebook.com/61573098115073/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" title="Consulter la page Facebook officielle">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Facebook Officiel
+          </a>
+        </div>
+
+        <div class="hero-meta-strip">
+          <div class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Lancée le <strong>14 Février 2025</strong></span>
+          </div>
+          <div class="hero-meta-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Cité des Sciences • Tunis</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Card -->
+      <div class="hero-visual">
+        <div class="hero-card-showcase">
+          <img src="assets/images/logo-absfj.svg" alt="Emblème Officiel ABSFJ Tunisie" class="hero-logo-display">
+          <div style="margin-top: 15px;">
+            <span class="hero-badge-tag">チュニジアJICA研修生同窓会</span>
+            <p style="font-size: 0.84rem; color: var(--text-muted); margin-top: 8px;">
+              Symbole du Mont Fuji, des flots méditerranéens et de l'alliance fraternelle Tunisie-Japon
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STATS COUNTER STRIP ==================== -->
+  <section class="stats-section">
+    <div class="container stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">1 800+</div>
+        <div class="stat-label">Bénéficiaires Tunisiens Formés au Japon</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Années de Coopération Technique JICA</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Pôles & Domaines d'Expertise</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Engagement pour la Qualité & l'Amitié</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT & PRESIDENT'S MESSAGE ==================== -->
+  <section id="a-propos" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Histoire & Vision</span>
+        <h2 class="section-title">L'ABSFJ : Un Demi-Siècle de Partenariat Vivant</h2>
+        <p class="section-subtitle">Fédérer les talents tunisiens imprégnés du savoir-faire et des valeurs éthiques du Japon.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- Message Card from President Jamel Boujdaria -->
+        <div class="about-card">
+          <div class="president-badge">
+            <div class="president-avatar">JB</div>
+            <div class="president-info">
+              <h4>M. Jamel Boujdaria</h4>
+              <div class="president-title">Président de l'ABSFJ</div>
+              <div class="president-order">Diplomate • Décoré de l'Ordre du Soleil Levant (Japon, 2025)</div>
+            </div>
+          </div>
+
+          <p class="quote-text">
+            « L'ABSFJ n'est pas seulement une association d'anciens boursiers : c'est un laboratoire d'idées, un levier d'action pragmatique et un pont vivant entre la Tunisie et le Japon. Après avoir bénéficié de formations de pointe au Japon, notre responsabilité morale et patriotique est de transférer cette culture de la rigueur, de la méthode KAIZEN et du respect mutuel dans chaque institution et entreprise tunisienne. »
+          </p>
+
+          <p style="font-size: 0.92rem; color: var(--text-muted);">
+            Sous l'impulsion de son bureau exécutif et en synergie permanente avec l'<strong>Ambassade du Japon</strong> et la <strong>JICA</strong>, l'association impulse des projets tangibles dans l'industrie, la santé, le tourisme et l'économie circulaire.
+          </p>
+        </div>
+
+        <!-- Genesis & Timeline Points -->
+        <div class="timeline-features">
+          <div class="feature-point">
+            <div class="feature-icon">🏛️</div>
+            <div class="feature-text">
+              <h5>Lancement Solennel (14 Février 2025)</h5>
+              <p>Inauguration officielle à la Cité des Sciences de Tunis, réunissant officiels japonais et tunisiens pour célébrer l'héritage de plus de 1 800 bénéficiaires formés depuis 1975.</p>
+            </div>
+          </div>
+
+          <div class="feature-point">
+            <div class="feature-icon">⚙️</div>
+            <div class="feature-text">
+              <h5>L'Approche KAIZEN au Cœur de l'Action</h5>
+              <p>Promotion active de la méthodologie japonaise d'amélioration continue, de productivité et de décarbonation pour les entreprises et administrations tunisiennes.</p>
+            </div>
+          </div>
+
+          <div class="feature-point">
+            <div class="feature-icon">🌱</div>
+            <div class="feature-text">
+              <h5>Projets Écologiques Concrets</h5>
+              <p>Soutien à l'expérimentation de la méthode de Fukuoka pour la gestion écologique des déchets à Béja et accélération de la transition verte.</p>
+            </div>
+          </div>
+
+          <div class="feature-point">
+            <div class="feature-icon">🤝</div>
+            <div class="feature-text">
+              <h5>Réseau Panafricain & Triangulaire</h5>
+              <p>Connexion des alumni tunisiens avec les associations JICA de tout le continent africain, dans la continuité de l'esprit TICAD.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STRATEGIC PILLARS (4 BUTS FONDAMENTAUX) ==================== -->
+  <section id="piliers" class="section" style="background-color: var(--bg-muted);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nos Objectifs & Missions</span>
+        <h2 class="section-title">Les 4 Piliers Stratégiques de l'ABSFJ</h2>
+        <p class="section-subtitle">Chaque mission traduit la symbiose entre la sagesse japonaise et le potentiel tunisien.</p>
+      </div>
+
+      <div class="pillars-grid">
+        <!-- Pilier 1 : KIZUNA -->
+        <div class="pillar-card">
+          <div class="pillar-kanji-badge">絆</div>
+          <h3 class="pillar-title">1. Réseau & Synergie (KIZUNA)</h3>
+          <p class="pillar-desc">
+            Rassembler, animer et faire dialoguer la diaspora des 1 800+ cadres tunisiens formés au Japon. Créer une dynamique solidaire d'entraide, de mentorat et d'opportunités d'affaires.
+          </p>
+          <span class="pillar-tag">Fédération des Alumni</span>
+        </div>
+
+        <!-- Pilier 2 : KAIZEN -->
+        <div class="pillar-card">
+          <div class="pillar-kanji-badge">改善</div>
+          <h3 class="pillar-title">2. Philosophie KAIZEN</h3>
+          <p class="pillar-desc">
+            Diffuser la culture de la qualité totale, du 5S et de l'élimination des gaspillages (Muda). Accompagner la compétitivité de l'industrie, des hôpitaux et des services publics tunisiens.
+          </p>
+          <span class="pillar-tag">Productivité & Qualité</span>
+        </div>
+
+        <!-- Pilier 3 : ÉCOLOGIE -->
+        <div class="pillar-card">
+          <div class="pillar-kanji-badge">環境</div>
+          <h3 class="pillar-title">3. Transition Écologique</h3>
+          <p class="pillar-desc">
+            Déployer des technologies environnementales japonaises éprouvées, notamment la méthode Fukuoka d'enfouissement semi-aérobie des déchets (pilote à Béja) et la décarbonation industrielle.
+          </p>
+          <span class="pillar-tag">Durabilité & Climat</span>
+        </div>
+
+        <!-- Pilier 4 : COOPERATION -->
+        <div class="pillar-card">
+          <div class="pillar-kanji-badge">友好</div>
+          <h3 class="pillar-title">4. Amitié & Coopération</h3>
+          <p class="pillar-desc">
+            Agir comme un pont culturel et économique bilatéral. Développer des guides d'accueil pour touristes japonais, encourager les partenariats universitaires (ENSIT, etc.) et les investissements.
+          </p>
+          <span class="pillar-tag">Diplomatie Civile</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EVENTS & ACHIEVEMENTS (OFFICIAL FACEBOOK FEED) ==================== -->
+  <section id="evenements" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Activités & Faits Marquants</span>
+        <h2 class="section-title">Actualités Officielles & Événements</h2>
+        <p class="section-subtitle">Toutes les initiatives marquantes issues de notre page officielle Facebook et du partenariat avec la JICA.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-nav">
+        <button class="filter-btn active" data-filter="all">Tous les Événements</button>
+        <button class="filter-btn" data-filter="ag">Assemblées & Statuts</button>
+        <button class="filter-btn" data-filter="kaizen">KAIZEN & Industrie</button>
+        <button class="filter-btn" data-filter="ecologie">Environnement & Béja</button>
+        <button class="filter-btn" data-filter="reseau">Réseau & Diplomatie</button>
+      </div>
+
+      <!-- Events Grid -->
+      <div class="events-grid">
+        <!-- Event 1: AG 2026 -->
+        <div class="event-card" data-category="ag">
+          <div class="event-card-header">
+            <span class="event-type-badge">Gouvernance</span>
+            <div class="event-date">📅 29 Janvier 2026</div>
+          </div>
+          <div class="event-card-body">
+            <h4 class="event-title">1ère Assemblée Générale Ordinaire de l'ABSFJ</h4>
+            <p class="event-desc">
+              Réunie au siège de l'UTICA à Tunis sous la présidence de M. Jamel Boujdaria. Présentation du rapport moral et financier après 1 an d'activité et mise en place de comités spécialisés.
+            </p>
+            <div class="event-footer">
+              <span class="event-location">📍 Siège de l'UTICA, Tunis</span>
+              <button class="btn-link open-modal-btn" data-event-id="ag-2026">En savoir plus →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2: Kaizen Climat & Décarbonation -->
+        <div class="event-card" data-category="kaizen">
+          <div class="event-card-header">
+            <span class="event-type-badge">Séminaire National</span>
+            <div class="event-date">📅 29 Juin 2026</div>
+          </div>
+          <div class="event-card-body">
+            <h4 class="event-title">Approche Kaizen pour le Climat & la Décarbonation</h4>
+            <p class="event-desc">
+              Séminaire majeur co-organisé avec la JICA Tunisie démontrant comment le Kaizen réduit les déperditions d'énergie et soutient les objectifs climatiques des entreprises tunisiennes.
+            </p>
+            <div class="event-footer">
+              <span class="event-location">📍 Tunis • Partenariat JICA</span>
+              <button class="btn-link open-modal-btn" data-event-id="kaizen-climat">En savoir plus →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3: Fukuoka Béja -->
+        <div class="event-card" data-category="ecologie">
+          <div class="event-card-header">
+            <span class="event-type-badge">Projet Pilote</span>
+            <div class="event-date">📅 En cours (2025 - 2026)</div>
+          </div>
+          <div class="event-card-body">
+            <h4 class="event-title">Méthode de Fukuoka à la Décharge de Béja</h4>
+            <p class="event-desc">
+              Projet environnemental conduit avec l'ANGED et EX Research Institute (Japon) pour convertir la décharge de Béja en site semi-aérobie diminuant les émissions de gaz méthane.
+            </p>
+            <div class="event-footer">
+              <span class="event-location">📍 Décharge de Béja, Tunisie</span>
+              <button class="btn-link open-modal-btn" data-event-id="fukuoka-beja">En savoir plus →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 4: Lancement Cité des Sciences -->
+        <div class="event-card" data-category="ag">
+          <div class="event-card-header">
+            <span class="event-type-badge">Fondation</span>
+            <div class="event-date">📅 14 Février 2025</div>
+          </div>
+          <div class="event-card-body">
+            <h4 class="event-title">Cérémonie Solennelle de Lancement de l'ABSFJ</h4>
+            <p class="event-desc">
+              Lancement historique de l'association à la Cité des Sciences de Tunis en présence de Son Excellence l'Ambassadeur du Japon et du Représentant Résident de la JICA.
+            </p>
+            <div class="event-footer">
+              <span class="event-location">📍 Cité des Sciences, Tunis</span>
+              <button class="btn-link open-modal-btn" data-event-id="lancement-2025">En savoir plus →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 5: Kaizen Santé -->
+        <div class="event-card" data-category="kaizen">
+          <div class="event-card-header">
+            <span class="event-type-badge">Atelier Sectoriel</span>
+            <div class="event-date">📅 Automne 2025</div>
+          </div>
+          <div class="event-card-body">
+            <h4 class="event-title">Le Kaizen Appliqué au Secteur Hospitalier</h4>
+            <p class="event-desc">
+              Partage d'expériences de cadres de santé tunisiens formés au Japon sur la gestion de l'accueil, la réduction des temps d'attente et l'ergonomie des soins en milieu hospitalier.
+            </p>
+            <div class="event-footer">
+              <span class="event-location">📍 ENSIT & CHU Tunis</span>
+              <button class="btn-link open-modal-btn" data-event-id="kaizen-sante">En savoir plus →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 6: Réseau Afrique -->
+        <div class="event-card" data-category="reseau">
+          <div class="event-card-header">
+            <span class="event-type-badge">International</span>
+            <div class="event-date">📅 Novembre 2025</div>
+          </div>
+          <div class="event-card-body">
+            <h4 class="event-title">Connexion avec les Réseaux Alumni JICA d'Afrique</h4>
+            <p class="event-desc">
+              Échanges bilatéraux et multilatéraux avec les associations soeurs de Côte d'Ivoire, du Sénégal et du Kenya pour renforcer la coopération triangulaire Tunisie-Japon-Afrique.
+            </p>
+            <div class="event-footer">
+              <span class="event-location">📍 Plateforme Panafricaine</span>
+              <button class="btn-link open-modal-btn" data-event-id="reseau-afrique">En savoir plus →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LOGO VISUALIZER & DOWNLOAD SECTION ==================== -->
+  <section id="logo-section" class="section logo-hub-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Identité de Marque</span>
+        <h2 class="section-title">Le Logo Officiel de l'ABSFJ</h2>
+        <p class="section-subtitle">Découvrez la symbolique graphique de notre emblème et téléchargez les formats vectoriels haute définition.</p>
+      </div>
+
+      <div class="logo-hub-grid">
+        <!-- Visual Box -->
+        <div class="logo-showcase-box">
+          <img src="assets/images/logo-absfj.svg" alt="Logo Officiel ABSFJ Vectoriel" class="logo-large-preview">
+          
+          <div style="display: flex; justify-content: center; gap: 14px; margin-top: 15px;">
+            <button id="btn-download-svg" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              Télécharger SVG (Vectoriel)
+            </button>
+            <button id="btn-download-badge" class="btn btn-gold">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg>
+              Télécharger Sceau Badge
+            </button>
+          </div>
+        </div>
+
+        <!-- Symbolism Breakdown -->
+        <div class="logo-explanation">
+          <h3 style="font-family: var(--font-serif); font-size: 1.6rem; margin-bottom: 16px;">
+            Une Harmonie Symbolique entre Deux Nations
+          </h3>
+          <p style="color: var(--text-muted); margin-bottom: 24px;">
+            Conçu pour incarner le respect mutuel, la rigueur et l'élévation des compétences, le logo officiel de l'ABSFJ conjugue avec subtilité :
+          </p>
+
+          <div class="logo-symbol-list">
+            <div class="symbol-item">
+              <div class="symbol-bullet">1</div>
+              <div>
+                <strong>Le Mont Fuji Sacré (富士山) :</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">
+                  Représenté en rouge vermillon (symbole d'énergie et de soleil levant) avec sa cime enneigée étincelante, incarnant le sommet de l'excellence et de la sagesse japonaise.
+                </p>
+              </div>
+            </div>
+
+            <div class="symbol-item">
+              <div class="symbol-bullet">2</div>
+              <div>
+                <strong>La Vague Hybride (Méditerranée & Océan) :</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">
+                  Une courbe fluide turquoise et bleu profond indigo rappelant à la fois la Grande Vague de Kanagawa et les eaux scintillantes de Carthage et de Sidi Bou Saïd.
+                </p>
+              </div>
+            </div>
+
+            <div class="symbol-item">
+              <div class="symbol-bullet">3</div>
+              <div>
+                <strong>Les Deux Drapeaux Frères :</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">
+                  Le croissant et l'étoile de la Tunisie à gauche, et le disque solaire Hinomaru du Japon à droite, encadrant l'acronyme ABSFJ dans une symétrie diplomatique parfaite.
+                </p>
+              </div>
+            </div>
+
+            <div class="symbol-item">
+              <div class="symbol-bullet">4</div>
+              <div>
+                <strong>Le Rayonnement Doré :</strong>
+                <p style="font-size: 0.88rem; color: var(--text-muted);">
+                  Les liserés dorés symbolisent la lumière de la connaissance, la valeur des compétences transférées et la pérennité de l'amitié bilatérale.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MEMBERSHIP FORM & VIRTUAL CARD ==================== -->
+  <section id="adhesion" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Rejoindre la Communauté</span>
+        <h2 class="section-title">Espace Adhésion des Anciens Bénéficiaires</h2>
+        <p class="section-subtitle">Vous avez suivi une formation de la JICA au Japon ? Enregistrez-vous pour intégrer le réseau officiel et générer votre carte de membre.</p>
+      </div>
+
+      <div class="membership-grid">
+        <!-- Interactive Registration Form -->
+        <div class="form-card">
+          <h3 style="font-size: 1.35rem; font-weight: 800; margin-bottom: 20px;">Formulaire d'Enregistrement Alumni</h3>
+
+          <div id="form-success-alert" style="display: none; padding: 14px; background-color: #D1FAE5; color: #065F46; border-radius: var(--radius-sm); margin-bottom: 18px; font-weight: 600;">
+            ✓ Félicitations ! Votre demande d'adhésion a été pré-enregistrée. Le bureau de l'ABSFJ vous contactera pour la confirmation.
+          </div>
+
+          <form id="membership-form">
+            <div class="form-group">
+              <label for="card-input-name" class="form-label">Nom & Prénom</label>
+              <input type="text" id="card-input-name" class="form-control" placeholder="Ex: Dr. Mohamed Ben Salem" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+              <div class="form-group">
+                <label for="card-input-year" class="form-label">Année de Formation JICA</label>
+                <input type="number" id="card-input-year" class="form-control" placeholder="Ex: 2024" min="1975" max="2026" required>
+              </div>
+
+              <div class="form-group">
+                <label for="card-input-domain" class="form-label">Domaine d'Expertise</label>
+                <select id="card-input-domain" class="form-control" required>
+                  <option value="KAIZEN & Qualité">KAIZEN & Productivité</option>
+                  <option value="Environnement & Déchets">Environnement (Méthode Fukuoka)</option>
+                  <option value="Santé & Management">Santé & Hôpitaux</option>
+                  <option value="Énergie & Climat">Énergie & Décarbonation</option>
+                  <option value="Agriculture & Eau">Agriculture & Ressources en Eau</option>
+                  <option value="Technologies & TIC">Technologies de l'Information</option>
+                  <option value="Autre Domaine JICA">Autre Spécialité JICA</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="member-email" class="form-label">Adresse Email Professionnelle</label>
+              <input type="email" id="member-email" class="form-control" placeholder="nom@institution.tn" required>
+            </div>
+
+            <div class="form-group">
+              <label for="member-org" class="form-label">Organisme / Entreprise d'Attache</label>
+              <input type="text" id="member-org" class="form-control" placeholder="Ex: Ministère, UTICA, Université, Entreprise">
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+              Soumettre mon Adhésion à l'ABSFJ
+            </button>
+          </form>
+        </div>
+
+        <!-- Virtual Membership Card Preview (Live Update) -->
+        <div class="virtual-card-preview">
+          <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 14px; text-align: center;">
+            Aperçu de Votre Carte Numérique d'Alumni
+          </h3>
+
+          <div class="member-id-card">
+            <div class="card-header-row">
+              <span class="card-brand">ABSFJ TUNISIE</span>
+              <div class="card-chip"></div>
+            </div>
+
+            <div style="font-size: 0.76rem; letter-spacing: 1.5px; text-transform: uppercase; color: #94A3B8; margin-bottom: 6px;">
+              MEMBRE TITULAIRE • JICA ALUMNI
+            </div>
+
+            <div class="card-holder-name" id="card-display-name">
+              VOTRE NOM & PRÉNOM
+            </div>
+
+            <div class="card-details-row">
+              <div>
+                <span style="display: block; font-size: 0.72rem; color: #94A3B8;">SPÉCIALITÉ JICA</span>
+                <strong id="card-display-domain">KAIZEN & Qualité</strong>
+              </div>
+              <div style="text-align: right;">
+                <span style="display: block; font-size: 0.72rem; color: #94A3B8;">SESSION JAPON</span>
+                <strong id="card-display-year">2025</strong>
+              </div>
+            </div>
+
+            <div style="margin-top: 18px; display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.7rem; color: #CBD5E1; font-family: var(--font-serif);">チュニジアJICA研修生同窓会</span>
+              <span style="font-size: 0.7rem; color: #FCD34D;">N° ID: ABSFJ-TN-2026</span>
+            </div>
+          </div>
+
+          <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 14px;">
+            La carte officielle physique et numérique certifiée est délivrée après validation de votre session par le bureau de l'ABSFJ et la JICA.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== INSTITUTIONAL PARTNERS ==================== -->
+  <section id="partenaires" class="partners-section">
+    <div class="container">
+      <div class="partners-title">Partenaires Institutionnels & Écosystème de Coopération</div>
+      <div class="partners-flex">
+        <div class="partner-item">🇯🇵 JICA Tunisie (Agence Japonaise de Coopération Internationale)</div>
+        <div class="partner-item">🏛️ Ambassade du Japon en Tunisie</div>
+        <div class="partner-item">🏢 UTICA (Union Tunisienne de l'Industrie, du Commerce et de l'Artisanat)</div>
+        <div class="partner-item">♻️ ANGED (Agence Nationale de Gestion des Déchets)</div>
+        <div class="partner-item">🎓 ENSIT (École Nationale Supérieure d'Ingénieurs de Tunis)</div>
+        <div class="partner-item">🌍 Réseau Panafricain des Associations Alumni JICA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="contact" class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Col -->
+        <div class="footer-brand">
+          <h3>ABSFJ TUNISIE</h3>
+          <p>
+            Association des Bénéficiaires des Sessions de Formation de la JICA au Japon. Fondée en février 2025 pour valoriser 50 ans d'amitié et d'expertise partagée entre la Tunisie et le Japon.
+          </p>
+          <div style="display: flex; gap: 10px;">
+            <a href="https://www.facebook.com/61573098115073/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="font-size: 0.82rem; padding: 6px 14px;">
+              Page Facebook Officielle
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Col -->
+        <div>
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#a-propos">À Propos & Mot du Président</a></li>
+            <li><a href="#piliers">Missions & 4 Piliers</a></li>
+            <li><a href="#evenements">Actualités & Événements</a></li>
+            <li><a href="#logo-section">Le Logo Officiel</a></li>
+          </ul>
+        </div>
+
+        <!-- Activities Col -->
+        <div>
+          <h4 class="footer-title">Pôles d'Action</h4>
+          <ul class="footer-links">
+            <li><a href="#evenements">Philosophie KAIZEN</a></li>
+            <li><a href="#evenements">Méthode Fukuoka (Béja)</a></li>
+            <li><a href="#evenements">Transition Énergétique</a></li>
+            <li><a href="#evenements">Tourisme Tuniso-Japonais</a></li>
+            <li><a href="#adhesion">Espace Adhérents Alumni</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Col -->
+        <div>
+          <h4 class="footer-title">Contact Officiel</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <span>Tunis, République Tunisienne</span>
+          </div>
+          <div class="footer-contact-item">
+            <span>🌐</span>
+            <span>Page officielle Facebook : <br><a href="https://www.facebook.com/61573098115073/" target="_blank" rel="noopener noreferrer" style="color: var(--gold-accent); word-break: break-all;">facebook.com/61573098115073</a></span>
+          </div>
+          <div class="footer-contact-item">
+            <span>🤝</span>
+            <span>En liaison directe avec le Bureau de la JICA Tunisie</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2025 - 2026 ABSFJ Tunisie. Tous droits réservés.
+        </div>
+        <div>
+          チュニジアJICA研修生同窓会 • 絆 (Kizuna) & 改善 (Kaizen)
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== MODAL D'ÉVÉNEMENT ==================== -->
+  <div class="modal-overlay" id="event-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">✕</button>
+      <span class="hero-tag hero-tag-japan" style="margin-bottom: 12px; display: inline-block;">Publication Officielle</span>
+      <h3 id="modal-title" style="font-family: var(--font-serif); font-size: 1.45rem; margin-bottom: 10px;">Titre de l'Événement</h3>
+      <div id="modal-date" style="font-size: 0.85rem; color: var(--gold-accent); font-weight: 700; margin-bottom: 18px;">Date</div>
+      <p id="modal-description" style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px;">
+        Détails complets...
+      </p>
+      <div style="text-align: right;">
+        <a href="https://www.facebook.com/61573098115073/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-size: 0.85rem;">
+          Voir sur Facebook →
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

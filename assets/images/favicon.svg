@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <circle cx="32" cy="32" r="30" fill="#0F172A" />
+  <!-- Fuji stylized -->
+  <path d="M 32,8 C 34,16 37,24 45,32 C 38,30 35,28 32,30 C 29,28 26,30 19,32 C 27,24 30,16 32,8 Z" fill="#DC2626" />
+  <path d="M 32,8 C 32.5,12 33.5,15 35,18 L 34,19 L 36,21 L 34,22 L 32,23 L 30,22 L 28,21 L 30,19 L 29,18 C 30.5,15 31.5,12 32,8 Z" fill="#FFFFFF" />
+  <!-- Wave -->
+  <path d="M 12,42 C 22,38 27,37 32,39 C 37,37 42,38 52,42 C 45,41 38,40 32,42 C 26,40 19,41 12,42 Z" fill="#0D9488" />
+  <!-- Text ABSFJ -->
+  <text x="32" y="54" text-anchor="middle" font-family="'Cinzel', serif" font-weight="900" font-size="11" letter-spacing="1" fill="#FFFFFF">ABSFJ</text>
+</svg>

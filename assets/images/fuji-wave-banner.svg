@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="50%" stop-color="#1E293B" />
+      <stop offset="100%" stop-color="#0369A1" />
+    </linearGradient>
+
+    <!-- Rising Sun Halo -->
+    <radialGradient id="sunGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#EF4444" stop-opacity="0.9" />
+      <stop offset="60%" stop-color="#DC2626" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#DC2626" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Seigaiha Pattern -->
+    <pattern id="seigaiha" width="60" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 0,30 A 30,30 0 0,1 60,30 M 5,30 A 25,25 0 0,1 55,30 M 10,30 A 20,20 0 0,1 50,30 M 15,30 A 15,15 0 0,1 45,30 M 20,30 A 10,10 0 0,1 40,30 M 25,30 A 5,5 0 0,1 35,30" fill="none" stroke="#38BDF8" stroke-opacity="0.15" stroke-width="1.2" />
+      <path d="M 30,15 A 30,30 0 0,1 90,15 M 35,15 A 25,25 0 0,1 85,15 M 40,15 A 20,20 0 0,1 80,15 M 45,15 A 15,15 0 0,1 75,15 M 50,15 A 10,10 0 0,1 70,15 M 55,15 A 5,5 0 0,1 65,15" fill="none" stroke="#38BDF8" stroke-opacity="0.15" stroke-width="1.2" />
+      <path d="M -30,15 A 30,30 0 0,1 30,15 M -25,15 A 25,25 0 0,1 25,15 M -20,15 A 20,20 0 0,1 20,15 M -15,15 A 15,15 0 0,1 15,15 M -10,15 A 10,10 0 0,1 10,15 M -5,15 A 5,5 0 0,1 5,15" fill="none" stroke="#38BDF8" stroke-opacity="0.15" stroke-width="1.2" />
+    </pattern>
+  </defs>
+
+  <!-- Sky Base -->
+  <rect width="1200" height="400" fill="url(#skyGrad)" />
+  <!-- Pattern Overlay -->
+  <rect width="1200" height="400" fill="url(#seigaiha)" />
+
+  <!-- The Rising Sun / Japanese Hinomaru & Tunisian Dawn -->
+  <circle cx="600" cy="220" r="160" fill="url(#sunGlow)" />
+  <circle cx="600" cy="220" r="110" fill="#E11D48" opacity="0.85" />
+
+  <!-- Mount Fuji silhouette -->
+  <path d="M 600,100 C 625,170 660,240 730,290 C 810,345 920,380 1050,390 L 150,390 C 280,380 390,345 470,290 C 540,240 575,170 600,100 Z" fill="#091428" opacity="0.9" />
+  <!-- Snow Peaks -->
+  <path d="M 600,100 C 608,125 618,150 635,175 L 626,182 L 638,195 L 620,202 L 626,220 L 610,215 L 600,224 L 590,215 L 574,220 L 580,202 L 562,195 L 574,182 L 565,175 C 582,150 592,125 600,100 Z" fill="#FFFFFF" opacity="0.95" />
+
+  <!-- Great Waves in Foreground (Mediterranean Azure + Japanese Navy) -->
+  <path d="M 0,330 C 150,290 300,360 450,320 C 600,280 750,350 900,310 C 1050,270 1150,330 1200,310 L 1200,400 L 0,400 Z" fill="#0284C7" opacity="0.6" />
+  <path d="M 0,355 C 180,325 350,380 520,345 C 680,310 860,370 1020,335 C 1120,310 1180,340 1200,330 L 1200,400 L 0,400 Z" fill="#0D9488" opacity="0.75" />
+  <path d="M 0,375 C 220,350 420,390 640,365 C 850,340 1040,380 1200,360 L 1200,400 L 0,400 Z" fill="#0F172A" />
+
+  <!-- Floating Sakura Petals -->
+  <g fill="#FDA4AF" opacity="0.8">
+    <ellipse cx="220" cy="120" rx="14" ry="7" transform="rotate(25, 220, 120)" />
+    <ellipse cx="250" cy="150" rx="12" ry="6" transform="rotate(-15, 250, 150)" />
+    <ellipse cx="380" cy="80" rx="15" ry="8" transform="rotate(45, 380, 80)" />
+    <ellipse cx="850" cy="140" rx="14" ry="7" transform="rotate(-30, 850, 140)" />
+    <ellipse cx="980" cy="180" rx="16" ry="8" transform="rotate(15, 980, 180)" />
+    <ellipse cx="780" cy="90" rx="13" ry="6" transform="rotate(60, 780, 90)" />
+  </g>
+</svg>

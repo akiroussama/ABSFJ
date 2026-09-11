@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients for Fuji and Waves -->
+    <linearGradient id="fujiRedGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#C8102E" />
+      <stop offset="60%" stop-color="#E02438" />
+      <stop offset="100%" stop-color="#9E0B1E" />
+    </linearGradient>
+
+    <linearGradient id="snowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="70%" stop-color="#F8FAFC" />
+      <stop offset="100%" stop-color="#E2E8F0" />
+    </linearGradient>
+
+    <linearGradient id="tealWaveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="40%" stop-color="#0D9488" />
+      <stop offset="80%" stop-color="#14B8A6" />
+      <stop offset="100%" stop-color="#F59E0B" />
+    </linearGradient>
+
+    <linearGradient id="navyWaveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="35%" stop-color="#1E3A8A" />
+      <stop offset="70%" stop-color="#0369A1" />
+      <stop offset="100%" stop-color="#0D9488" />
+    </linearGradient>
+
+    <linearGradient id="goldAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#FCD34D" />
+    </linearGradient>
+
+    <filter id="softGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- BACKGROUND: Transparent for universal placement -->
+
+  <!-- ==================== TOP ICONOGRAPHY: FUJI & HYBRID WAVE ==================== -->
+  <g transform="translate(0, 5)" filter="url(#softGlow)">
+    <!-- Fuji Mountain Body (Crimson Japanese Sunrise / Tunisian Red) -->
+    <path d="M 400,30 
+             C 415,80 435,130 475,175 
+             C 525,230 600,265 675,275 
+             C 590,260 520,225 460,205 
+             C 435,198 415,200 400,215 
+             C 385,200 365,198 340,205 
+             C 280,225 210,260 125,275 
+             C 200,265 275,230 325,175 
+             C 365,130 385,80 400,30 Z" 
+          fill="url(#fujiRedGrad)" />
+
+    <!-- Mount Fuji Snow Cap (Stylized Japanese Traditional Peaks) -->
+    <path d="M 400,30 
+             C 405,48 412,68 424,88 
+             L 418,92 L 426,102 L 413,108 L 418,124 L 406,120 L 400,126 L 394,120 L 382,124 L 387,108 L 374,102 L 382,92 L 376,88 
+             C 388,68 395,48 400,30 Z" 
+          fill="url(#snowGrad)" />
+
+    <!-- Inner Snow Ridges -->
+    <path d="M 400,38 L 402,75 L 408,98 L 400,118 L 392,98 L 398,75 Z" fill="#E2E8F0" opacity="0.6" />
+
+    <!-- Wave 1: Teal / Cyan (Mediterranean Waters & Pacific Waves) -->
+    <path d="M 230,240 
+             C 310,215 360,202 400,220 
+             C 440,202 490,215 570,240 
+             C 505,230 450,224 400,236 
+             C 350,224 295,230 230,240 Z" 
+          fill="url(#tealWaveGrad)" />
+
+    <!-- Wave 2: Deep Indigo Navy Arc (Structure & Depth) -->
+    <path d="M 125,275 
+             C 215,268 290,245 350,226 
+             C 375,218 390,218 400,222 
+             C 410,218 425,218 450,226 
+             C 510,245 585,268 675,275 
+             C 610,270 540,250 470,235 
+             C 435,228 415,230 400,245 
+             C 385,230 365,228 330,235 
+             C 260,250 190,270 125,275 Z" 
+          fill="url(#navyWaveGrad)" />
+
+    <!-- Golden Horizon Stroke (Warmth, Sunrise & Cooperation) -->
+    <path d="M 525,248 
+             C 580,260 635,268 685,272 
+             C 645,268 595,258 545,248 Z" 
+          fill="url(#goldAccent)" />
+    <path d="M 115,272 
+             C 165,268 220,260 275,248 
+             C 255,248 205,258 165,268 Z" 
+          fill="url(#goldAccent)" />
+  </g>
+
+  <!-- ==================== MIDDLE ROW: FLAGS & ACRONYM ==================== -->
+
+  <!-- TUNISIAN FLAG EMBLEM (Left) -->
+  <g transform="translate(145, 332)">
+    <!-- Flag base circle with subtle border -->
+    <circle cx="28" cy="28" r="27" fill="#E70013" stroke="#D1D5DB" stroke-width="1.5" filter="url(#softGlow)" />
+    <!-- White center disk -->
+    <circle cx="28" cy="28" r="14" fill="#FFFFFF" />
+    <!-- Red Crescent -->
+    <circle cx="28" cy="28" r="10" fill="#E70013" />
+    <circle cx="31" cy="28" r="8" fill="#FFFFFF" />
+    <!-- Red 5-pointed Star -->
+    <polygon points="28,21 29.8,25.5 34.5,25.5 30.7,28.2 32.2,32.7 28,30 23.8,32.7 25.3,28.2 21.5,25.5 26.2,25.5" fill="#E70013" />
+  </g>
+
+  <!-- ACRONYM: ABSFJ (Center) -->
+  <!-- Bold, dynamic, slightly italicized with Japanese calligraphy inspiration -->
+  <g transform="translate(400, 368)" text-anchor="middle">
+    <!-- Drop shadow text for depth -->
+    <text x="2" y="2" font-family="'Cinzel', 'Noto Serif JP', 'Georgia', serif" font-weight="900" font-size="78" font-style="italic" letter-spacing="8" fill="#CBD5E1" opacity="0.6">ABSFJ</text>
+    <!-- Main Acronym text -->
+    <text x="0" y="0" font-family="'Cinzel', 'Noto Serif JP', 'Georgia', serif" font-weight="900" font-size="78" font-style="italic" letter-spacing="8" fill="#0F172A">ABSFJ</text>
+  </g>
+
+  <!-- JAPANESE FLAG EMBLEM (Right) -->
+  <g transform="translate(595, 332)">
+    <!-- Flag base rounded card / badge with border -->
+    <rect x="0" y="0" width="56" height="56" rx="28" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1.5" filter="url(#softGlow)" />
+    <!-- Japanese Red Sun (Hinomaru) -->
+    <circle cx="28" cy="28" r="16.8" fill="#BC002D" />
+  </g>
+
+  <!-- ==================== BOTTOM ROW: OFFICIAL FULL SUBTITLES ==================== -->
+  
+  <!-- Line 1: Main Title in French -->
+  <text x="400" y="420" 
+        text-anchor="middle" 
+        font-family="'Montserrat', 'Segoe UI', 'Helvetica Neue', sans-serif" 
+        font-weight="700" 
+        font-size="21" 
+        letter-spacing="1.2" 
+        fill="#B91C1C">
+    Association des Bénéficiaires des Sessions de Formation au Japon
+  </text>
+
+  <!-- Line 2: Partnership Banner / English & Japanese reference -->
+  <g transform="translate(400, 452)">
+    <!-- Decorative side lines -->
+    <line x1="-320" y1="-5" x2="-140" y2="-5" stroke="#CBD5E1" stroke-width="1.2" />
+    <circle cx="-135" cy="-5" r="2.5" fill="#B91C1C" />
+    
+    <text x="0" y="0" 
+          text-anchor="middle" 
+          font-family="'Montserrat', 'Segoe UI', 'Helvetica Neue', sans-serif" 
+          font-weight="600" 
+          font-size="14.5" 
+          letter-spacing="3" 
+          fill="#1E293B">
+      PAR LA JICA • TUNISIE
+    </text>
+
+    <circle cx="135" cy="-5" r="2.5" fill="#B91C1C" />
+    <line x1="140" y1="-5" x2="320" y2="-5" stroke="#CBD5E1" stroke-width="1.2" />
+  </g>
+
+  <!-- Line 3: Subtitle in Japanese & English (Diplomatic harmony) -->
+  <text x="400" y="478" 
+        text-anchor="middle" 
+        font-family="'Noto Sans JP', 'Montserrat', sans-serif" 
+        font-weight="500" 
+        font-size="12" 
+        letter-spacing="2" 
+        fill="#64748B">
+    チュニジアJICA研修生同窓会 | JICA TRAINING ALUMNI TUNISIA
+  </text>
+</svg>
