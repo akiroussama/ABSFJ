@@ -6,15 +6,16 @@ Le suivi concerne uniquement la page publique de l’ABSFJ, identifiant
 `61573098115073` :
 https://www.facebook.com/people/Association-des-b%C3%A9n%C3%A9ficiaires-des-sessions-de-formation-de-la-JICA-au-Japon/61573098115073/
 
-Le contrôle est exécuté par une tâche récurrente Codex attachée à la conversation
-du projet, toutes les 48 heures. Il utilise l’accès public au navigateur, vérifié
-le 11 septembre 2026. L’ordinateur doit être allumé, Codex ouvert et le navigateur
-disponible. Ce n’est pas un ordonnanceur hébergé par Vercel ou GitHub Actions :
-l’intervalle planifié ne garantit pas une publication en moins de 48 heures en cas
-d’indisponibilité de la machine, de Facebook ou du déploiement.
+Le dépôt contient le protocole d’un job GitHub Actions prévu toutes les 48 heures.
+L’API Meta Spark peut aider à structurer le texte, mais elle ne remplace pas
+l’autorisation de lecture Facebook. Le job doit recevoir `FACEBOOK_PAGE_ID` et
+`FACEBOOK_PAGE_ACCESS_TOKEN` depuis les Secrets GitHub. `MUSE_SPARK_API_KEY` est
+un secret séparé, optionnel pour la structuration ; aucune clé ne doit figurer
+dans le dépôt ou dans les journaux.
 
-Nom dans Codex : **ABSFJ — publications Facebook toutes les 48 h**.
-Identifiant : `absfj-publications-facebook-toutes-les-48-h`.
+La tâche Codex actuelle « ABSFJ — publications Facebook toutes les 48 h » reste
+un filet de contrôle tant que le workflow GitHub avec le token Page n’est pas
+installé. Elle dépend de l’ordinateur allumé et de Codex ouvert.
 
 ## Registre de départ
 
