@@ -18,7 +18,7 @@
 
 ## 🌟 Présentation
 
-L'**ABSFJ** (*Association des Bénéficiaires des Sessions de Formation de la JICA au Japon*) réunit la communauté d'élite de plus de **1 800 cadres, ingénieurs, médecins, hauts fonctionnaires et experts tunisiens** ayant bénéficié de programmes de formation et de transfert de savoir-faire au Japon sous l'égide de la **JICA** (*Japan International Cooperation Agency*) depuis 1975.
+L'**ABSFJ** (_Association des Bénéficiaires des Sessions de Formation de la JICA au Japon_) réunit la communauté d'élite de plus de **1 800 cadres, ingénieurs, médecins, hauts fonctionnaires et experts tunisiens** ayant bénéficié de programmes de formation et de transfert de savoir-faire au Japon sous l'égide de la **JICA** (_Japan International Cooperation Agency_) depuis 1975.
 
 Présidée par **S.E. M. Jamel Boujdaria**, diplomate de carrière décoré par Sa Majesté l'Empereur du Japon de l'**Ordre du Soleil Levant, Rayons d'Or avec Rosette**, l'association œuvre au renforcement des liens d'amitié bilatéraux et à la diffusion de l'excellence méthodologique japonaise.
 
@@ -70,3 +70,18 @@ L'ensemble des publications de la page officielle Facebook ([facebook.com/615730
 
 - **Site Web en Ligne (GitHub Pages) :** [https://akiroussama.github.io/ABSFJ/](https://akiroussama.github.io/ABSFJ/)
 - **Visualisation Locale :** Ouvrez simplement le fichier `index.html` dans un navigateur web moderne.
+
+## Direction artistique — Kizuna (septembre 2026)
+
+La page adopte une composition éditoriale japonaise : papier ivoire `#F7F5EF`, rouge sceau `#A52F36`, vert encre `#263A31` et or patiné `#9C8050`. Cormorant Garamond compose les titres, Manrope les interfaces et Noto Serif JP les caractères japonais. Les images existantes du Fuji et de Sidi Bou Saïd ouvrent le récit ; le portrait du président, les quatre panneaux des missions et les archives photographiques prolongent cette identité.
+
+Le site reste intégralement statique : `index.html`, `assets/css/style.css`, `assets/js/main.js`. Aucun framework ni compilation ne sont nécessaires. Les 12 événements, les 21 fiches de galerie, les liens sources et les photographies originales sont conservés.
+
+- Le drapeau tunisien du bandeau est un SVG intégré, avec son disque blanc, son croissant et son étoile rouges.
+- Le thème est mémorisé lorsque le stockage du navigateur est disponible.
+- Les pétales sont suspendus dans un onglet masqué et désactivés avec la préférence de réduction des mouvements.
+- Les modales verrouillent le fond, maintiennent le focus au clavier et le restaurent à la fermeture. La galerie propose aussi le balayage tactile.
+- Les filtres actualisent immédiatement les résultats et leur état accessible.
+- **Adhésion :** le formulaire prépare et télécharge un fichier texte sur l’appareil. Le visiteur doit le transmettre à l’association via sa page officielle. Aucun enregistrement distant, envoi automatique ou carte validée n’est simulé. Les données saisies ne sont pas enregistrées dans le stockage local.
+
+Pour un aperçu local : `python -m http.server 4173 --bind 127.0.0.1`, puis ouvrir `http://127.0.0.1:4173/`. Vérification de syntaxe : `node --check assets/js/main.js`.
