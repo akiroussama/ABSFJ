@@ -1,7 +1,7 @@
 # 🇹🇳 ABSFJ - Association des Bénéficiaires des Sessions de Formation de la JICA au Japon 🇯🇵
 
 <p align="center">
-  <img src="assets/images/logo-absfj.svg" alt="Logo Officiel ABSFJ Tunisie" width="220" />
+  <img src="assets/images/logo-absfj-officiel.jpg" alt="Logo officiel ABSFJ Tunisie publié sur Facebook" width="220" />
   <br>
   <b>チュニジアJICA研修生同窓会 • JICA Training Alumni Tunisia</b>
   <br>
@@ -62,7 +62,7 @@ L'ensemble des publications de la page officielle Facebook ([facebook.com/615730
 - **Thème Sombre / Thème Clair** avec bascule instantanée et persistance locale.
 - **Animation poétique de pétales de cerisiers (Sakura)** en arrière-plan.
 - **Générateur interactif de carte de membre numérique en temps réel** avec puce dorée et badge personnalisé.
-- **Téléchargement direct du logo** en format vectoriel SVG haute résolution.
+- **Logo institutionnel officiel** repris de la page Facebook de l’association, avec téléchargement de la version haute définition.
 
 ---
 

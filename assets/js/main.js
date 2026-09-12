@@ -928,6 +928,67 @@ document.addEventListener("DOMContentLoaded", () => {
     link.click();
     link.remove();
   }
+  const restitutionForm = document.getElementById("restitution-form");
+  const restitutionText = document.getElementById("restitution-text");
+  const restitutionCount = document.getElementById("restitution-count");
+  const restitutionStatus = document.getElementById("restitution-status");
+  const restitutionYear = document.getElementById("restitution-year");
+  restitutionYear.max = String(new Date().getFullYear());
+  function restitutionParagraphs() {
+    return restitutionText.value
+      .trim()
+      .split(/\n\s*\n/)
+      .map((paragraph) => paragraph.trim())
+      .filter(Boolean);
+  }
+  function updateRestitutionCount() {
+    const count = restitutionParagraphs().length;
+    restitutionCount.textContent = `${count} / 3 paragraphe${count > 1 ? "s" : ""}`;
+    restitutionCount.classList.toggle("is-valid", count >= 2 && count <= 3);
+  }
+  restitutionText.addEventListener("input", updateRestitutionCount);
+  restitutionForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const paragraphs = restitutionParagraphs();
+    if (paragraphs.length < 2 || paragraphs.length > 3) {
+      restitutionStatus.textContent =
+        "Séparez votre texte en deux ou trois paragraphes avec une ligne vide.";
+      restitutionStatus.classList.add("is-error");
+      restitutionText.focus();
+      return;
+    }
+    const name = document.getElementById("restitution-name").value.trim();
+    const title = document.getElementById("restitution-title").value.trim();
+    const content = [
+      "RESTITUTION DE MISSION AU JAPON — ABSFJ TUNISIE",
+      "",
+      `Auteur : ${name}`,
+      `Année : ${restitutionYear.value}`,
+      `Mission / Formation : ${title}`,
+      "",
+      ...paragraphs.flatMap((paragraph, index) => [
+        `PARAGRAPHE ${index + 1}`,
+        paragraph,
+        "",
+      ]),
+      "Document préparé par l’adhérent. Publication soumise à la validation de l’ABSFJ.",
+    ].join("\n");
+    const url = URL.createObjectURL(
+      new Blob(["\uFEFF", content], { type: "text/plain;charset=utf-8" }),
+    );
+    const safeName = name
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/[^a-z0-9]+/gi, "-")
+      .replace(/^-|-$/g, "")
+      .toLowerCase();
+    downloadFile(url, `ABSFJ-restitution-${safeName || "adherent"}.txt`);
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    restitutionStatus.textContent =
+      "Votre restitution est prête et a été téléchargée sur votre appareil.";
+    restitutionStatus.classList.remove("is-error");
+  });
+  updateRestitutionCount();
   document.getElementById("membership-form").addEventListener("submit", (e) => {
     e.preventDefault();
     const content = [
@@ -955,16 +1016,8 @@ document.addEventListener("DOMContentLoaded", () => {
     .getElementById("btn-download-svg")
     .addEventListener("click", () =>
       downloadFile(
-        "assets/images/logo-absfj.svg",
-        "ABSFJ_Logo_Officiel_HD.svg",
-      ),
-    );
-  document
-    .getElementById("btn-download-badge")
-    .addEventListener("click", () =>
-      downloadFile(
-        "assets/images/logo-absfj-badge.svg",
-        "ABSFJ_Badge_Officiel_Sceau.svg",
+        "assets/images/logo-absfj-officiel.jpg",
+        "ABSFJ_Logo_Officiel.jpg",
       ),
     );
 
