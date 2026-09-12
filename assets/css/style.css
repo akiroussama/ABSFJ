@@ -1570,6 +1570,67 @@ html {
   font-size: 8px;
   letter-spacing: 0.6px;
 }
+.event-upcoming-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f6f0dd;
+  background-color: #203d37;
+  background-image:
+    radial-gradient(circle at 78% 29%, #a72f3bd9 0 7%, transparent 7.3%),
+    repeating-radial-gradient(
+      ellipse at 20% 125%,
+      transparent 0 13px,
+      #e9d7ae24 14px 15px,
+      transparent 16px 27px
+    ),
+    linear-gradient(135deg, #203d37, #496456 58%, #263d36);
+}
+.upcoming-art-kicker {
+  position: absolute;
+  top: 22px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #f2e5c5cc;
+  font-size: 8px;
+  letter-spacing: 1.2px;
+}
+.upcoming-art-kicker span[lang="ja"] {
+  color: #ead39a;
+  font-family: var(--font-jp);
+  font-size: 22px;
+}
+.upcoming-date {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-top: 10px;
+  text-shadow: 0 3px 18px #14282288;
+}
+.upcoming-day {
+  color: #fffaf0;
+  font-family: var(--font-serif);
+  font-size: clamp(72px, 8vw, 104px);
+  line-height: 0.85;
+}
+.upcoming-month {
+  border-left: 1px solid #d2b77c;
+  padding-left: 13px;
+  color: #f0dfb6;
+  font-family: var(--font-serif);
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 1.45;
+}
+.event-card-upcoming .event-title {
+  color: var(--primary);
+}
+.event-announcement-date {
+  color: var(--gold-accent);
+  text-align: right;
+}
 .event-photos-count {
   position: absolute;
   right: 12px;
@@ -3532,5 +3593,12 @@ html {
   }
   .stat-number span {
     font-size: 24px;
+  }
+}
+
+@media (max-width: 430px) {
+  .events-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
   }
 }
