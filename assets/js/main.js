@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   updateNavigation();
 
-  // Paint each flower once; animate only small cached sprites at varying depths.
+  // Botanical miniatures: six cached silk/porcelain studies, carried by a slow breeze.
   const canvas = document.getElementById("sakura-canvas");
   const ctx = canvas?.getContext("2d");
   if (ctx) {
@@ -101,83 +101,171 @@ document.addEventListener("DOMContentLoaded", () => {
       frame = 0,
       lastTime = 0,
       flowers = [];
-    function flowerSprite(jasmine) {
+    function flowerSprite(jasmine, variation) {
       const sprite = document.createElement("canvas");
-      sprite.width = sprite.height = 96;
+      sprite.width = sprite.height = 256;
       const brush = sprite.getContext("2d");
-      brush.translate(48, 48);
-      const petals = jasmine ? 7 : 5;
-      for (let i = 0; i < petals; i++) {
+      brush.scale(2, 2);
+      brush.translate(64, 64);
+
+      // An asymmetric sage leaf gives the white jasmine a quiet botanical signature.
+      if (jasmine) {
         brush.save();
-        brush.rotate((i * Math.PI * 2) / petals);
-        const wash = brush.createLinearGradient(0, 0, 0, -36);
-        wash.addColorStop(0, jasmine ? "#b6bc86" : "#ce718e");
-        wash.addColorStop(0.42, jasmine ? "#f6f3e5" : "#ecabc2");
-        wash.addColorStop(1, jasmine ? "#ffffff" : "#ffe0e9");
-        brush.fillStyle = wash;
-        brush.strokeStyle = jasmine ? "#71826ab8" : "#b95e7a60";
-        brush.lineWidth = jasmine ? 1.7 : 1.1;
-        brush.shadowColor = jasmine ? "#3e554d70" : "#99475e26";
-        brush.shadowBlur = jasmine ? 3.5 : 2;
-        brush.shadowOffsetY = jasmine ? 2 : 1;
+        brush.rotate(-0.35 + variation * 0.24);
+        const leaf = brush.createLinearGradient(9, 15, 40, 49);
+        leaf.addColorStop(0, "#536c59");
+        leaf.addColorStop(0.5, "#80977a");
+        leaf.addColorStop(1, "#b5bea0");
+        brush.fillStyle = leaf;
         brush.beginPath();
-        brush.moveTo(0, 3);
-        if (jasmine) {
-          // Full ivory lobes with sage edges retain definition on the paper background.
-          brush.bezierCurveTo(-11, -5, -14, -24, -3, -37);
-          brush.bezierCurveTo(2, -42, 15, -23, 11, -11);
-          brush.bezierCurveTo(9, -4, 3, 1, 0, 3);
-        } else {
-          // Five broad petals, each with the characteristic cherry-blossom notch.
-          brush.bezierCurveTo(-13, -4, -22, -24, -12, -34);
-          brush.quadraticCurveTo(-7, -39, -3, -35);
-          brush.lineTo(0, -29);
-          brush.lineTo(4, -36);
-          brush.bezierCurveTo(14, -42, 23, -22, 10, -7);
-          brush.quadraticCurveTo(4, 0, 0, 3);
-        }
-        brush.closePath();
+        brush.moveTo(7, 11);
+        brush.bezierCurveTo(32, 12, 44, 28, 43, 50);
+        brush.bezierCurveTo(20, 45, 11, 33, 7, 11);
         brush.fill();
+        brush.strokeStyle = "#d6d6b496";
+        brush.lineWidth = 0.7;
+        brush.beginPath();
+        brush.moveTo(10, 15);
+        brush.quadraticCurveTo(29, 30, 40, 46);
         brush.stroke();
         brush.restore();
       }
-      // Fine stamens and a warm centre make the blossoms legible at small sizes.
-      const stamens = jasmine ? 7 : 10;
-      brush.strokeStyle = jasmine ? "#a7ad74" : "#b36379";
-      brush.fillStyle = jasmine ? "#c9b666" : "#c29b62";
-      brush.lineWidth = 0.8;
+
+      const petals = jasmine ? 7 : 5;
+      for (let i = 0; i < petals; i++) {
+        brush.save();
+        const irregularity = Math.sin(i * 2.4 + variation * 1.7);
+        brush.rotate((i * Math.PI * 2) / petals + irregularity * 0.065);
+        brush.scale(1 + irregularity * 0.06, 0.94 + irregularity * 0.06);
+
+        // A coloured underside and an off-centre highlight suggest a folded surface.
+        const wash = jasmine
+          ? brush.createLinearGradient(-15, -23, 15, -16)
+          : brush.createLinearGradient(-18, 1, 13, -43);
+        wash.addColorStop(0, jasmine ? "#8c9d88" : "#a84969");
+        wash.addColorStop(0.28, jasmine ? "#dce2d4" : "#d7809c");
+        wash.addColorStop(0.6, jasmine ? "#ffffff" : "#f2b9c9");
+        wash.addColorStop(0.84, jasmine ? "#f9f6e9" : "#ffe3e8");
+        wash.addColorStop(1, jasmine ? "#aebca2" : "#efb1c4");
+        brush.fillStyle = wash;
+        brush.shadowColor = jasmine ? "#344f467a" : "#87375340";
+        brush.shadowBlur = 3;
+        brush.shadowOffsetX = -0.8;
+        brush.shadowOffsetY = 1.8;
+        brush.beginPath();
+        brush.moveTo(-2, 5);
+        if (jasmine) {
+          // Twisted lance-shaped petals, rather than a flat outlined star.
+          brush.bezierCurveTo(-15, -5, -17, -26, -5, -45);
+          brush.bezierCurveTo(-1, -49, 17, -30, 12, -15);
+          brush.bezierCurveTo(10, -4, 3, 1, -2, 5);
+        } else {
+          // Broad silk lobes and a small V-shaped cherry-blossom notch.
+          brush.bezierCurveTo(-13, -5, -26, -24, -17, -39);
+          brush.bezierCurveTo(-13, -47, -7, -48, -3, -43);
+          brush.lineTo(1, -36);
+          brush.lineTo(5, -44);
+          brush.bezierCurveTo(16, -49, 25, -31, 16, -16);
+          brush.bezierCurveTo(11, -7, 4, 0, -2, 5);
+        }
+        brush.closePath();
+        brush.fill();
+        brush.shadowColor = "transparent";
+        if (jasmine) {
+          // Only the shaded edge is defined; the lit edge melts into the ivory.
+          const edge = brush.createLinearGradient(-15, 0, 12, -37);
+          edge.addColorStop(0, "#5c716087");
+          edge.addColorStop(0.55, "#89997b66");
+          edge.addColorStop(1, "#ffffff90");
+          brush.strokeStyle = edge;
+          brush.lineWidth = 1.3;
+          brush.stroke();
+        }
+        brush.clip();
+
+        // A translucent fold catches the light on one side of each petal.
+        const fold = brush.createLinearGradient(-7, -19, 10, -21);
+        fold.addColorStop(0, "#ffffff00");
+        fold.addColorStop(0.48, jasmine ? "#ffffffa8" : "#fff5f29c");
+        fold.addColorStop(0.58, jasmine ? "#9ca98c38" : "#b7658430");
+        fold.addColorStop(1, "#ffffff00");
+        brush.fillStyle = fold;
+        brush.beginPath();
+        brush.moveTo(-2, 4);
+        brush.bezierCurveTo(-7, -12, 7, -27, jasmine ? -5 : 1, -45);
+        brush.quadraticCurveTo(20, -22, 8, -4);
+        brush.closePath();
+        brush.fill();
+
+        brush.strokeStyle = jasmine ? "#7d906338" : "#a94d7438";
+        brush.lineWidth = 0.65;
+        for (const side of [-1, 1]) {
+          brush.beginPath();
+          brush.moveTo(0, -3);
+          brush.quadraticCurveTo(side * 9, -16, side * 10, -29);
+          brush.stroke();
+        }
+        brush.strokeStyle = jasmine ? "#ffffffb8" : "#fff3efb0";
+        brush.lineWidth = 0.85;
+        brush.beginPath();
+        brush.moveTo(jasmine ? -5 : 5, -43);
+        brush.quadraticCurveTo(17, -30, 10, -15);
+        brush.stroke();
+        brush.restore();
+      }
+
+      const heart = brush.createRadialGradient(-1, -2, 0, 0, 0, 12);
+      heart.addColorStop(0, jasmine ? "#b4bd7b" : "#aa4e70");
+      heart.addColorStop(0.48, jasmine ? "#d6d6a6" : "#d987a0");
+      heart.addColorStop(1, jasmine ? "#dedec200" : "#e5a3ba00");
+      brush.fillStyle = heart;
+      brush.beginPath();
+      brush.arc(0, 0, 12, 0, Math.PI * 2);
+      brush.fill();
+
+      // Fine champagne stamens, with tiny points of light rather than sparkles.
+      const stamens = jasmine ? 7 : 12;
+      brush.strokeStyle = jasmine ? "#929e64" : "#a25e79";
+      brush.lineWidth = 0.7;
       for (let i = 0; i < stamens; i++) {
         const angle = (i * Math.PI * 2) / stamens;
-        const radius = jasmine ? 6 : 11;
+        const radius = jasmine ? 5.5 : 9 + (i % 3) * 1.8;
         const x = Math.cos(angle) * radius;
         const y = Math.sin(angle) * radius;
         brush.beginPath();
         brush.moveTo(x * 0.25, y * 0.25);
-        brush.lineTo(x, y);
+        brush.quadraticCurveTo(x * 0.6 - 1, y * 0.5, x, y);
         brush.stroke();
+        brush.fillStyle = jasmine ? "#b6a461" : "#c7a16b";
         brush.beginPath();
-        brush.arc(x, y, 1.15, 0, Math.PI * 2);
+        brush.arc(x, y, jasmine ? 1 : 1.4, 0, Math.PI * 2);
+        brush.fill();
+        brush.fillStyle = "#fff4d7";
+        brush.beginPath();
+        brush.arc(x - 0.3, y - 0.4, 0.5, 0, Math.PI * 2);
         brush.fill();
       }
-      brush.beginPath();
-      brush.arc(0, 0, jasmine ? 3 : 2.4, 0, Math.PI * 2);
-      brush.fill();
       return sprite;
     }
-    const sprites = [flowerSprite(false), flowerSprite(true)];
+    const sprites = [false, true].map((jasmine) =>
+      Array.from({ length: 3 }, (_, variation) =>
+        flowerSprite(jasmine, variation),
+      ),
+    );
     function flower(randomY = false, kind = Math.round(Math.random())) {
       const depth = Math.random();
       return {
         kind,
+        variation: Math.floor(Math.random() * 3),
         x: Math.random() * width,
-        y: randomY ? Math.random() * height : -40,
-        size: kind === 1 ? 31 + depth * 17 : 23 + depth * 16,
-        speed: 10 + depth * 13,
-        drift: 3 + Math.random() * 7,
+        y: randomY ? Math.random() * height : -60,
+        size: (kind === 1 ? 43 : 39) + depth * 19,
+        speed: 8 + depth * 10,
+        drift: (Math.random() - 0.45) * 7,
         angle: Math.random() * Math.PI * 2,
         phase: Math.random() * Math.PI * 2,
-        spin: (Math.random() - 0.5) * 0.28,
-        opacity: kind === 1 ? 0.8 + depth * 0.14 : 0.46 + depth * 0.28,
+        spin: (Math.random() - 0.5) * 0.16,
+        opacity: kind === 1 ? 0.88 + depth * 0.1 : 0.58 + depth * 0.2,
       };
     }
     function resizeCanvas() {
@@ -187,7 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
       canvas.width = width * dpr;
       canvas.height = height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      flowers = Array.from({ length: width < 760 ? 12 : 24 }, (_, i) =>
+      flowers = Array.from({ length: width < 760 ? 8 : 18 }, (_, i) =>
         flower(true, i % 2),
       );
     }
@@ -196,21 +284,28 @@ document.addEventListener("DOMContentLoaded", () => {
       lastTime = time;
       ctx.clearRect(0, 0, width, height);
       flowers.forEach((p, i) => {
-        p.phase += dt * 0.45;
-        p.x += (p.drift + Math.sin(p.phase) * 9) * dt;
-        p.y += p.speed * dt;
+        p.phase += dt * 0.34;
+        p.x += (p.drift + Math.sin(p.phase) * 12) * dt;
+        p.y += (p.speed + Math.cos(p.phase * 0.8) * 2) * dt;
         p.angle += p.spin * dt;
-        if (p.y > height + 40 || p.x > width + 40 || p.x < -40) {
+        if (p.y > height + 60 || p.x > width + 60 || p.x < -60) {
           flowers[i] = flower(false, p.kind);
           return;
         }
         ctx.save();
         ctx.translate(p.x, p.y);
-        ctx.rotate(p.angle);
-        ctx.scale(1, 0.84 + Math.sin(p.phase) * 0.12);
+        ctx.rotate(p.angle + Math.sin(p.phase * 0.7) * 0.16);
+        ctx.transform(
+          1,
+          Math.sin(p.phase) * 0.09,
+          0,
+          0.82 + Math.cos(p.phase) * 0.16,
+          0,
+          0,
+        );
         ctx.globalAlpha = p.opacity;
         ctx.drawImage(
-          sprites[p.kind],
+          sprites[p.kind][p.variation],
           -p.size / 2,
           -p.size / 2,
           p.size,
