@@ -116,8 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
         brush.scale(1 + nuance * 0.025, 1 - nuance * 0.018);
         const wash = brush.createLinearGradient(-12, 2, 9, -40);
         if (jasmine) {
-          wash.addColorStop(0, "#c3b48388");
-          wash.addColorStop(0.22, "#eee8d6db");
+          wash.addColorStop(0, "#a58f62b8");
+          wash.addColorStop(0.22, "#e2d8bfd9");
           wash.addColorStop(0.68, "#fffef7f0");
           wash.addColorStop(1, "#d8ccb0a0");
         } else {
@@ -143,6 +143,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         brush.closePath();
         brush.fill();
+
+        if (jasmine) {
+          // A champagne edge keeps the ivory silhouette visible on pale paper.
+          const rim = brush.createLinearGradient(-9, -3, 8, -39);
+          rim.addColorStop(0, "#80663ac2");
+          rim.addColorStop(0.48, "#b39b6e9e");
+          rim.addColorStop(1, "#fffdf34d");
+          brush.strokeStyle = rim;
+          brush.lineWidth = 1.05;
+          brush.stroke();
+        }
 
         // A single hairline highlight suggests embossed paper, without an outline.
         brush.strokeStyle = jasmine ? "#fffdf5b8" : "#fff5f2a0";
@@ -195,13 +206,13 @@ document.addEventListener("DOMContentLoaded", () => {
         variation: Math.floor(Math.random() * 2),
         x: Math.random() * width,
         y: randomY ? Math.random() * height : -60,
-        size: (kind === 1 ? 27 : 25) + depth * 12,
+        size: (kind === 1 ? 36 : 29) + depth * 16,
         speed: 7 + depth * 8,
         drift: (Math.random() - 0.5) * 5,
         angle: Math.random() * Math.PI * 2,
         phase: Math.random() * Math.PI * 2,
         spin: (Math.random() - 0.5) * 0.11,
-        opacity: kind === 1 ? 0.46 + depth * 0.12 : 0.38 + depth * 0.14,
+        opacity: kind === 1 ? 0.8 + depth * 0.14 : 0.48 + depth * 0.14,
       };
     }
     function resizeCanvas() {
@@ -211,7 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
       canvas.width = width * dpr;
       canvas.height = height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      flowers = Array.from({ length: width < 760 ? 5 : 11 }, (_, i) =>
+      flowers = Array.from({ length: width < 760 ? 9 : 18 }, (_, i) =>
         flower(true, i % 2),
       );
     }
