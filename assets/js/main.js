@@ -116,10 +116,10 @@ document.addEventListener("DOMContentLoaded", () => {
         brush.scale(1 + nuance * 0.025, 1 - nuance * 0.018);
         const wash = brush.createLinearGradient(-12, 2, 9, -40);
         if (jasmine) {
-          wash.addColorStop(0, "#a58f62b8");
-          wash.addColorStop(0.22, "#e2d8bfd9");
-          wash.addColorStop(0.68, "#fffef7f0");
-          wash.addColorStop(1, "#d8ccb0a0");
+          wash.addColorStop(0, "#967a49d4");
+          wash.addColorStop(0.22, "#d8c9a9ed");
+          wash.addColorStop(0.68, "#fffdf4fa");
+          wash.addColorStop(1, "#c7b389c9");
         } else {
           wash.addColorStop(0, "#a64c6870");
           wash.addColorStop(0.28, "#dfa0b4c7");
@@ -142,7 +142,13 @@ document.addEventListener("DOMContentLoaded", () => {
           brush.bezierCurveTo(23, -21, 14, -2, 0, 4);
         }
         brush.closePath();
+        if (jasmine) {
+          brush.shadowColor = "#57452e5c";
+          brush.shadowBlur = 1.8;
+          brush.shadowOffsetY = 1.1;
+        }
         brush.fill();
+        brush.shadowColor = "transparent";
 
         if (jasmine) {
           // A champagne edge keeps the ivory silhouette visible on pale paper.
@@ -151,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
           rim.addColorStop(0.48, "#b39b6e9e");
           rim.addColorStop(1, "#fffdf34d");
           brush.strokeStyle = rim;
-          brush.lineWidth = 1.05;
+          brush.lineWidth = 1.15;
           brush.stroke();
         }
 
@@ -212,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
         angle: Math.random() * Math.PI * 2,
         phase: Math.random() * Math.PI * 2,
         spin: (Math.random() - 0.5) * 0.11,
-        opacity: kind === 1 ? 0.8 + depth * 0.14 : 0.48 + depth * 0.14,
+        opacity: kind === 1 ? 0.86 + depth * 0.1 : 0.48 + depth * 0.14,
       };
     }
     function resizeCanvas() {
