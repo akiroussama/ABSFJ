@@ -60,7 +60,7 @@ L'ensemble des publications de la page officielle Facebook ([facebook.com/615730
 - **Modals d'Événements Multi-Photos** : Galerie miniature interactive pour basculer instantanément entre les photos d'un même événement.
 - **Système de Double Filtrage** : Filtres thématiques pour les 12 actualités et pour la médiathèque photo.
 - **Thème Sombre / Thème Clair** avec bascule instantanée et persistance locale.
-- **Animation de fleurs de sakura et de jasmin** : corolles dessinées sur Canvas, mouvements lents et légers effets de relief, adaptés au mobile et à la réduction des mouvements.
+- **Filigranes floraux de sakura et de jasmin** : corolles minimalistes inspirées des emblèmes japonais, palette poudrée et champagne, mouvement lent adapté au mobile et à la réduction des animations.
 - **Générateur interactif de carte de membre numérique en temps réel** avec puce dorée et badge personnalisé.
 - **Logo institutionnel officiel** repris de la page Facebook de l’association, avec téléchargement de la version haute définition.
 
