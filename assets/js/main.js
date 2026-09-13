@@ -1,4 +1,4 @@
-/** ABSFJ — theme, navigation, sakura and accessible photo archives. */
+/** ABSFJ — theme, navigation, sakura & jasmine and accessible photo archives. */
 document.addEventListener("DOMContentLoaded", () => {
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const themeButton = document.getElementById("theme-toggle");
@@ -74,7 +74,9 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     if (section)
       navigation.forEach((link) => {
-        const active = link.hash === "#" + section.id;
+        const active =
+          link.hash ===
+          "#" + (section.id === "bureau" ? "a-propos" : section.id);
         link.classList.toggle("active", active);
         if (active) link.setAttribute("aria-current", "location");
         else link.removeAttribute("aria-current");
@@ -90,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   updateNavigation();
 
-  // Lightweight, time-based petals. Pause offscreen and respect reduced motion.
+  // Paint each flower once; animate only small cached sprites at varying depths.
   const canvas = document.getElementById("sakura-canvas");
   const ctx = canvas?.getContext("2d");
   if (ctx) {
@@ -98,17 +100,84 @@ document.addEventListener("DOMContentLoaded", () => {
       height,
       frame = 0,
       lastTime = 0,
-      petals = [];
-    function petal(randomY = false) {
+      flowers = [];
+    function flowerSprite(jasmine) {
+      const sprite = document.createElement("canvas");
+      sprite.width = sprite.height = 96;
+      const brush = sprite.getContext("2d");
+      brush.translate(48, 48);
+      const petals = jasmine ? 7 : 5;
+      for (let i = 0; i < petals; i++) {
+        brush.save();
+        brush.rotate((i * Math.PI * 2) / petals);
+        const wash = brush.createLinearGradient(0, 0, 0, -36);
+        wash.addColorStop(0, jasmine ? "#d7d9aa" : "#ce718e");
+        wash.addColorStop(0.42, jasmine ? "#f3f0df" : "#ecabc2");
+        wash.addColorStop(1, jasmine ? "#ffffff" : "#ffe0e9");
+        brush.fillStyle = wash;
+        brush.strokeStyle = jasmine ? "#8e99817a" : "#b95e7a60";
+        brush.lineWidth = 1.1;
+        brush.shadowColor = jasmine ? "#4a62573d" : "#99475e26";
+        brush.shadowBlur = 2;
+        brush.shadowOffsetY = 1;
+        brush.beginPath();
+        brush.moveTo(0, 3);
+        if (jasmine) {
+          // Long, ivory-white lobes with a slight twist: a star-shaped jasmine.
+          brush.bezierCurveTo(-9, -5, -11, -23, -2, -37);
+          brush.bezierCurveTo(1, -39, 11, -22, 8, -11);
+          brush.bezierCurveTo(7, -4, 3, 1, 0, 3);
+        } else {
+          // Five broad petals, each with the characteristic cherry-blossom notch.
+          brush.bezierCurveTo(-13, -4, -22, -24, -12, -34);
+          brush.quadraticCurveTo(-7, -39, -3, -35);
+          brush.lineTo(0, -29);
+          brush.lineTo(4, -36);
+          brush.bezierCurveTo(14, -42, 23, -22, 10, -7);
+          brush.quadraticCurveTo(4, 0, 0, 3);
+        }
+        brush.closePath();
+        brush.fill();
+        brush.stroke();
+        brush.restore();
+      }
+      // Fine stamens and a warm centre make the blossoms legible at small sizes.
+      const stamens = jasmine ? 7 : 10;
+      brush.strokeStyle = jasmine ? "#a7ad74" : "#b36379";
+      brush.fillStyle = jasmine ? "#c9b666" : "#c29b62";
+      brush.lineWidth = 0.8;
+      for (let i = 0; i < stamens; i++) {
+        const angle = (i * Math.PI * 2) / stamens;
+        const radius = jasmine ? 6 : 11;
+        const x = Math.cos(angle) * radius;
+        const y = Math.sin(angle) * radius;
+        brush.beginPath();
+        brush.moveTo(x * 0.25, y * 0.25);
+        brush.lineTo(x, y);
+        brush.stroke();
+        brush.beginPath();
+        brush.arc(x, y, 1.15, 0, Math.PI * 2);
+        brush.fill();
+      }
+      brush.beginPath();
+      brush.arc(0, 0, jasmine ? 3 : 2.4, 0, Math.PI * 2);
+      brush.fill();
+      return sprite;
+    }
+    const sprites = [flowerSprite(false), flowerSprite(true)];
+    function flower(randomY = false, kind = Math.round(Math.random())) {
+      const depth = Math.random();
       return {
+        kind,
         x: Math.random() * width,
-        y: randomY ? Math.random() * height : -20,
-        size: 7 + Math.random() * 7,
-        speed: 18 + Math.random() * 21,
-        drift: 7 + Math.random() * 15,
+        y: randomY ? Math.random() * height : -40,
+        size: 23 + depth * 16,
+        speed: 10 + depth * 13,
+        drift: 3 + Math.random() * 7,
         angle: Math.random() * Math.PI * 2,
-        spin: (Math.random() - 0.5) * 0.6,
-        opacity: 0.5 + Math.random() * 0.3,
+        phase: Math.random() * Math.PI * 2,
+        spin: (Math.random() - 0.5) * 0.28,
+        opacity: 0.46 + depth * 0.28,
       };
     }
     function resizeCanvas() {
@@ -118,26 +187,35 @@ document.addEventListener("DOMContentLoaded", () => {
       canvas.width = width * dpr;
       canvas.height = height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      petals = Array.from({ length: width < 760 ? 16 : 30 }, () => petal(true));
+      flowers = Array.from({ length: width < 760 ? 12 : 24 }, (_, i) =>
+        flower(true, i % 2),
+      );
     }
     function animate(time) {
       const dt = Math.min((time - lastTime) / 1000 || 0.016, 0.04);
       lastTime = time;
       ctx.clearRect(0, 0, width, height);
-      petals.forEach((p, i) => {
-        p.x += (p.drift + Math.sin(p.angle) * 10) * dt;
+      flowers.forEach((p, i) => {
+        p.phase += dt * 0.45;
+        p.x += (p.drift + Math.sin(p.phase) * 9) * dt;
         p.y += p.speed * dt;
         p.angle += p.spin * dt;
-        if (p.y > height + 20 || p.x > width + 20) petals[i] = petal();
+        if (p.y > height + 40 || p.x > width + 40 || p.x < -40) {
+          flowers[i] = flower(false, p.kind);
+          return;
+        }
         ctx.save();
         ctx.translate(p.x, p.y);
         ctx.rotate(p.angle);
-        ctx.beginPath();
-        ctx.moveTo(0, 0);
-        ctx.bezierCurveTo(p.size * 0.5, -p.size * 0.5, p.size, 0, 0, p.size);
-        ctx.bezierCurveTo(-p.size, 0, -p.size * 0.5, -p.size * 0.5, 0, 0);
-        ctx.fillStyle = `rgba(208, 107, 127, ${p.opacity})`;
-        ctx.fill();
+        ctx.scale(1, 0.84 + Math.sin(p.phase) * 0.12);
+        ctx.globalAlpha = p.opacity;
+        ctx.drawImage(
+          sprites[p.kind],
+          -p.size / 2,
+          -p.size / 2,
+          p.size,
+          p.size,
+        );
         ctx.restore();
       });
       frame = requestAnimationFrame(animate);
