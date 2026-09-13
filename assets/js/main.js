@@ -111,22 +111,22 @@ document.addEventListener("DOMContentLoaded", () => {
         brush.save();
         brush.rotate((i * Math.PI * 2) / petals);
         const wash = brush.createLinearGradient(0, 0, 0, -36);
-        wash.addColorStop(0, jasmine ? "#d7d9aa" : "#ce718e");
-        wash.addColorStop(0.42, jasmine ? "#f3f0df" : "#ecabc2");
+        wash.addColorStop(0, jasmine ? "#b6bc86" : "#ce718e");
+        wash.addColorStop(0.42, jasmine ? "#f6f3e5" : "#ecabc2");
         wash.addColorStop(1, jasmine ? "#ffffff" : "#ffe0e9");
         brush.fillStyle = wash;
-        brush.strokeStyle = jasmine ? "#8e99817a" : "#b95e7a60";
-        brush.lineWidth = 1.1;
-        brush.shadowColor = jasmine ? "#4a62573d" : "#99475e26";
-        brush.shadowBlur = 2;
-        brush.shadowOffsetY = 1;
+        brush.strokeStyle = jasmine ? "#71826ab8" : "#b95e7a60";
+        brush.lineWidth = jasmine ? 1.7 : 1.1;
+        brush.shadowColor = jasmine ? "#3e554d70" : "#99475e26";
+        brush.shadowBlur = jasmine ? 3.5 : 2;
+        brush.shadowOffsetY = jasmine ? 2 : 1;
         brush.beginPath();
         brush.moveTo(0, 3);
         if (jasmine) {
-          // Long, ivory-white lobes with a slight twist: a star-shaped jasmine.
-          brush.bezierCurveTo(-9, -5, -11, -23, -2, -37);
-          brush.bezierCurveTo(1, -39, 11, -22, 8, -11);
-          brush.bezierCurveTo(7, -4, 3, 1, 0, 3);
+          // Full ivory lobes with sage edges retain definition on the paper background.
+          brush.bezierCurveTo(-11, -5, -14, -24, -3, -37);
+          brush.bezierCurveTo(2, -42, 15, -23, 11, -11);
+          brush.bezierCurveTo(9, -4, 3, 1, 0, 3);
         } else {
           // Five broad petals, each with the characteristic cherry-blossom notch.
           brush.bezierCurveTo(-13, -4, -22, -24, -12, -34);
@@ -171,13 +171,13 @@ document.addEventListener("DOMContentLoaded", () => {
         kind,
         x: Math.random() * width,
         y: randomY ? Math.random() * height : -40,
-        size: 23 + depth * 16,
+        size: kind === 1 ? 31 + depth * 17 : 23 + depth * 16,
         speed: 10 + depth * 13,
         drift: 3 + Math.random() * 7,
         angle: Math.random() * Math.PI * 2,
         phase: Math.random() * Math.PI * 2,
         spin: (Math.random() - 0.5) * 0.28,
-        opacity: 0.46 + depth * 0.28,
+        opacity: kind === 1 ? 0.8 + depth * 0.14 : 0.46 + depth * 0.28,
       };
     }
     function resizeCanvas() {
