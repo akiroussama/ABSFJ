@@ -11,7 +11,7 @@ L’annonce concerne explicitement l’« Association des bénéficiaires de ses
 - Narjes Ben Amer : secrétaire générale.
 - Ahmed Ben Slama : trésorier.
 
-Cette source prouve la composition déclarée à la constitution. Elle ne confirme pas à elle seule que les quatre fonctions sont encore inchangées en septembre 2026. Le site présente donc expressément le bureau déclaré en 2024, avec un lien direct vers l’annonce, sans le qualifier de bureau actuel.
+Cette source prouve la composition déclarée à la constitution. Elle ne confirme pas à elle seule que les quatre fonctions sont encore inchangées en septembre 2026. Le 13 septembre 2026, le responsable du site a confirmé dans la conversation que cette composition est toujours valable et demandé de citer le JORT. La section est donc présentée comme le bureau exécutif ; la référence publique reste explicitement l’annonce de constitution de 2024, avec un lien direct.
 
 ## Effectif actuel : non établi
 
