@@ -192,6 +192,21 @@
         "122176323434769937"
       ],
       "origin": "existing_site"
+    },
+    {
+      "post_id": "pfbid0VN7DMeB1DeMzq93SkKYrz3Bd5k78qyMYBG8kSCGTSKMsa83Vu4m4ZfsFLJQCZuG8l",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0VN7DMeB1DeMzq93SkKYrz3Bd5k78qyMYBG8kSCGTSKMsa83Vu4m4ZfsFLJQCZuG8l&id=61573098115073",
+      "published_date": "2026-09-21",
+      "event_ids": [
+        "restitution-yosra-ben-fadhel"
+      ],
+      "gallery_ids": [
+        "p22"
+      ],
+      "photo_ids": [
+        "122187731948769937"
+      ],
+      "origin": "facebook_sync"
     }
   ]
 }

@@ -284,6 +284,23 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const eventDetailsData = {
+    "restitution-yosra-ben-fadhel": {
+      id: "restitution-yosra-ben-fadhel",
+      category: "kaizen",
+      badge: "Restitution JICA",
+      date: "21 Septembre 2026",
+      location: "Japon • Tunisie",
+      title:
+        "Mme Yosra Ben Fadhel partage son expérience de formation au Japon",
+      summary:
+        "À la suite de sa formation JICA consacrée à la gestion et à la maintenance des équipements médicaux, Mme Yosra Ben Fadhel restitue les enseignements de son parcours au Japon.",
+      full_text:
+        "Mme Yosra Ben Fadhel à la suite de sa formation sur la gestion des équipements médicaux organisée par la JICA au Japon.",
+      main_image: "assets/images/events/photo_122187731948769937.jpg",
+      images: ["assets/images/events/photo_122187731948769937.jpg"],
+      fb_url:
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid0VN7DMeB1DeMzq93SkKYrz3Bd5k78qyMYBG8kSCGTSKMsa83Vu4m4ZfsFLJQCZuG8l&id=61573098115073",
+    },
     "ia-distinction-akir": {
       id: "ia-distinction-akir",
       category: "reseau",
@@ -779,6 +796,19 @@ document.addEventListener("DOMContentLoaded", () => {
       desc: "Célébration festive du 70e anniversaire des relations amicales et diplomatiques Tunisie - Japon.",
       fb_url:
         "https://www.facebook.com/permalink.php?story_fbid=pfbid0K3JYnMeR4FddESuTLHZnYUzuhzttBNFKw6f3dPaGsnLCdPXSwwxkqdnmG4oeyXAol&id=61573098115073",
+    },
+    {
+      id: "p22",
+      category: "talents",
+      tag: "Restitution JICA",
+      img: "assets/images/events/photo_122187731948769937.jpg",
+      title: "Mme Yosra Ben Fadhel • Gestion des équipements médicaux",
+      date: "21 Septembre 2026",
+      event_id: "restitution-yosra-ben-fadhel",
+      event_name: "Restitution de formation JICA au Japon",
+      desc: "Retour d'expérience de Mme Yosra Ben Fadhel après une formation JICA au Japon sur la gestion et la maintenance des équipements médicaux.",
+      fb_url:
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid0VN7DMeB1DeMzq93SkKYrz3Bd5k78qyMYBG8kSCGTSKMsa83Vu4m4ZfsFLJQCZuG8l&id=61573098115073",
     },
   ];
 
