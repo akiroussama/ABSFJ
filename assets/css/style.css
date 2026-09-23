@@ -3694,3 +3694,113 @@ html {
     gap: 32px;
   }
 }
+
+/* Quiet, one-time language invitation; the full choice remains in view. */
+.language-nudge {
+  position: fixed;
+  z-index: 1600;
+  inset-block-start: 42vh;
+  inset-inline-end: 14px;
+  display: grid;
+  gap: 10px;
+  width: 168px;
+  padding: 16px 12px 12px;
+  color: #292923;
+  background: rgba(255, 253, 248, 0.96);
+  border: 1px solid rgba(143, 118, 70, 0.28);
+  border-radius: 18px;
+  box-shadow: 0 12px 36px rgba(28, 30, 25, 0.18);
+  opacity: 0;
+  transform: translateX(16px);
+  transition: opacity 220ms ease, transform 300ms cubic-bezier(.2,.75,.25,1);
+  backdrop-filter: blur(14px);
+}
+.language-nudge[hidden] { display: none; }
+.language-nudge.is-visible { opacity: 1; transform: translateX(0); }
+.language-nudge.is-dismissed { display: none; }
+.language-nudge-label {
+  color: #777365;
+  font-size: 9px;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: .05em;
+}
+.language-nudge-options { display: grid; gap: 5px; direction: ltr; }
+.language-nudge-options button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  width: 100%;
+  min-height: 42px;
+  padding: 6px 10px;
+  color: inherit;
+  font: 700 12px/1.2 Manrope, "Noto Sans Arabic", "Noto Sans JP", sans-serif;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+.language-nudge-options button:hover,
+.language-nudge-options button[aria-pressed="true"] {
+  background: #f4eee1;
+  border-color: rgba(143, 118, 70, 0.22);
+}
+.language-nudge-options button:hover { transform: translateX(-2px); }
+.language-nudge-options button span:first-child { flex: 0 0 24px; font-size: 19px; text-align: center; }
+.language-nudge-options button span:last-child { white-space: nowrap; text-align: left; }
+.language-nudge-close {
+  position: absolute;
+  inset-block-start: 3px;
+  inset-inline-end: 5px;
+  padding: 0 3px;
+  color: #777365;
+  font-size: 16px;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.language-trigger {
+  position: fixed;
+  z-index: 1601;
+  inset-block-end: 20px;
+  inset-inline-end: 18px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 54px;
+  min-height: 44px;
+  padding: 8px 12px;
+  color: #292923;
+  font: 800 11px/1 Manrope, sans-serif;
+  background: rgba(255, 253, 248, .96);
+  border: 1px solid rgba(143, 118, 70, .32);
+  border-radius: 24px;
+  box-shadow: 0 5px 18px rgba(28, 30, 25, .15);
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+}
+.language-trigger span:first-child { font-size: 17px; }
+.language-trigger:hover { background: #f4eee1; }
+html[lang="ja"] body { font-family: "Noto Sans JP", "Manrope", sans-serif; }
+html[lang="ar"] body { font-family: "Noto Sans Arabic", sans-serif; }
+html[lang="ar"] .nav-link-kanji { display: none; }
+html[lang="ar"] .nav-links,
+html[lang="ar"] .nav-actions,
+html[lang="ar"] .hero-cta-group { direction: rtl; }
+html[lang="ar"] .hero-content,
+html[lang="ar"] .section-header,
+html[lang="ar"] .pillar-card,
+html[lang="ar"] .form-card,
+html[lang="ar"] .footer-brand { text-align: right; }
+html[lang="ar"] .hero-signature { flex-direction: row-reverse; }
+html[lang="ar"] .section-tag { letter-spacing: 0; }
+@media (max-width: 640px) {
+  .language-nudge { inset-block-start: 38vh; inset-inline-end: 8px; width: 168px; }
+  .language-trigger { inset-block-end: 14px; inset-inline-end: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .language-nudge, .language-nudge-options button { transition: none; }
+}
