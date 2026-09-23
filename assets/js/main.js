@@ -886,7 +886,16 @@ document.addEventListener("DOMContentLoaded", () => {
             filter !== "all" && item.getAttribute(categoryAttribute) !== filter;
           if (!item.hidden) visible++;
         });
-        status.textContent = `${visible} ${label}`;
+        const language = document.documentElement.dataset.language;
+        const statusCopy = {
+          en:
+            filterAttribute === "data-filter"
+              ? `${visible} ${visible === 1 ? "event" : "events"} shown`
+              : `${visible} ${visible === 1 ? "photo" : "photos"} shown`,
+          ja: filterAttribute === "data-filter" ? `${visible}件のイベントを表示` : `${visible}枚の写真を表示`,
+          fr: `${visible} ${label}`,
+        };
+        status.textContent = statusCopy[language] || statusCopy.fr;
       });
     });
   }
@@ -911,15 +920,54 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".open-modal-btn").forEach((button) => {
     button.setAttribute("aria-haspopup", "dialog");
     const data = eventDetailsData[button.dataset.eventId];
-    button.setAttribute("aria-label", "Lire : " + data.title);
+    const setMoreLabel = () => {
+      const language = document.documentElement.dataset.language || "fr";
+      const title = button.closest(".event-card")?.querySelector(".event-title")?.textContent.trim() || data.title;
+      button.setAttribute("aria-label", ({ fr: "Lire : " + title, en: "Read more: " + title, ja: "詳しく見る：" + title })[language]);
+    };
+    setMoreLabel();
+    window.addEventListener("absfj:languagechange", setMoreLabel);
     button.addEventListener("click", () => {
-      document.getElementById("modal-title").textContent = data.title;
-      document.getElementById("modal-date").textContent = data.date;
-      document.getElementById("modal-location").textContent = data.location;
-      document.getElementById("modal-badge").textContent = data.badge;
+      const card = button.closest(".event-card");
+      const language = document.documentElement.dataset.language || "fr";
+      const translated = language !== "fr";
+      const localisedDate = (() => {
+        const match = data.date.match(/^(\d{1,2})\s+([\p{L}]+)\s+(\d{4})$/u);
+        if (!match || !translated) return data.date;
+        const month = {
+          janvier: 0, février: 1, mars: 2, avril: 3, mai: 4, juin: 5,
+          juillet: 6, août: 7, septembre: 8, octobre: 9, novembre: 10, décembre: 11,
+        }[match[2].toLocaleLowerCase("fr")];
+        if (month === undefined) return data.date;
+        return new Intl.DateTimeFormat(language === "ja" ? "ja-JP" : "en-GB", {
+          day: "numeric", month: "long", year: "numeric",
+        }).format(new Date(Number(match[3]), month, Number(match[1])));
+      })();
+      document.getElementById("modal-title").textContent =
+        translated ? card?.querySelector(".event-title")?.textContent || data.title : data.title;
+      document.getElementById("modal-date").textContent = localisedDate;
+      document.getElementById("modal-location").textContent = translated
+        ? card?.querySelector(".event-location")?.textContent || data.location
+        : data.location;
+      document.getElementById("modal-badge").textContent = translated
+        ? card?.querySelector(".event-type-badge-overlay")?.textContent || data.badge
+        : data.badge;
       document.getElementById("modal-description").textContent =
-        data.full_text || data.summary;
+        translated
+          ? card?.querySelector(".event-desc")?.textContent || data.summary
+          : data.full_text || data.summary;
       document.getElementById("modal-fb-link").href = data.fb_url;
+      document.getElementById("modal-close").setAttribute(
+        "aria-label",
+        ({ fr: "Fermer les détails de l’événement", en: "Close event details", ja: "イベントの詳細を閉じる" })[language],
+      );
+      const facebookLink = document.getElementById("modal-fb-link");
+      facebookLink.setAttribute(
+        "aria-label",
+        ({ fr: "Consulter la publication sur Facebook", en: "View the Facebook post", ja: "Facebookの投稿を見る" })[language],
+      );
+      facebookLink.lastChild.textContent =
+        ({ fr: " Consulter la Publication sur Facebook ↗", en: " View the Facebook post ↗", ja: " Facebookの投稿を見る ↗" })[language];
       modalImg.src = data.main_image;
       modalImg.alt = data.title;
       modalThumbs.replaceChildren();
@@ -955,17 +1003,31 @@ document.addEventListener("DOMContentLoaded", () => {
     currentPhotoIndex =
       (index + galleryMasterData.length) % galleryMasterData.length;
     const photo = galleryMasterData[currentPhotoIndex];
+    const localized = window.absfjGalleryCopy?.[currentPhotoIndex];
+    const lang = document.documentElement.dataset.language || 'fr';
     const img = document.getElementById("lightbox-img");
     img.src = photo.img;
-    img.alt = photo.title;
-    document.getElementById("lightbox-tag").textContent = photo.tag;
-    document.getElementById("lightbox-title").textContent = photo.title;
+    img.alt = localized?.[0] || photo.title;
+    document.getElementById("lightbox-tag").textContent = localized?.[1] || photo.tag;
+    document.getElementById("lightbox-title").textContent = localized?.[0] || photo.title;
     document.getElementById("lightbox-desc").textContent =
-      photo.desc + " — " + photo.event_name;
+      localized?.[2] || photo.desc + " — " + photo.event_name;
+    const monthNumber = { janvier: 0, février: 1, mars: 2, avril: 3, mai: 4, juin: 5, juillet: 6, août: 7, septembre: 8, octobre: 9, novembre: 10, décembre: 11 };
+    const dateMatch = photo.date.toLocaleLowerCase('fr').match(/(\d{1,2})\s+(\p{L}+)\s+(\d{4})/u);
+    const parsedDate = dateMatch && monthNumber[dateMatch[2]] !== undefined
+      ? new Date(Date.UTC(Number(dateMatch[3]), monthNumber[dateMatch[2]], Number(dateMatch[1]), 12))
+      : null;
+    const displayDate = lang === 'fr' || !parsedDate
+      ? photo.date
+      : new Intl.DateTimeFormat(lang === 'ja' ? 'ja' : 'en-GB', { day: 'numeric', month: 'long', year: 'numeric' }).format(parsedDate);
     document.getElementById("lightbox-date").textContent =
-      `${photo.date} · Photo ${currentPhotoIndex + 1} / ${galleryMasterData.length}`;
+      `${displayDate} · ${lang === 'ja' ? '写真' : lang === 'en' ? 'Photo' : 'Photo'} ${currentPhotoIndex + 1} / ${galleryMasterData.length}`;
     document.getElementById("lightbox-fb-link").href = photo.fb_url;
   }
+  window.addEventListener('absfj:languagechange', () => {
+    const lightboxDialog = document.getElementById('lightbox-modal');
+    if (lightboxDialog?.open) showPhoto(currentPhotoIndex);
+  });
   document.querySelectorAll(".gallery-item").forEach((item) => {
     item.setAttribute(
       "aria-label",
@@ -1065,16 +1127,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const domainInput = document.getElementById("card-input-domain");
   yearInput.max = String(new Date().getFullYear());
   function syncCard() {
+    const language = document.documentElement.dataset.language || "fr";
     document.getElementById("card-display-name").textContent =
-      nameInput.value.trim() || "VOTRE NOM & PRÉNOM";
+      nameInput.value.trim() ||
+      ({ fr: "VOTRE NOM & PRÉNOM", en: "YOUR FULL NAME", ja: "氏名" })[
+        language
+      ];
     document.getElementById("card-display-year").textContent =
       yearInput.value || "—";
     document.getElementById("card-display-domain").textContent =
+      domainInput.options[domainInput.selectedIndex]?.textContent ||
       domainInput.value;
   }
   [nameInput, yearInput, domainInput].forEach((input) =>
     input.addEventListener("input", syncCard),
   );
+  window.addEventListener("absfj:languagechange", syncCard);
   syncCard();
   function downloadFile(href, filename) {
     const link = document.createElement("a");
@@ -1099,7 +1167,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   function updateRestitutionCount() {
     const count = restitutionParagraphs().length;
-    restitutionCount.textContent = `${count} / 3 paragraphe${count > 1 ? "s" : ""}`;
+    const language = document.documentElement.dataset.language || "fr";
+    restitutionCount.textContent =
+      language === "ja"
+        ? `${count} / 3段落`
+        : language === "en"
+          ? `${count} / 3 paragraph${count === 1 ? "" : "s"}`
+          : `${count} / 3 paragraphe${count > 1 ? "s" : ""}`;
     restitutionCount.classList.toggle("is-valid", count >= 2 && count <= 3);
   }
   restitutionText.addEventListener("input", updateRestitutionCount);

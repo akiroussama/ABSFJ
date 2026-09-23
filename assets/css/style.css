@@ -2620,7 +2620,7 @@ html {
     padding-left: 17px;
   }
   .section-title {
-    font-size: 43px;
+    font-size: clamp(32px, 8.7vw, 43px);
     line-height: 1.06;
     letter-spacing: -1.2px;
     margin-bottom: 20px;
@@ -3145,7 +3145,7 @@ html {
     min-height: 210px;
   }
   .section-title {
-    font-size: 39px;
+    font-size: clamp(30px, 9vw, 35px);
   }
   .footer-invitation h2 {
     font-size: 33px;
