@@ -58,9 +58,31 @@
     <aside class="language-nudge" id="language-nudge" aria-label="Choisir une langue" aria-live="polite" hidden>
       <span class="language-nudge-label">Votre langue</span>
       <div class="language-nudge-options">
-        <button type="button" data-language="fr" aria-label="Français" title="Français"><span aria-hidden="true">🇫🇷</span><span>Français</span></button>
-        <button type="button" data-language="en" aria-label="English" title="English"><span aria-hidden="true">🇬🇧</span><span>English</span></button>
-        <button type="button" data-language="ja" aria-label="日本語" title="日本語"><span aria-hidden="true">🇯🇵</span><span>日本語</span></button>
+        <button type="button" data-language="fr" aria-label="Français" title="Français">
+          <svg class="language-flag" viewBox="0 0 28 20" aria-hidden="true" focusable="false">
+            <rect width="28" height="20" fill="#fff" />
+            <path fill="#0055a4" d="M0 0h9.34v20H0z" />
+            <path fill="#ef4135" d="M18.66 0H28v20h-9.34z" />
+          </svg>
+          <span>Français</span>
+        </button>
+        <button type="button" data-language="en" aria-label="English" title="English">
+          <svg class="language-flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false">
+            <path fill="#012169" d="M0 0h60v40H0z" />
+            <path stroke="#fff" stroke-width="8" d="m0 0 60 40M60 0 0 40" />
+            <path stroke="#c8102e" stroke-width="3" d="m0 0 60 40M60 0 0 40" />
+            <path stroke="#fff" stroke-width="14" d="M30 0v40M0 20h60" />
+            <path stroke="#c8102e" stroke-width="8" d="M30 0v40M0 20h60" />
+          </svg>
+          <span>English</span>
+        </button>
+        <button type="button" data-language="ja" aria-label="日本語" title="日本語">
+          <svg class="language-flag" viewBox="0 0 28 20" aria-hidden="true" focusable="false">
+            <rect width="28" height="20" fill="#fff" />
+            <circle cx="14" cy="10" r="6" fill="#bc002d" />
+          </svg>
+          <span>日本語</span>
+        </button>
       </div>
       <button class="language-nudge-close" type="button" aria-label="Fermer">×</button>
     </aside>
