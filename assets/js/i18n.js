@@ -85,19 +85,8 @@
       'label[for="restitution-name"]': '氏名', 'label[for="restitution-year"]': '研修年', 'label[for="restitution-title"]': '研修・プログラム名', 'label[for="restitution-text"]': '研修報告（2〜3段落）', '.restitution-submit': '報告書を作成 ↗',
       '#logo-section .section-title': '二つの岸、<em>一つの紋章。</em>', '#logo-section .section-subtitle': '公式ロゴに込められた意味をご覧いただき、高解像度のベクター形式をダウンロードできます。', '#adhesion .section-header .section-title': 'あなたの旅は<em>ここから続く。</em>', '#adhesion .section-header .section-subtitle': '日本でJICA研修に参加されましたか？コミュニティへの参加申請を準備し、同窓生カードのプレビューをご覧ください。', '#adhesion label[for="card-input-name"]': '氏名', '#adhesion label[for="card-input-year"]': 'JICA研修の年', '#adhesion label[for="card-input-domain"]': '専門分野', '#adhesion label[for="member-email"]': '勤務先メールアドレス', '#adhesion label[for="member-org"]': '所属機関・企業', '.site-footer .footer-invitation h2': 'この物語を、<br><em>共に紡ぎ続けましょう。</em>',
     },
-    ar: {
-      'body > .skip-link': 'انتقل إلى المحتوى', '.top-bar-left > span:last-child': 'رابط حيّ يجمع تونس واليابان', '.top-bar-link': 'تابعوا أخبارنا ↗', '.news-alert-label': 'آخر الأخبار',
-      '.nav-links li:nth-child(1) .nav-link': '<span class="nav-link-kanji">ホーム</span>الرئيسية', '.nav-links li:nth-child(2) .nav-link': '<span class="nav-link-kanji">概要</span>من نحن', '.nav-links li:nth-child(3) .nav-link': '<span class="nav-link-kanji">使命</span>رسالتنا', '.nav-links li:nth-child(4) .nav-link': '<span class="nav-link-kanji">活動</span>الأنشطة', '.nav-links li:nth-child(5) .nav-link': '<span class="nav-link-kanji">写真</span>معرض الصور', '.nav-links li:nth-child(6) .nav-link': '<span class="nav-link-kanji">紋章</span>شعارنا', '.nav-links li:nth-child(7) .nav-link': '<span class="nav-link-kanji">連携</span>شركاؤنا', '.nav-links li:nth-child(8) .nav-link': '<span class="nav-link-kanji">連絡</span>اتصل بنا',
-      '.restitution-nav span': 'تقارير المهمات', '.btn-nav-cta span': 'فضاء الأعضاء', '.hero-title': 'ثقافتان.<br>طموح<br><em>واحد.</em>', '.hero-description': 'من اليابان إلى تونس، تتناقل الأجيال المعرفة.<br>نرعى الروابط ونبني المستقبل معاً.', '.hero-cta-group .btn-primary': 'روح الجمعية <span aria-hidden="true">↗</span>', '.hero-cta-group .text-link': 'اكتشف أنشطتنا <span aria-hidden="true">→</span>', '.hero-signature p': 'تجارب في اليابان.<br><strong>ومستقبل نتشاركه.</strong>', '.diorama-caption p': 'أفق واحد يجمعنا.', '.stats-section .eyebrow': 'إرث مشترك', '.stats-section p': 'قوة الروابط.<br><em>ثراء شبكة متضامنة.</em>',
-      '#a-propos .section-header .section-title': 'التجربة تطوّرنا.<br><em>والمشاركة تجمعنا.</em>', '#a-propos .section-header .section-subtitle': 'تؤمن جمعية المستفيدين من دورات التدريب باليابان التابعة للوكالة اليابانية للتعاون الدولي في تونس بأن المعرفة تكتمل قيمتها حين نتشاركها.', '#piliers .section-header .section-title': 'أربع قيم.<br><em>وأفق مشترك.</em>', '#piliers .section-header .section-subtitle': 'من الروابط الإنسانية إلى المشاريع الميدانية، يجمعنا الالتزام بتبادل المعرفة والتقدم والاحترام.',
-      '#piliers .pillar-card:nth-child(1) .pillar-title': 'تعزيز الروابط', '#piliers .pillar-card:nth-child(1) .pillar-desc': 'نجمع أكثر من 1800 إطار تونسي تلقوا تدريباً في اليابان، وننمّي التضامن والإرشاد وفرص التعاون.', '#piliers .pillar-card:nth-child(2) .pillar-title': 'نتقدم كل يوم', '#piliers .pillar-card:nth-child(2) .pillar-desc': 'ننشر ثقافة الجودة الشاملة ومنهجية 5S والحد من الهدر، وندعم تنافسية الصناعة والمستشفيات والخدمات العمومية التونسية.', '#piliers .pillar-card:nth-child(3) .pillar-title': 'نحمي البيئة', '#piliers .pillar-card:nth-child(3) .pillar-desc': 'نتشارك الخبرات البيئية اليابانية، ومنها طريقة فوكوؤكا شبه الهوائية في باجة وجهود إزالة الكربون الصناعي.', '#piliers .pillar-card:nth-child(4) .pillar-title': 'نقرّب الثقافات', '#piliers .pillar-card:nth-child(4) .pillar-desc': 'نبني جسوراً ثقافية واقتصادية عبر أدلة السياحة والشراكات الجامعية والاستثمار.',
-      '#evenements .section-header .section-title': 'صداقة <em>نعيشها معاً.</em>', '#evenements .section-header .section-subtitle': 'لقاءات ومبادرات ولحظات مشتركة: تعرّفوا على من يدفعون التعاون التونسي الياباني إلى الأمام.', '#evenements [data-filter="all"]': 'كل الأخبار (14)', '#evenements [data-filter="reseau"]': 'الشبكة والكفاءات', '#evenements [data-filter="kaizen"]': 'كايزن والمناخ', '#evenements [data-filter="ecologie"]': 'البيئة', '#evenements [data-filter="amitie"]': 'الرياضة والصداقة', '#evenements [data-filter="ag"]': 'أنشطة الجمعية',
-      '#galerie .section-header .section-title': 'وجوه <em>من حكايتنا.</em>', '#galerie .section-header .section-subtitle': 'اثنتان وعشرون صورة لعلاقة تُبنى كل يوم. تصفحوا الصور واطلعوا على المنشورات الأصلية.', '#galerie [data-gfilter="all"]': 'كل الصور (22)', '#galerie [data-gfilter="diplomatie"]': 'الدبلوماسية و70 عاماً (8)', '#galerie [data-gfilter="talents"]': 'الشباب والذكاء الاصطناعي (8)', '#galerie [data-gfilter="kaizen"]': 'كايزن والمناخ (1)', '#galerie [data-gfilter="sport"]': 'الرياضة والألفة (2)', '#galerie [data-gfilter="ecologie"]': 'مشاريع باجة (1)', '#galerie [data-gfilter="afrique"]': 'إفريقيا والشبكة (1)', '#galerie [data-gfilter="amitie"]': 'المتطوعون اليابانيون (1)',
-      '#restitution .section-title': 'من اليابان إلى تونس،<br><em>نتشارك الخبرة.</em>', '#restitution .section-subtitle': 'كل مهمة في اليابان رصيد للمجتمع. يمكن لأعضاء الجمعية إعداد تقرير موجز وعملي لفائدة الشبكة.', '#restitution h3': 'شارك تجربتي', '#restitution .form-card-intro': 'اكتبوا فقرتين أو ثلاثاً. سنُعدّ وثيقة جاهزة لإرسالها إلى مكتب الجمعية.', 'label[for="restitution-name"]': 'الاسم واللقب', 'label[for="restitution-year"]': 'سنة المهمة', 'label[for="restitution-title"]': 'عنوان المهمة أو التدريب', 'label[for="restitution-text"]': 'تقريري · فقرتان إلى ثلاث', '.restitution-submit': 'إعداد التقرير ↗',
-      '#logo-section .section-title': 'ضفتان، <em>وشعار واحد.</em>', '#logo-section .section-subtitle': 'اكتشفوا رمزية شعارنا وحمّلوا النسخ المتجهة عالية الدقة.', '#adhesion .section-header .section-title': 'رحلتكم متواصلة <em>معنا.</em>', '#adhesion .section-header .section-subtitle': 'هل شاركتم في تدريب للوكالة اليابانية في اليابان؟ أعدّوا طلب الانضمام إلى مجتمع الخريجين واطلعوا على معاينة بطاقة العضوية.', '#adhesion label[for="card-input-name"]': 'الاسم واللقب', '#adhesion label[for="card-input-year"]': 'سنة تدريب الوكالة اليابانية', '#adhesion label[for="card-input-domain"]': 'مجال الاختصاص', '#adhesion label[for="member-email"]': 'البريد الإلكتروني المهني', '#adhesion label[for="member-org"]': 'المؤسسة أو جهة العمل', '.site-footer .footer-invitation h2': 'لنواصل كتابة<br><em>هذه الحكاية معاً.</em>',
-    },
   };
-  const languages = { fr: { label: 'Français', dir: 'ltr', locale: 'fr-TN' }, en: { label: 'English', dir: 'ltr', locale: 'en' }, ja: { label: '日本語', dir: 'ltr', locale: 'ja' }, ar: { label: 'العربية', dir: 'rtl', locale: 'ar-TN' } };
+  const languages = { fr: { label: 'Français', dir: 'ltr', locale: 'fr-TN' }, en: { label: 'English', dir: 'ltr', locale: 'en' }, ja: { label: '日本語', dir: 'ltr', locale: 'ja' } };
   const originalMarkup = new Map();
   function initialLanguage() {
     try {
@@ -107,9 +96,8 @@
     const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
     if (timezone === 'Asia/Tokyo') return 'ja';
     const requested = (navigator.languages || [navigator.language || 'fr']).map(x => x.toLowerCase());
-    if (timezone === 'Africa/Tunis') return requested.some(x => x.startsWith('ar')) ? 'ar' : 'fr';
+    if (timezone === 'Africa/Tunis') return 'fr';
     for (const lang of requested) if (lang.startsWith('ja')) return 'ja';
-    for (const lang of requested) if (lang.startsWith('ar')) return 'ar';
     for (const lang of requested) if (lang.startsWith('en')) return 'en';
     return 'fr';
   }
@@ -130,12 +118,12 @@
     document.querySelectorAll('[data-language]').forEach(button => {
       button.setAttribute('aria-pressed', String(button.dataset.language === lang));
     });
-    const pickerNames = { fr: ['Votre langue', 'Choisir une langue', 'Fermer'], en: ['Choose your language', 'Choose a language', 'Close'], ja: ['言語を選択', '言語を選択', '閉じる'], ar: ['اختر لغتك', 'اختيار اللغة', 'إغلاق'] }[lang];
+    const pickerNames = { fr: ['Choisir une langue', 'Choisir une langue', 'Fermer'], en: ['Choose your language', 'Choose a language', 'Close'], ja: ['言語を選択', '言語を選択', '閉じる'] }[lang];
     document.querySelector('.language-nudge-label').textContent = pickerNames[0];
     document.getElementById('language-nudge').setAttribute('aria-label', pickerNames[1]);
     document.querySelector('.language-nudge-close').setAttribute('aria-label', pickerNames[2]);
     document.getElementById('language-trigger').setAttribute('aria-label', pickerNames[1]);
-    document.title = ({ fr: 'ABSFJ Tunisie | Association des Bénéficiaires des Sessions de Formation au Japon (JICA)', en: 'ABSFJ Tunisia | JICA Alumni', ja: 'チュニジア JICA 研修生同窓会 | ABSFJ', ar: 'جمعية خريجي برامج التدريب باليابان | ABSFJ تونس' })[lang];
+    document.title = ({ fr: 'ABSFJ Tunisie | Association des Bénéficiaires des Sessions de Formation au Japon (JICA)', en: 'ABSFJ Tunisia | JICA Alumni', ja: 'チュニジア JICA 研修生同窓会 | ABSFJ' })[lang];
   }
   document.addEventListener('DOMContentLoaded', () => {
     const nudge = document.getElementById('language-nudge');

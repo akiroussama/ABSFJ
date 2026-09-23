@@ -3735,7 +3735,7 @@ html {
   min-height: 42px;
   padding: 6px 10px;
   color: inherit;
-  font: 700 12px/1.2 Manrope, "Noto Sans Arabic", "Noto Sans JP", sans-serif;
+  font: 700 12px/1.2 Manrope, "Noto Sans JP", sans-serif;
   background: transparent;
   border: 1px solid transparent;
   border-radius: 10px;
@@ -3785,18 +3785,6 @@ html {
 .language-trigger span:first-child { font-size: 17px; }
 .language-trigger:hover { background: #f4eee1; }
 html[lang="ja"] body { font-family: "Noto Sans JP", "Manrope", sans-serif; }
-html[lang="ar"] body { font-family: "Noto Sans Arabic", sans-serif; }
-html[lang="ar"] .nav-link-kanji { display: none; }
-html[lang="ar"] .nav-links,
-html[lang="ar"] .nav-actions,
-html[lang="ar"] .hero-cta-group { direction: rtl; }
-html[lang="ar"] .hero-content,
-html[lang="ar"] .section-header,
-html[lang="ar"] .pillar-card,
-html[lang="ar"] .form-card,
-html[lang="ar"] .footer-brand { text-align: right; }
-html[lang="ar"] .hero-signature { flex-direction: row-reverse; }
-html[lang="ar"] .section-tag { letter-spacing: 0; }
 @media (max-width: 640px) {
   .language-nudge { inset-block-start: 38vh; inset-inline-end: 8px; width: 168px; }
   .language-trigger { inset-block-end: 14px; inset-inline-end: 12px; }
