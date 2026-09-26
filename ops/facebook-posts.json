@@ -207,6 +207,17 @@
         "122187731948769937"
       ],
       "origin": "facebook_sync"
+    },
+    {
+      "post_id": "pfbid02zZJXVzXGGPViTesoU2VVaxAN8P1aBVRwscjhqsw7TL8jLvpcbFAHcRHZSbuaBYMPl",
+      "source_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02zZJXVzXGGPViTesoU2VVaxAN8P1aBVRwscjhqsw7TL8jLvpcbFAHcRHZSbuaBYMPl&id=61573098115073",
+      "published_date": "2026-09-25",
+      "event_ids": [
+        "bridging-japan-tunisia-enit"
+      ],
+      "gallery_ids": [],
+      "photo_ids": [],
+      "origin": "facebook_sync"
     }
   ]
 }

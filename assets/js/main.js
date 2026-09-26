@@ -284,6 +284,22 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const eventDetailsData = {
+    "bridging-japan-tunisia-enit": {
+      id: "bridging-japan-tunisia-enit",
+      category: "reseau",
+      badge: "Recherche, innovation & culture",
+      date: "25 Septembre 2026",
+      location: "ENIT • Tunis",
+      title: "Bridging Japan and Tunisia à l’ENIT",
+      summary:
+        "JICA Tunis invite l’ABSFJ à une rencontre consacrée aux études au Japon et aux liens académiques, professionnels et culturels, le 11 novembre 2026 à l’ENIT.",
+      full_text:
+        "Le bureau de la JICA Tunis invite l'ABSFJ à participer à l'évènement \" * *Bridging Japan and Tunisia through Research, Innovation and Culture* \", organisé conjointement par le projet J-MENA de l'Université de Kyushu et JICA Tunisie en partenariat avec l'ambassade du Japon en Tunisie qui se tiendra à l'École Nationale d'Ingénieurs de Tunis (ENIT) le mercredi 11 novembre 2026 de 13h30 à 16h00.\nCet événement vise à promouvoir les opportunités d'études au Japon et à renforcer les liens académiques, professionnels et culturels entre la Tunisie et le Japon. \nUn espace de networking sera dédié aux participants afin de favoriser les échanges, renforcer les opportunités de mise en relation et permettre des discussions plus approfondies dans un cadre convivial.\nSoyons nombreux à prendre part à cet important événement.",
+      main_image: null,
+      images: [],
+      fb_url:
+        "https://www.facebook.com/permalink.php?story_fbid=pfbid02zZJXVzXGGPViTesoU2VVaxAN8P1aBVRwscjhqsw7TL8jLvpcbFAHcRHZSbuaBYMPl&id=61573098115073",
+    },
     "restitution-yosra-ben-fadhel": {
       id: "restitution-yosra-ben-fadhel",
       category: "kaizen",
@@ -968,8 +984,14 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       facebookLink.lastChild.textContent =
         ({ fr: " Consulter la Publication sur Facebook ↗", en: " View the Facebook post ↗", ja: " Facebookの投稿を見る ↗" })[language];
-      modalImg.src = data.main_image;
-      modalImg.alt = data.title;
+      modalImg.hidden = !data.main_image;
+      if (data.main_image) {
+        modalImg.src = data.main_image;
+        modalImg.alt = data.title;
+      } else {
+        modalImg.removeAttribute("src");
+        modalImg.alt = "";
+      }
       modalThumbs.replaceChildren();
       modalThumbs.style.display = data.images?.length > 1 ? "flex" : "none";
       if (data.images?.length > 1)

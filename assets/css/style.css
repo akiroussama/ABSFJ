@@ -1676,6 +1676,68 @@ html {
     ),
     linear-gradient(135deg, #203d37, #496456 58%, #263d36);
 }
+.event-text-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
+  color: #f8f3e7;
+  background:
+    radial-gradient(circle at 77% 28%, #b23643 0 8.5%, transparent 8.8%),
+    linear-gradient(112deg, transparent 49.7%, #cbb47b52 50%, transparent 50.4%),
+    linear-gradient(145deg, #183a39, #28504c 58%, #162f30);
+}
+.event-text-art::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.32;
+  background-image: repeating-radial-gradient(
+    ellipse at 2% 112%,
+    transparent 0 15px,
+    #e6d5a9 16px 17px,
+    transparent 18px 31px
+  );
+}
+.event-text-art-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  transform: translateY(2px);
+}
+.event-text-art-day {
+  font-family: var(--font-serif);
+  font-size: clamp(72px, 8vw, 104px);
+  line-height: 0.8;
+  color: #fffaf0;
+  text-shadow: 0 8px 30px #10252280;
+}
+.event-text-art-month {
+  border-left: 1px solid #dbc58f;
+  padding-left: 12px;
+  color: #ead9ad;
+  font-family: var(--font-serif);
+  font-size: 14px;
+  letter-spacing: 1.2px;
+}
+.event-text-art-signature {
+  position: absolute;
+  top: 18px;
+  right: 17px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f4e4bfcc;
+}
+.event-text-art-signature span {
+  font-family: var(--font-jp);
+  font-size: 21px;
+}
+.event-text-art-signature small {
+  font-size: 7px;
+  letter-spacing: 1.2px;
+}
 .upcoming-art-kicker {
   position: absolute;
   top: 22px;
