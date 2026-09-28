@@ -284,6 +284,20 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   const eventDetailsData = {
+    "team-building-ras-jbel": {
+      id: "team-building-ras-jbel",
+      category: "ag",
+      badge: "Vie associative",
+      date: "8 Novembre 2026",
+      location: "Ras Jbel · Tunisie",
+      title: "Journée Team Building de l’ABSFJ",
+      summary:
+        "« Tunisie–Japon : apprendre, partager, créer » — une journée de rencontres et d’activités pour renforcer les liens entre les membres de l’ABSFJ.",
+      full_text:
+        "Programme prévisionnel — dimanche 8 novembre 2026\n\nThème : « Tunisie–Japon : apprendre, partager, créer ». Le document de programme indique Dar El Lamma, à Ras Jbel, comme lieu proposé.\n\n08h00 : départ en bus depuis le point d’accueil prévu au parking El Menzah 1.\n09h00–09h30 : accueil à Ras Jbel et constitution d’équipes mixtes.\n09h30–11h30 : atelier consacré au programme des activités de l’Association pour 2027.\n11h30–12h30 : lancement d’activités autour des cultures japonaise et tunisienne, de la créativité, de l’intelligence artificielle et du sport.\n12h30–14h00 : déjeuner convivial.\n14h00–15h00 : atelier « Art & Amitié » ou karaoké.\n15h00–16h00 : défis en équipes, dont un quiz Tunisie–Japon.\n16h00–17h00 : clôture, remise de prix et moment convivial.\n\nLes horaires et le lieu sont présentés à titre prévisionnel, conformément au document de programme reçu.",
+      main_image: null,
+      images: [],
+    },
     "bridging-japan-tunisia-enit": {
       id: "bridging-japan-tunisia-enit",
       category: "reseau",
