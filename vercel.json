@@ -6,9 +6,22 @@
   "regions": ["fra1"],
   "cleanUrls": false,
   "functions": {
-    "api/photos.js": { "maxDuration": 30 }
+    "api/photos.js": { "maxDuration": 30 },
+    "api/publications.js": { "maxDuration": 30, "includeFiles": "assets/data/publications-legacy.json" },
+    "api/publication-photos.js": { "maxDuration": 30, "includeFiles": "assets/data/publications-legacy.json" },
+    "api/bureau.js": { "maxDuration": 30, "includeFiles": "assets/data/publications-legacy.json" }
   },
+  "rewrites": [{ "source": "/bureau-publications", "destination": "/bureau-publications.html" }],
   "headers": [
+    {
+      "source": "/bureau-publications(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Cache-Control", "value": "private, no-store" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Content-Security-Policy", "value": "script-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'" }
+      ]
+    },
     {
       "source": "/api/(.*)",
       "headers": [

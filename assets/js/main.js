@@ -888,150 +888,150 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById(id).addEventListener("click", closeDialog),
   );
 
-  function setupFilters(
-    buttons,
-    items,
-    filterAttribute,
-    categoryAttribute,
-    label,
-  ) {
+  function setupFilters(buttons, items, filterAttribute, categoryAttribute, label) {
     const status = document.createElement("p");
     status.className = "sr-only";
     status.setAttribute("role", "status");
     buttons[0]?.parentElement.after(status);
-    buttons.forEach((button) => {
-      button.setAttribute(
-        "aria-pressed",
-        String(button.classList.contains("active")),
-      );
+    const currentItems = typeof items === "function" ? items : () => items;
+    function refresh() {
+      const selected = buttons.find(button => button.classList.contains("active"));
+      const filter = selected?.getAttribute(filterAttribute) || "all";
+      let visible = 0;
+      currentItems().forEach(item => {
+        item.hidden = filter !== "all" && item.getAttribute(categoryAttribute) !== filter;
+        if (!item.hidden) visible++;
+      });
+      const language = document.documentElement.dataset.language || "fr";
+      const statusCopy = {
+        en: filterAttribute === "data-filter" ? `${visible} ${visible === 1 ? "event" : "events"} shown` : `${visible} ${visible === 1 ? "photo" : "photos"} shown`,
+        ja: filterAttribute === "data-filter" ? `${visible}件のイベントを表示` : `${visible}枚の写真を表示`,
+        fr: `${visible} ${label}`,
+      };
+      status.textContent = statusCopy[language] || statusCopy.fr;
+    }
+    buttons.forEach(button => {
+      button.setAttribute("aria-pressed", String(button.classList.contains("active")));
       button.addEventListener("click", () => {
-        const filter = button.getAttribute(filterAttribute);
-        buttons.forEach((other) => {
+        buttons.forEach(other => {
           other.classList.toggle("active", other === button);
           other.setAttribute("aria-pressed", String(other === button));
         });
-        let visible = 0;
-        items.forEach((item) => {
-          item.hidden =
-            filter !== "all" && item.getAttribute(categoryAttribute) !== filter;
-          if (!item.hidden) visible++;
-        });
-        const language = document.documentElement.dataset.language;
-        const statusCopy = {
-          en:
-            filterAttribute === "data-filter"
-              ? `${visible} ${visible === 1 ? "event" : "events"} shown`
-              : `${visible} ${visible === 1 ? "photo" : "photos"} shown`,
-          ja: filterAttribute === "data-filter" ? `${visible}件のイベントを表示` : `${visible}枚の写真を表示`,
-          fr: `${visible} ${label}`,
-        };
-        status.textContent = statusCopy[language] || statusCopy.fr;
+        refresh();
       });
     });
+    return { refresh };
   }
-  setupFilters(
+  const eventFilters = setupFilters(
     [...document.querySelectorAll("[data-filter]")],
-    [...document.querySelectorAll(".event-card")],
-    "data-filter",
-    "data-category",
-    "événements affichés",
+    () => [...document.querySelectorAll("#evenements .event-card")],
+    "data-filter", "data-category", "événements affichés",
   );
   setupFilters(
     [...document.querySelectorAll("[data-gfilter]")],
     [...document.querySelectorAll(".gallery-item")],
-    "data-gfilter",
-    "data-gcategory",
-    "photographies affichées",
+    "data-gfilter", "data-gcategory", "photographies affichées",
   );
 
   const eventModal = document.getElementById("event-modal");
   const modalImg = document.getElementById("modal-img");
   const modalThumbs = document.getElementById("modal-thumbs-container");
-  document.querySelectorAll(".open-modal-btn").forEach((button) => {
-    button.setAttribute("aria-haspopup", "dialog");
-    const data = eventDetailsData[button.dataset.eventId];
-    const setMoreLabel = () => {
-      const language = document.documentElement.dataset.language || "fr";
-      const title = button.closest(".event-card")?.querySelector(".event-title")?.textContent.trim() || data.title;
-      button.setAttribute("aria-label", ({ fr: "Lire : " + title, en: "Read more: " + title, ja: "詳しく見る：" + title })[language]);
-    };
-    setMoreLabel();
-    window.addEventListener("absfj:languagechange", setMoreLabel);
-    button.addEventListener("click", () => {
-      const card = button.closest(".event-card");
-      const language = document.documentElement.dataset.language || "fr";
-      const translated = language !== "fr";
-      const localisedDate = (() => {
-        const match = data.date.match(/^(\d{1,2})\s+([\p{L}]+)\s+(\d{4})$/u);
-        if (!match || !translated) return data.date;
-        const month = {
-          janvier: 0, février: 1, mars: 2, avril: 3, mai: 4, juin: 5,
-          juillet: 6, août: 7, septembre: 8, octobre: 9, novembre: 10, décembre: 11,
-        }[match[2].toLocaleLowerCase("fr")];
-        if (month === undefined) return data.date;
-        return new Intl.DateTimeFormat(language === "ja" ? "ja-JP" : "en-GB", {
-          day: "numeric", month: "long", year: "numeric",
-        }).format(new Date(Number(match[3]), month, Number(match[1])));
-      })();
-      document.getElementById("modal-title").textContent =
-        translated ? card?.querySelector(".event-title")?.textContent || data.title : data.title;
-      document.getElementById("modal-date").textContent = localisedDate;
-      document.getElementById("modal-location").textContent = translated
-        ? card?.querySelector(".event-location")?.textContent || data.location
-        : data.location;
-      document.getElementById("modal-badge").textContent = translated
-        ? card?.querySelector(".event-type-badge-overlay")?.textContent || data.badge
-        : data.badge;
-      document.getElementById("modal-description").textContent =
-        translated
-          ? card?.querySelector(".event-desc")?.textContent || data.summary
-          : data.full_text || data.summary;
-      document.getElementById("modal-fb-link").href = data.fb_url;
-      document.getElementById("modal-close").setAttribute(
-        "aria-label",
-        ({ fr: "Fermer les détails de l’événement", en: "Close event details", ja: "イベントの詳細を閉じる" })[language],
-      );
-      const facebookLink = document.getElementById("modal-fb-link");
-      facebookLink.setAttribute(
-        "aria-label",
-        ({ fr: "Consulter la publication sur Facebook", en: "View the Facebook post", ja: "Facebookの投稿を見る" })[language],
-      );
-      facebookLink.lastChild.textContent =
-        ({ fr: " Consulter la Publication sur Facebook ↗", en: " View the Facebook post ↗", ja: " Facebookの投稿を見る ↗" })[language];
-      modalImg.hidden = !data.main_image;
-      if (data.main_image) {
-        modalImg.src = data.main_image;
-        modalImg.alt = data.title;
-      } else {
-        modalImg.removeAttribute("src");
-        modalImg.alt = "";
-      }
-      modalThumbs.replaceChildren();
-      modalThumbs.style.display = data.images?.length > 1 ? "flex" : "none";
-      if (data.images?.length > 1)
-        data.images.forEach((src, i) => {
-          const thumb = document.createElement("button");
-          thumb.type = "button";
-          thumb.className = "modal-thumb" + (i === 0 ? " active" : "");
-          thumb.setAttribute("aria-label", "Afficher la photo " + (i + 1));
-          thumb.setAttribute("aria-pressed", String(i === 0));
-          const img = document.createElement("img");
-          img.src = src;
-          img.alt = "";
-          thumb.append(img);
-          thumb.addEventListener("click", () => {
-            modalImg.src = src;
-            modalImg.alt = data.title + " — Photo " + (i + 1);
-            modalThumbs.querySelectorAll("button").forEach((other) => {
-              other.classList.toggle("active", other === thumb);
-              other.setAttribute("aria-pressed", String(other === thumb));
-            });
-          });
-          modalThumbs.append(thumb);
-        });
-      openDialog(eventModal);
+  const eventRecords = new Map(Object.entries(eventDetailsData));
+  function refreshEventCards() {
+    const cards = [...document.querySelectorAll("#evenements .event-card")];
+    const language = document.documentElement.dataset.language || "fr";
+    const allButton = document.querySelector('#evenements [data-filter="all"]');
+    if (allButton) allButton.textContent = ({ fr: `Tout le journal (${cards.length})`, en: `All updates (${cards.length})`, ja: `すべて (${cards.length})` })[language];
+    cards.forEach(card => {
+      const button = card.querySelector(".open-modal-btn");
+      if (!button) return;
+      const title = card.querySelector(".event-title")?.textContent.trim() || "";
+      const buttonLanguage = card.dataset.publicationManaged === "true" ? "fr" : language;
+      button.setAttribute("aria-haspopup", "dialog");
+      button.setAttribute("aria-label", ({ fr: "Lire : " + title, en: "Read more: " + title, ja: "詳しく見る：" + title })[buttonLanguage]);
     });
+    eventFilters.refresh();
+  }
+  document.querySelector("#evenements .events-grid")?.addEventListener("click", event => {
+    const button = event.target.closest(".open-modal-btn");
+    if (!button || !event.currentTarget.contains(button)) return;
+    const data = eventRecords.get(button.dataset.eventId);
+    if (!data) return;
+    const card = button.closest(".event-card");
+    const managed = card?.dataset.publicationManaged === "true";
+    const language = managed ? "fr" : document.documentElement.dataset.language || "fr";
+    const translated = language !== "fr";
+    eventModal.lang = managed ? "fr" : document.documentElement.lang;
+    const localisedDate = (() => {
+      const match = (data.date || "").match(/^(\d{1,2})\s+([\p{L}]+)\s+(\d{4})$/u);
+      if (!match || !translated) return data.date || "";
+      const month = { janvier: 0, février: 1, mars: 2, avril: 3, mai: 4, juin: 5, juillet: 6, août: 7, septembre: 8, octobre: 9, novembre: 10, décembre: 11 }[match[2].toLocaleLowerCase("fr")];
+      if (month === undefined) return data.date;
+      return new Intl.DateTimeFormat(language === "ja" ? "ja-JP" : "en-GB", { day: "numeric", month: "long", year: "numeric" }).format(new Date(Number(match[3]), month, Number(match[1])));
+    })();
+    document.getElementById("modal-title").textContent = translated ? card?.querySelector(".event-title")?.textContent || data.title : data.title;
+    document.getElementById("modal-date").textContent = localisedDate;
+    document.getElementById("modal-location").textContent = translated ? card?.querySelector(".event-location")?.textContent || data.location : data.location;
+    document.getElementById("modal-badge").textContent = translated ? card?.querySelector(".event-type-badge-overlay")?.textContent || data.badge : data.badge;
+    document.getElementById("modal-description").textContent = translated ? card?.querySelector(".event-desc")?.textContent || data.summary : data.full_text || data.summary;
+    document.getElementById("modal-close").setAttribute("aria-label", ({ fr: "Fermer les détails de l’événement", en: "Close event details", ja: "イベントの詳細を閉じる" })[language]);
+    const facebookLink = document.getElementById("modal-fb-link");
+    facebookLink.hidden = !data.fb_url;
+    if (data.fb_url) facebookLink.href = data.fb_url;
+    else facebookLink.removeAttribute("href");
+    const sourceLabel = managed
+      ? " Consulter la source ↗"
+      : ({ fr: " Consulter la Publication sur Facebook ↗", en: " View the Facebook post ↗", ja: " Facebookの投稿を見る ↗" })[language];
+    facebookLink.setAttribute("aria-label", sourceLabel.trim());
+    facebookLink.lastChild.textContent = sourceLabel;
+    modalImg.hidden = !data.main_image;
+    if (data.main_image) {
+      modalImg.src = data.main_image;
+      modalImg.alt = data.photo_alts?.[0] || data.title;
+    } else {
+      modalImg.removeAttribute("src");
+      modalImg.alt = "";
+    }
+    modalThumbs.replaceChildren();
+    modalThumbs.style.display = data.images?.length > 1 ? "flex" : "none";
+    if (data.images?.length > 1) data.images.forEach((src, i) => {
+      const thumb = document.createElement("button");
+      thumb.type = "button";
+      thumb.className = "modal-thumb" + (i === 0 ? " active" : "");
+      thumb.setAttribute("aria-label", "Afficher la photo " + (i + 1));
+      thumb.setAttribute("aria-pressed", String(i === 0));
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "";
+      thumb.append(img);
+      thumb.addEventListener("click", () => {
+        modalImg.src = src;
+        modalImg.alt = data.photo_alts?.[i] || data.title + " — Photo " + (i + 1);
+        modalThumbs.querySelectorAll("button").forEach(other => {
+          other.classList.toggle("active", other === thumb);
+          other.setAttribute("aria-pressed", String(other === thumb));
+        });
+      });
+      modalThumbs.append(thumb);
+    });
+    openDialog(eventModal);
   });
+  window.ABSFJEvents = {
+    upsert(publications) {
+      const badges = { reseau: "Réseau & talents", kaizen: "Kaizen & climat", ecologie: "Environnement", amitie: "Sport & Amitié", ag: "Vie associative" };
+      publications.forEach(publication => eventRecords.set(publication.id, {
+        id: publication.id, title: publication.title, category: publication.category,
+        badge: badges[publication.category] || "Publication ABSFJ", date: publication.dateLabel || "",
+        location: publication.location || "", summary: publication.summary || "", full_text: publication.body || "",
+        main_image: publication.photos[0]?.url || null, images: publication.photos.map(photo => photo.url),
+        photo_alts: publication.photos.map(photo => photo.alt), fb_url: publication.sourceUrl || "",
+      }));
+    },
+    refresh: refreshEventCards,
+  };
+  window.addEventListener("absfj:languagechange", refreshEventCards);
+  refreshEventCards();
+  window.dispatchEvent(new Event("absfj:eventsready"));
 
   const lightbox = document.getElementById("lightbox-modal");
   let currentPhotoIndex = 0;

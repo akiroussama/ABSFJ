@@ -68,43 +68,43 @@
       '#evenements [data-filter="all"]': 'All updates (15)', '#evenements [data-filter="reseau"]': 'Network & talent',
       '#evenements [data-filter="kaizen"]': 'Kaizen & climate', '#evenements [data-filter="ecologie"]': 'Environment',
       '#evenements [data-filter="amitie"]': 'Sport & friendship', '#evenements [data-filter="ag"]': 'Association life',
-      '#evenements .event-card:nth-child(1) .event-title': 'ABSFJ Team-Building Day',
-      '#evenements .event-card:nth-child(1) .event-desc': '“Tunisia–Japan: learn, share, create” — a day of activities and conversation to strengthen bonds among ABSFJ members.',
+      '#evenements .event-card[data-event-id="team-building-ras-jbel"] .event-title': 'ABSFJ Team-Building Day',
+      '#evenements .event-card[data-event-id="team-building-ras-jbel"] .event-desc': '“Tunisia–Japan: learn, share, create” — a day of activities and conversation to strengthen bonds among ABSFJ members.',
       '#event-team-building-ras-jbel .open-modal-btn': 'View programme →',
-      '#evenements .event-card:nth-child(1) .event-location': 'Ras Jbel · Tunisia',
+      '#evenements .event-card[data-event-id="team-building-ras-jbel"] .event-location': 'Ras Jbel · Tunisia',
       '#event-bridging-japan-tunisia-enit .event-title': 'Bridging Japan and Tunisia at ENIT',
       '#event-bridging-japan-tunisia-enit .event-desc': 'JICA Tunisia invites ABSFJ to a meeting on study opportunities in Japan and academic, professional and cultural ties, on 11 November 2026 at ENIT.',
       '#event-bridging-japan-tunisia-enit .event-location': 'ENIT · Tunis',
       '#event-bridging-japan-tunisia-enit .event-type-badge-overlay': 'Research, innovation & culture',
       '#event-bridging-japan-tunisia-enit .event-text-art-month': '11 NOV · ENIT',
-      '#evenements .event-card:nth-child(1) .event-type-badge-overlay': 'Coming up · Association life', '#evenements .event-card:nth-child(3) .event-type-badge-overlay': 'JICA training report', '#evenements .event-card:nth-child(4) .event-type-badge-overlay': 'Excellence & AI', '#evenements .event-card:nth-child(5) .event-type-badge-overlay': 'ABE Initiative & diplomacy', '#evenements .event-card:nth-child(6) .event-type-badge-overlay': 'Pan-African network', '#evenements .event-card:nth-child(7) .event-type-badge-overlay': 'Tunisia–Japan friendship', '#evenements .event-card:nth-child(8) .event-type-badge-overlay': 'Excellence & graduates', '#evenements .event-card:nth-child(9) .event-type-badge-overlay': 'Kaizen & climate', '#evenements .event-card:nth-child(10) .event-type-badge-overlay': 'Sport & fair play', '#evenements .event-card:nth-child(11) .event-type-badge-overlay': 'JICA Tokyo leadership', '#evenements .event-card:nth-child(12) .event-type-badge-overlay': 'Diplomacy & 70 years', '#evenements .event-card:nth-child(13) .event-type-badge-overlay': 'Environment & Fukuoka method', '#evenements .event-card:nth-child(14) .event-type-badge-overlay': 'General assembly', '#evenements .event-card:nth-child(15) .event-type-badge-overlay': 'Founding ceremony',
-      '#evenements .event-card:nth-child(3) .event-location': 'Japan · Tunisia', '#evenements .event-card:nth-child(4) .event-location': 'Tokyo · Tunis', '#evenements .event-card:nth-child(5) .event-location': 'Japanese Embassy & JICA Office, Tunis', '#evenements .event-card:nth-child(6) .event-location': 'Pan-African JICA video conference', '#evenements .event-card:nth-child(7) .event-location': 'Tunis, Tunisia', '#evenements .event-card:nth-child(8) .event-location': 'Tunis · JICA programmes', '#evenements .event-card:nth-child(9) .event-location': 'The Penthouse Hotel, Tunis', '#evenements .event-card:nth-child(10) .event-location': 'Juventus Academy Club, Tunis', '#evenements .event-card:nth-child(11) .event-location': 'JICA Residence, Tunis', '#evenements .event-card:nth-child(12) .event-location': 'Residence of the Japanese Embassy, Tunis', '#evenements .event-card:nth-child(13) .event-location': 'Béja landfill, Tunisia', '#evenements .event-card:nth-child(14) .event-location': 'UTICA headquarters, Tunis', '#evenements .event-card:nth-child(15) .event-location': 'Cité des Sciences, Tunis',
-      '#evenements .event-card:nth-child(3) .event-title': 'Yosra Ben Fadhel shares her JICA training experience in Japan',
-      '#evenements .event-card:nth-child(3) .event-desc': 'After completing JICA training in the management and maintenance of medical equipment, Yosra Ben Fadhel shares the lessons from her experience in Japan.',
-      '#evenements .event-card:nth-child(4) .event-title': 'ABSFJ honours Oussama Akir for his distinction in artificial intelligence',
-      '#evenements .event-card:nth-child(4) .event-desc': 'An AI researcher recognised in Tokyo among 25,000 candidates from 120 countries. A source of national pride and a talent shaping the future of ABSFJ.',
-      '#evenements .event-card:nth-child(5) .event-title': 'Luncheon honouring young talents from the ABE Initiative',
-      '#evenements .event-card:nth-child(5) .event-desc': 'A high-level meeting with President Jamel Boujdaria, JICA’s Miyata Mayumi, the First Secretary of the Japanese Embassy, and four young talents, including ABE fellows and AI experts.',
-      '#evenements .event-card:nth-child(6) .event-title': 'Meeting of African JICA alumni associations',
-      '#evenements .event-card:nth-child(6) .event-desc': 'A multilateral exchange chaired by Djibouti with Gabon, Burkina Faso, Mali, the DRC and JICA to develop shared pan-African initiatives.',
-      '#evenements .event-card:nth-child(7) .event-title': 'Welcoming Japanese volunteers and friends to Tunisia',
-      '#evenements .event-card:nth-child(7) .event-desc': 'ABSFJ welcomes the Japanese volunteers and cooperation partners arriving in Tunisia and reaffirms its commitment to supporting them.',
-      '#evenements .event-card:nth-child(8) .event-title': 'Celebrating JICA training programme graduates',
-      '#evenements .event-card:nth-child(8) .event-desc': 'A formal presentation of distinctions and tributes to graduates of JICA training programmes in Japan. Gallery of six official photographs.',
-      '#evenements .event-card:nth-child(9) .event-title': 'National seminar: how Kaizen can help address climate change',
-      '#evenements .event-card:nth-child(9) .event-desc': 'A landmark conference co-organised with JICA, bringing together Japan’s Ambassador, Miyata Mayumi, BSB Toyota, ANME and the Ministry of Industry.',
-      '#evenements .event-card:nth-child(10) .event-title': 'Tunisian-Japanese friendship football match',
-      '#evenements .event-card:nth-child(10) .event-desc': 'A friendly match bringing together young Tunisians and Japanese and their families, with Ambassador Saito Jun and Miyata Mayumi in attendance.',
-      '#evenements .event-card:nth-child(11) .event-title': 'Strategic luncheon with JICA Tokyo Senior Vice-President Yoko Mitsui',
-      '#evenements .event-card:nth-child(11) .event-desc': 'Official visit by JICA Tokyo Senior Vice-President Yoko Mitsui. ABSFJ presented its work and discussed strengthening the partnership.',
-      '#evenements .event-card:nth-child(12) .event-title': '70 years of bilateral relations and the Emperor’s Birthday',
-      '#evenements .event-card:nth-child(12) .event-desc': 'ABSFJ attended the Japanese Embassy’s diplomatic reception marking 70 years of Tunisia-Japan relations. Gallery of five official photographs.',
-      '#evenements .event-card:nth-child(13) .event-title': 'Fukuoka method pilot at Béja landfill',
-      '#evenements .event-card:nth-child(13) .event-desc': 'A Japanese ecological engineering project using semi-aerobic aeration to sharply reduce methane emissions.',
-      '#evenements .event-card:nth-child(14) .event-title': 'ABSFJ’s first ordinary general assembly',
-      '#evenements .event-card:nth-child(14) .event-desc': 'Review of the first successful year of the board under President Jamel Boujdaria and the organisation of working committees.',
-      '#evenements .event-card:nth-child(15) .event-title': 'Official launch ceremony of ABSFJ',
-      '#evenements .event-card:nth-child(15) .event-desc': 'The association was formally launched with the Japanese Embassy, JICA and more than 200 professionals trained in Japan since 1975.',
+      '#evenements .event-card[data-event-id="team-building-ras-jbel"] .event-type-badge-overlay': 'Coming up · Association life', '#evenements .event-card[data-event-id="restitution-yosra-ben-fadhel"] .event-type-badge-overlay': 'JICA training report', '#evenements .event-card[data-event-id="ia-distinction-akir"] .event-type-badge-overlay': 'Excellence & AI', '#evenements .event-card[data-event-id="dejeuner-abe-jica"] .event-type-badge-overlay': 'ABE Initiative & diplomacy', '#evenements .event-card[data-event-id="reseau-afrique-alumni"] .event-type-badge-overlay': 'Pan-African network', '#evenements .event-card[data-event-id="accueil-volontaires-japon"] .event-type-badge-overlay': 'Tunisia–Japan friendship', '#evenements .event-card[data-event-id="felicitations-laureats"] .event-type-badge-overlay': 'Excellence & graduates', '#evenements .event-card[data-event-id="seminaire-penthouse-kaizen"] .event-type-badge-overlay': 'Kaizen & climate', '#evenements .event-card[data-event-id="football-amitie-japon"] .event-type-badge-overlay': 'Sport & fair play', '#evenements .event-card[data-event-id="visite-mitsui-yoko-jica"] .event-type-badge-overlay': 'JICA Tokyo leadership', '#evenements .event-card[data-event-id="reception-70-ans-empereur"] .event-type-badge-overlay': 'Diplomacy & 70 years', '#evenements .event-card[data-event-id="projet-decharge-beja"] .event-type-badge-overlay': 'Environment & Fukuoka method', '#evenements .event-card[data-event-id="ag-ordinaire-utica"] .event-type-badge-overlay': 'General assembly', '#evenements .event-card[data-event-id="lancement-solennel-cite-sciences"] .event-type-badge-overlay': 'Founding ceremony',
+      '#evenements .event-card[data-event-id="restitution-yosra-ben-fadhel"] .event-location': 'Japan · Tunisia', '#evenements .event-card[data-event-id="ia-distinction-akir"] .event-location': 'Tokyo · Tunis', '#evenements .event-card[data-event-id="dejeuner-abe-jica"] .event-location': 'Japanese Embassy & JICA Office, Tunis', '#evenements .event-card[data-event-id="reseau-afrique-alumni"] .event-location': 'Pan-African JICA video conference', '#evenements .event-card[data-event-id="accueil-volontaires-japon"] .event-location': 'Tunis, Tunisia', '#evenements .event-card[data-event-id="felicitations-laureats"] .event-location': 'Tunis · JICA programmes', '#evenements .event-card[data-event-id="seminaire-penthouse-kaizen"] .event-location': 'The Penthouse Hotel, Tunis', '#evenements .event-card[data-event-id="football-amitie-japon"] .event-location': 'Juventus Academy Club, Tunis', '#evenements .event-card[data-event-id="visite-mitsui-yoko-jica"] .event-location': 'JICA Residence, Tunis', '#evenements .event-card[data-event-id="reception-70-ans-empereur"] .event-location': 'Residence of the Japanese Embassy, Tunis', '#evenements .event-card[data-event-id="projet-decharge-beja"] .event-location': 'Béja landfill, Tunisia', '#evenements .event-card[data-event-id="ag-ordinaire-utica"] .event-location': 'UTICA headquarters, Tunis', '#evenements .event-card[data-event-id="lancement-solennel-cite-sciences"] .event-location': 'Cité des Sciences, Tunis',
+      '#evenements .event-card[data-event-id="restitution-yosra-ben-fadhel"] .event-title': 'Yosra Ben Fadhel shares her JICA training experience in Japan',
+      '#evenements .event-card[data-event-id="restitution-yosra-ben-fadhel"] .event-desc': 'After completing JICA training in the management and maintenance of medical equipment, Yosra Ben Fadhel shares the lessons from her experience in Japan.',
+      '#evenements .event-card[data-event-id="ia-distinction-akir"] .event-title': 'ABSFJ honours Oussama Akir for his distinction in artificial intelligence',
+      '#evenements .event-card[data-event-id="ia-distinction-akir"] .event-desc': 'An AI researcher recognised in Tokyo among 25,000 candidates from 120 countries. A source of national pride and a talent shaping the future of ABSFJ.',
+      '#evenements .event-card[data-event-id="dejeuner-abe-jica"] .event-title': 'Luncheon honouring young talents from the ABE Initiative',
+      '#evenements .event-card[data-event-id="dejeuner-abe-jica"] .event-desc': 'A high-level meeting with President Jamel Boujdaria, JICA’s Miyata Mayumi, the First Secretary of the Japanese Embassy, and four young talents, including ABE fellows and AI experts.',
+      '#evenements .event-card[data-event-id="reseau-afrique-alumni"] .event-title': 'Meeting of African JICA alumni associations',
+      '#evenements .event-card[data-event-id="reseau-afrique-alumni"] .event-desc': 'A multilateral exchange chaired by Djibouti with Gabon, Burkina Faso, Mali, the DRC and JICA to develop shared pan-African initiatives.',
+      '#evenements .event-card[data-event-id="accueil-volontaires-japon"] .event-title': 'Welcoming Japanese volunteers and friends to Tunisia',
+      '#evenements .event-card[data-event-id="accueil-volontaires-japon"] .event-desc': 'ABSFJ welcomes the Japanese volunteers and cooperation partners arriving in Tunisia and reaffirms its commitment to supporting them.',
+      '#evenements .event-card[data-event-id="felicitations-laureats"] .event-title': 'Celebrating JICA training programme graduates',
+      '#evenements .event-card[data-event-id="felicitations-laureats"] .event-desc': 'A formal presentation of distinctions and tributes to graduates of JICA training programmes in Japan. Gallery of six official photographs.',
+      '#evenements .event-card[data-event-id="seminaire-penthouse-kaizen"] .event-title': 'National seminar: how Kaizen can help address climate change',
+      '#evenements .event-card[data-event-id="seminaire-penthouse-kaizen"] .event-desc': 'A landmark conference co-organised with JICA, bringing together Japan’s Ambassador, Miyata Mayumi, BSB Toyota, ANME and the Ministry of Industry.',
+      '#evenements .event-card[data-event-id="football-amitie-japon"] .event-title': 'Tunisian-Japanese friendship football match',
+      '#evenements .event-card[data-event-id="football-amitie-japon"] .event-desc': 'A friendly match bringing together young Tunisians and Japanese and their families, with Ambassador Saito Jun and Miyata Mayumi in attendance.',
+      '#evenements .event-card[data-event-id="visite-mitsui-yoko-jica"] .event-title': 'Strategic luncheon with JICA Tokyo Senior Vice-President Yoko Mitsui',
+      '#evenements .event-card[data-event-id="visite-mitsui-yoko-jica"] .event-desc': 'Official visit by JICA Tokyo Senior Vice-President Yoko Mitsui. ABSFJ presented its work and discussed strengthening the partnership.',
+      '#evenements .event-card[data-event-id="reception-70-ans-empereur"] .event-title': '70 years of bilateral relations and the Emperor’s Birthday',
+      '#evenements .event-card[data-event-id="reception-70-ans-empereur"] .event-desc': 'ABSFJ attended the Japanese Embassy’s diplomatic reception marking 70 years of Tunisia-Japan relations. Gallery of five official photographs.',
+      '#evenements .event-card[data-event-id="projet-decharge-beja"] .event-title': 'Fukuoka method pilot at Béja landfill',
+      '#evenements .event-card[data-event-id="projet-decharge-beja"] .event-desc': 'A Japanese ecological engineering project using semi-aerobic aeration to sharply reduce methane emissions.',
+      '#evenements .event-card[data-event-id="ag-ordinaire-utica"] .event-title': 'ABSFJ’s first ordinary general assembly',
+      '#evenements .event-card[data-event-id="ag-ordinaire-utica"] .event-desc': 'Review of the first successful year of the board under President Jamel Boujdaria and the organisation of working committees.',
+      '#evenements .event-card[data-event-id="lancement-solennel-cite-sciences"] .event-title': 'Official launch ceremony of ABSFJ',
+      '#evenements .event-card[data-event-id="lancement-solennel-cite-sciences"] .event-desc': 'The association was formally launched with the Japanese Embassy, JICA and more than 200 professionals trained in Japan since 1975.',
       '#galerie .section-header .section-title': 'The faces of <em>our story.</em>',
       '#galerie .section-header .section-subtitle': 'Twenty-two glimpses of a relationship built day by day. Explore the photographs and find each original post.',
       '#galerie [data-gfilter="all"]': 'All photos (22) a', '#galerie [data-gfilter="diplomatie"]': 'Diplomacy & 70 years (8) a',
@@ -202,43 +202,43 @@
       '#piliers .pillar-card:nth-child(4) .pillar-title': '文化をつなぐ', '#piliers .pillar-card:nth-child(4) .pillar-desc': '観光案内、大学連携、投資を通じて、文化と経済の架け橋を築きます。',
       '#evenements .section-header .section-title': '友情を、<em>共に生きる。</em>', '.upcoming-art-kicker span:first-child': '同窓生交流会', '.event-card-upcoming .event-date-overlay': '日曜日 · ラスジェベル', '#evenements .section-header .section-subtitle': '出会い、取り組み、分かち合う時間。チュニジアと日本の協力を進める人々をご紹介します。',
       '#evenements [data-filter="all"]': 'すべて (15)', '#evenements [data-filter="reseau"]': 'ネットワーク・人材', '#evenements [data-filter="kaizen"]': '改善・気候', '#evenements [data-filter="ecologie"]': '環境', '#evenements [data-filter="amitie"]': 'スポーツ・友情', '#evenements [data-filter="ag"]': '協会の活動',
-      '#evenements .event-card:nth-child(1) .event-title': 'ABSFJチームビルディング交流会',
-      '#evenements .event-card:nth-child(1) .event-desc': '「チュニジアと日本：学び、分かち合い、創造する」をテーマに、ABSFJ会員の絆を深める交流と活動の一日です。',
+      '#evenements .event-card[data-event-id="team-building-ras-jbel"] .event-title': 'ABSFJチームビルディング交流会',
+      '#evenements .event-card[data-event-id="team-building-ras-jbel"] .event-desc': '「チュニジアと日本：学び、分かち合い、創造する」をテーマに、ABSFJ会員の絆を深める交流と活動の一日です。',
       '#event-team-building-ras-jbel .open-modal-btn': 'プログラムを見る →',
-      '#evenements .event-card:nth-child(1) .event-location': 'ラスジェベル · チュニジア',
+      '#evenements .event-card[data-event-id="team-building-ras-jbel"] .event-location': 'ラスジェベル · チュニジア',
       '#event-bridging-japan-tunisia-enit .event-title': 'ENITで「日本とチュニジアをつなぐ」交流会',
       '#event-bridging-japan-tunisia-enit .event-desc': 'JICAチュニジア事務所はABSFJを、日本留学と学術・専門・文化交流をテーマとする2026年11月11日のENITでのイベントへ招待しています。',
       '#event-bridging-japan-tunisia-enit .event-location': 'ENIT · チュニス',
       '#event-bridging-japan-tunisia-enit .event-type-badge-overlay': '研究・イノベーション・文化',
       '#event-bridging-japan-tunisia-enit .event-text-art-month': '11月 · ENIT',
-      '#evenements .event-card:nth-child(1) .event-type-badge-overlay': '開催予定 · 協会交流会', '#evenements .event-card:nth-child(3) .event-type-badge-overlay': 'JICA研修報告', '#evenements .event-card:nth-child(4) .event-type-badge-overlay': '卓越性・AI', '#evenements .event-card:nth-child(5) .event-type-badge-overlay': 'ABEイニシアティブ・外交', '#evenements .event-card:nth-child(6) .event-type-badge-overlay': 'アフリカ同窓生ネットワーク', '#evenements .event-card:nth-child(7) .event-type-badge-overlay': 'チュニジア・日本友好', '#evenements .event-card:nth-child(8) .event-type-badge-overlay': '研修修了生・表彰', '#evenements .event-card:nth-child(9) .event-type-badge-overlay': 'カイゼン・気候', '#evenements .event-card:nth-child(10) .event-type-badge-overlay': 'スポーツ・フェアプレー', '#evenements .event-card:nth-child(11) .event-type-badge-overlay': 'JICA東京幹部', '#evenements .event-card:nth-child(12) .event-type-badge-overlay': '外交関係70周年', '#evenements .event-card:nth-child(13) .event-type-badge-overlay': '環境・福岡方式', '#evenements .event-card:nth-child(14) .event-type-badge-overlay': '通常総会', '#evenements .event-card:nth-child(15) .event-type-badge-overlay': '設立記念式典',
-      '#evenements .event-card:nth-child(3) .event-location': '日本 · チュニジア', '#evenements .event-card:nth-child(4) .event-location': '東京 · チュニス', '#evenements .event-card:nth-child(5) .event-location': '在チュニジア日本大使館・JICA事務所', '#evenements .event-card:nth-child(6) .event-location': 'JICAアフリカ広域オンライン会議', '#evenements .event-card:nth-child(7) .event-location': 'チュニス、チュニジア', '#evenements .event-card:nth-child(8) .event-location': 'チュニス · JICA研修', '#evenements .event-card:nth-child(9) .event-location': 'ザ・ペントハウスホテル、チュニス', '#evenements .event-card:nth-child(10) .event-location': 'ユベントス・アカデミークラブ、チュニス', '#evenements .event-card:nth-child(11) .event-location': 'JICAチュニジア事務所、チュニス', '#evenements .event-card:nth-child(12) .event-location': '在チュニジア日本大使公邸', '#evenements .event-card:nth-child(13) .event-location': 'ベジャ廃棄物処分場、チュニジア', '#evenements .event-card:nth-child(14) .event-location': 'UTICA本部、チュニス', '#evenements .event-card:nth-child(15) .event-location': 'チュニス科学都市',
-      '#evenements .event-card:nth-child(3) .event-title': 'ヨスラ・ベン・ファデル氏、日本でのJICA研修経験を共有',
-      '#evenements .event-card:nth-child(3) .event-desc': '医療機器の管理・保守に関するJICA研修を終えたヨスラ・ベン・ファデル氏が、日本で学んだことを共有しました。',
-      '#evenements .event-card:nth-child(4) .event-title': 'AI分野での功績を称え、ウサマ・アキル氏を表彰',
-      '#evenements .event-card:nth-child(4) .event-desc': '120か国から集まった25,000人の候補者の中から東京で表彰されたAI研究者。国の誇りであり、ABSFJの未来を担う人材です。',
-      '#evenements .event-card:nth-child(5) .event-title': 'ABEイニシアティブの若手人材を囲む昼食会',
-      '#evenements .event-card:nth-child(5) .event-desc': 'ジャメル・ブジュダリア会長、JICAの宮田真由美氏、日本大使館の一等書記官、ABE奨学生やAI専門家を含む若手4人が参加しました。',
-      '#evenements .event-card:nth-child(6) .event-title': 'アフリカJICA同窓会ネットワーク会合',
-      '#evenements .event-card:nth-child(6) .event-desc': 'ジブチが議長を務め、ガボン、ブルキナファソ、マリ、コンゴ民主共和国、JICAと共にアフリカ共通の取り組みを協議しました。',
-      '#evenements .event-card:nth-child(7) .event-title': 'チュニジアに到着した日本人ボランティアを歓迎',
-      '#evenements .event-card:nth-child(7) .event-desc': 'ABSFJはチュニジアに到着した日本人ボランティアと協力関係者を歓迎し、活動を支援する姿勢を改めて表明しました。',
-      '#evenements .event-card:nth-child(8) .event-title': 'JICA研修修了生を祝う表彰式',
-      '#evenements .event-card:nth-child(8) .event-desc': '日本でJICA研修を修了した参加者を称え、表彰状を授与しました。公式写真6点をご覧いただけます。',
-      '#evenements .event-card:nth-child(9) .event-title': '全国セミナー：気候変動対策に活かすカイゼン',
-      '#evenements .event-card:nth-child(9) .event-desc': 'JICAと共催した重要な会議に、日本大使、宮田真由美氏、BSB Toyota、ANME、産業省が参加しました。',
-      '#evenements .event-card:nth-child(10) .event-title': 'チュニジア・日本友好サッカー交流試合',
-      '#evenements .event-card:nth-child(10) .event-desc': '齋藤純大使と宮田真由美氏の出席のもと、両国の若者と家族が親善試合を通じて交流しました。',
-      '#evenements .event-card:nth-child(11) .event-title': 'JICA東京の三井陽子上級副理事長との戦略昼食会',
-      '#evenements .event-card:nth-child(11) .event-desc': 'JICA東京の三井陽子上級副理事長が公式訪問。ABSFJの活動を紹介し、今後の連携強化について協議しました。',
-      '#evenements .event-card:nth-child(12) .event-title': '外交関係樹立70周年と天皇誕生日を祝う',
-      '#evenements .event-card:nth-child(12) .event-desc': 'チュニジアと日本の外交関係70周年を記念する日本大使館のレセプションにABSFJが出席しました。公式写真5点をご覧いただけます。',
-      '#evenements .event-card:nth-child(13) .event-title': 'ベジャ廃棄物処分場での福岡方式の実証事業',
-      '#evenements .event-card:nth-child(13) .event-desc': '準好気性埋立て方式を用いてメタン排出の大幅削減を目指す、日本の環境技術プロジェクトです。',
-      '#evenements .event-card:nth-child(14) .event-title': 'ABSFJ第1回通常総会',
-      '#evenements .event-card:nth-child(14) .event-desc': 'ジャメル・ブジュダリア会長のもとでの初年度の活動と、各運営委員会の設置について報告しました。',
-      '#evenements .event-card:nth-child(15) .event-title': 'ABSFJ設立記念式典',
-      '#evenements .event-card:nth-child(15) .event-desc': '日本大使館、JICA、日本で研修を受けた200人以上の専門家と共に、協会の正式な発足を祝いました。',
+      '#evenements .event-card[data-event-id="team-building-ras-jbel"] .event-type-badge-overlay': '開催予定 · 協会交流会', '#evenements .event-card[data-event-id="restitution-yosra-ben-fadhel"] .event-type-badge-overlay': 'JICA研修報告', '#evenements .event-card[data-event-id="ia-distinction-akir"] .event-type-badge-overlay': '卓越性・AI', '#evenements .event-card[data-event-id="dejeuner-abe-jica"] .event-type-badge-overlay': 'ABEイニシアティブ・外交', '#evenements .event-card[data-event-id="reseau-afrique-alumni"] .event-type-badge-overlay': 'アフリカ同窓生ネットワーク', '#evenements .event-card[data-event-id="accueil-volontaires-japon"] .event-type-badge-overlay': 'チュニジア・日本友好', '#evenements .event-card[data-event-id="felicitations-laureats"] .event-type-badge-overlay': '研修修了生・表彰', '#evenements .event-card[data-event-id="seminaire-penthouse-kaizen"] .event-type-badge-overlay': 'カイゼン・気候', '#evenements .event-card[data-event-id="football-amitie-japon"] .event-type-badge-overlay': 'スポーツ・フェアプレー', '#evenements .event-card[data-event-id="visite-mitsui-yoko-jica"] .event-type-badge-overlay': 'JICA東京幹部', '#evenements .event-card[data-event-id="reception-70-ans-empereur"] .event-type-badge-overlay': '外交関係70周年', '#evenements .event-card[data-event-id="projet-decharge-beja"] .event-type-badge-overlay': '環境・福岡方式', '#evenements .event-card[data-event-id="ag-ordinaire-utica"] .event-type-badge-overlay': '通常総会', '#evenements .event-card[data-event-id="lancement-solennel-cite-sciences"] .event-type-badge-overlay': '設立記念式典',
+      '#evenements .event-card[data-event-id="restitution-yosra-ben-fadhel"] .event-location': '日本 · チュニジア', '#evenements .event-card[data-event-id="ia-distinction-akir"] .event-location': '東京 · チュニス', '#evenements .event-card[data-event-id="dejeuner-abe-jica"] .event-location': '在チュニジア日本大使館・JICA事務所', '#evenements .event-card[data-event-id="reseau-afrique-alumni"] .event-location': 'JICAアフリカ広域オンライン会議', '#evenements .event-card[data-event-id="accueil-volontaires-japon"] .event-location': 'チュニス、チュニジア', '#evenements .event-card[data-event-id="felicitations-laureats"] .event-location': 'チュニス · JICA研修', '#evenements .event-card[data-event-id="seminaire-penthouse-kaizen"] .event-location': 'ザ・ペントハウスホテル、チュニス', '#evenements .event-card[data-event-id="football-amitie-japon"] .event-location': 'ユベントス・アカデミークラブ、チュニス', '#evenements .event-card[data-event-id="visite-mitsui-yoko-jica"] .event-location': 'JICAチュニジア事務所、チュニス', '#evenements .event-card[data-event-id="reception-70-ans-empereur"] .event-location': '在チュニジア日本大使公邸', '#evenements .event-card[data-event-id="projet-decharge-beja"] .event-location': 'ベジャ廃棄物処分場、チュニジア', '#evenements .event-card[data-event-id="ag-ordinaire-utica"] .event-location': 'UTICA本部、チュニス', '#evenements .event-card[data-event-id="lancement-solennel-cite-sciences"] .event-location': 'チュニス科学都市',
+      '#evenements .event-card[data-event-id="restitution-yosra-ben-fadhel"] .event-title': 'ヨスラ・ベン・ファデル氏、日本でのJICA研修経験を共有',
+      '#evenements .event-card[data-event-id="restitution-yosra-ben-fadhel"] .event-desc': '医療機器の管理・保守に関するJICA研修を終えたヨスラ・ベン・ファデル氏が、日本で学んだことを共有しました。',
+      '#evenements .event-card[data-event-id="ia-distinction-akir"] .event-title': 'AI分野での功績を称え、ウサマ・アキル氏を表彰',
+      '#evenements .event-card[data-event-id="ia-distinction-akir"] .event-desc': '120か国から集まった25,000人の候補者の中から東京で表彰されたAI研究者。国の誇りであり、ABSFJの未来を担う人材です。',
+      '#evenements .event-card[data-event-id="dejeuner-abe-jica"] .event-title': 'ABEイニシアティブの若手人材を囲む昼食会',
+      '#evenements .event-card[data-event-id="dejeuner-abe-jica"] .event-desc': 'ジャメル・ブジュダリア会長、JICAの宮田真由美氏、日本大使館の一等書記官、ABE奨学生やAI専門家を含む若手4人が参加しました。',
+      '#evenements .event-card[data-event-id="reseau-afrique-alumni"] .event-title': 'アフリカJICA同窓会ネットワーク会合',
+      '#evenements .event-card[data-event-id="reseau-afrique-alumni"] .event-desc': 'ジブチが議長を務め、ガボン、ブルキナファソ、マリ、コンゴ民主共和国、JICAと共にアフリカ共通の取り組みを協議しました。',
+      '#evenements .event-card[data-event-id="accueil-volontaires-japon"] .event-title': 'チュニジアに到着した日本人ボランティアを歓迎',
+      '#evenements .event-card[data-event-id="accueil-volontaires-japon"] .event-desc': 'ABSFJはチュニジアに到着した日本人ボランティアと協力関係者を歓迎し、活動を支援する姿勢を改めて表明しました。',
+      '#evenements .event-card[data-event-id="felicitations-laureats"] .event-title': 'JICA研修修了生を祝う表彰式',
+      '#evenements .event-card[data-event-id="felicitations-laureats"] .event-desc': '日本でJICA研修を修了した参加者を称え、表彰状を授与しました。公式写真6点をご覧いただけます。',
+      '#evenements .event-card[data-event-id="seminaire-penthouse-kaizen"] .event-title': '全国セミナー：気候変動対策に活かすカイゼン',
+      '#evenements .event-card[data-event-id="seminaire-penthouse-kaizen"] .event-desc': 'JICAと共催した重要な会議に、日本大使、宮田真由美氏、BSB Toyota、ANME、産業省が参加しました。',
+      '#evenements .event-card[data-event-id="football-amitie-japon"] .event-title': 'チュニジア・日本友好サッカー交流試合',
+      '#evenements .event-card[data-event-id="football-amitie-japon"] .event-desc': '齋藤純大使と宮田真由美氏の出席のもと、両国の若者と家族が親善試合を通じて交流しました。',
+      '#evenements .event-card[data-event-id="visite-mitsui-yoko-jica"] .event-title': 'JICA東京の三井陽子上級副理事長との戦略昼食会',
+      '#evenements .event-card[data-event-id="visite-mitsui-yoko-jica"] .event-desc': 'JICA東京の三井陽子上級副理事長が公式訪問。ABSFJの活動を紹介し、今後の連携強化について協議しました。',
+      '#evenements .event-card[data-event-id="reception-70-ans-empereur"] .event-title': '外交関係樹立70周年と天皇誕生日を祝う',
+      '#evenements .event-card[data-event-id="reception-70-ans-empereur"] .event-desc': 'チュニジアと日本の外交関係70周年を記念する日本大使館のレセプションにABSFJが出席しました。公式写真5点をご覧いただけます。',
+      '#evenements .event-card[data-event-id="projet-decharge-beja"] .event-title': 'ベジャ廃棄物処分場での福岡方式の実証事業',
+      '#evenements .event-card[data-event-id="projet-decharge-beja"] .event-desc': '準好気性埋立て方式を用いてメタン排出の大幅削減を目指す、日本の環境技術プロジェクトです。',
+      '#evenements .event-card[data-event-id="ag-ordinaire-utica"] .event-title': 'ABSFJ第1回通常総会',
+      '#evenements .event-card[data-event-id="ag-ordinaire-utica"] .event-desc': 'ジャメル・ブジュダリア会長のもとでの初年度の活動と、各運営委員会の設置について報告しました。',
+      '#evenements .event-card[data-event-id="lancement-solennel-cite-sciences"] .event-title': 'ABSFJ設立記念式典',
+      '#evenements .event-card[data-event-id="lancement-solennel-cite-sciences"] .event-desc': '日本大使館、JICA、日本で研修を受けた200人以上の専門家と共に、協会の正式な発足を祝いました。',
       '#galerie .section-header .section-title': '<em>私たちの歩み。</em>', '#galerie .section-header .section-subtitle': '日々築かれる関係を写した22枚の写真をご覧ください。各投稿の原文もご覧いただけます。',
       '#galerie [data-gfilter="all"]': 'すべての写真 (22) a', '#galerie [data-gfilter="diplomatie"]': '外交・70周年 (8) a', '#galerie [data-gfilter="talents"]': '若い才能・AI (8) a', '#galerie [data-gfilter="kaizen"]': '改善・気候 (1) a', '#galerie [data-gfilter="sport"]': 'スポーツ・交流 (2) a', '#galerie [data-gfilter="ecologie"]': 'プロジェクト・ベジャ (1) a', '#galerie [data-gfilter="afrique"]': 'アフリカ・ネットワーク (1) a', '#galerie [data-gfilter="amitie"]': '日本人ボランティア (1) a',
       '#restitution .section-title': '日本からチュニジアへ、<br><em>学びを伝える。</em>', '#restitution .section-subtitle': '日本での研修をコミュニティ全体の力に。ABSFJ会員は、ネットワークに役立つ短い報告をここで準備できます。', '#restitution h3': '研修経験を共有する', '#restitution .form-card-intro': '2〜3段落でご記入ください。協会の理事会に送るための文書を作成します。',
@@ -321,6 +321,10 @@
     ],
   };
   const originalMarkup = new Map();
+  // Publications edited in the admin remain in their authored language.
+  function isManagedPublication(node) {
+    return Boolean(node.closest('.event-card[data-publication-managed="true"]'));
+  }
   function initialLanguage() {
     try {
       const saved = localStorage.getItem('absfj-language');
@@ -345,10 +349,17 @@
     root.lang = languages[lang].locale;
     root.dir = languages[lang].dir;
     root.dataset.language = lang;
-    for (const [node, markup] of originalMarkup) node.innerHTML = markup;
+    for (const [node, markup] of originalMarkup) {
+      if (!node.isConnected || isManagedPublication(node)) {
+        originalMarkup.delete(node);
+        continue;
+      }
+      node.innerHTML = markup;
+    }
     const dict = dictionaries[lang] || {};
     for (const [selector, copy] of Object.entries(dict)) {
       document.querySelectorAll(selector).forEach(node => {
+        if (isManagedPublication(node)) return;
         if (!originalMarkup.has(node)) originalMarkup.set(node, node.innerHTML);
         if (node.matches('input,textarea')) node.setAttribute('placeholder', copy);
         else if (node.matches('option')) node.textContent = copy;
@@ -383,11 +394,6 @@
     });
     document.querySelectorAll('.event-card').forEach(card => {
       const title = card.querySelector('.event-title');
-      const image = card.querySelector('.event-card-img');
-      if (image && title) {
-        if (!image.dataset.originalAlt) image.dataset.originalAlt = image.alt;
-        image.alt = lang === 'fr' ? image.dataset.originalAlt : title.textContent.trim();
-      }
       const more = card.querySelector('.open-modal-btn');
       if (more) {
         more.textContent = ({ fr: 'En savoir plus →', en: 'Read more →', ja: '詳しく見る →' })[lang];
@@ -396,6 +402,13 @@
       }
       const sourceLink = card.querySelector('.event-footer .btn-link[title]');
       if (sourceLink) sourceLink.title = ({ fr: 'Voir la publication sur Facebook', en: 'View the Facebook post', ja: 'Facebookの投稿を見る' })[lang];
+      // Utility buttons follow the UI language; publication content, dates and alt text do not.
+      if (isManagedPublication(card)) return;
+      const image = card.querySelector('.event-card-img');
+      if (image && title) {
+        if (!image.dataset.originalAlt) image.dataset.originalAlt = image.alt;
+        image.alt = lang === 'fr' ? image.dataset.originalAlt : title.textContent.trim();
+      }
       card.querySelectorAll('.event-date-overlay, .event-announcement-date, .upcoming-date').forEach(node => {
         if (!node.dataset.originalMarkup) node.dataset.originalMarkup = node.innerHTML;
         if (node.classList.contains('upcoming-date') && !node.dataset.originalAriaLabel) node.dataset.originalAriaLabel = node.getAttribute('aria-label') || '';
