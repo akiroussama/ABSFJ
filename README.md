@@ -75,7 +75,7 @@ L'ensemble des publications de la page officielle Facebook ([facebook.com/615730
 
 La page adopte une composition éditoriale japonaise : papier ivoire `#F7F5EF`, rouge sceau `#A52F36`, vert encre `#263A31` et or patiné `#9C8050`. Cormorant Garamond compose les titres, Manrope les interfaces et Noto Serif JP les caractères japonais. Un diorama en relief associe le Fuji, le soleil levant, les vagues méditerranéennes, les maisons de Sidi Bou Saïd et une grue en origami ; le portrait du président, les quatre panneaux des missions et les archives photographiques prolongent cette identité.
 
-Le site reste intégralement statique : `index.html`, `assets/css/style.css`, `assets/js/main.js`. Aucun framework ni compilation ne sont nécessaires. Les 12 événements, les 21 fiches de galerie, les liens sources et les photographies originales sont conservés.
+Les pages restent en HTML/CSS/JavaScript, sans framework ni compilation. Depuis novembre 2026, la médiathèque participative utilise une fonction Vercel et Vercel Blob pour conserver les photos envoyées sans connexion. Les archives photographiques et leurs sources sont préservées dans la page dédiée ; l’accueil affiche seulement six photos récentes. Les trois projets exemples disposent de fiches détaillées et d’un suivi. Voir [la documentation médiathèque et projets](ops/mediatheque-projets.md).
 
 - Le drapeau tunisien du bandeau est un SVG intégré, avec son disque blanc, son croissant et son étoile rouges.
 - Le thème est mémorisé lorsque le stockage du navigateur est disponible.

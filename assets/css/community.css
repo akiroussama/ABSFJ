@@ -1,0 +1,22 @@
+/* Shared invitations on the home page, in the existing Kizuna palette. */
+.nav-links li:nth-child(6){display:block}
+.community-shortcuts{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.community-shortcuts a{display:inline-flex;align-items:center;gap:9px;padding:9px 14px;border:1px solid var(--border-color);border-radius:4px;font-size:.76rem;font-weight:700;background:var(--bg-card);transition:border-color .2s,transform .2s}
+.community-shortcuts a:hover{border-color:var(--primary);transform:translateY(-2px)}
+.community-shortcuts a span:first-child{color:var(--primary);font-size:1rem}
+.community-section{padding:88px 0;background:var(--bg-muted);border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color)}
+.community-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:28px;margin-bottom:36px}
+.community-heading .section-title{margin:12px 0 16px}
+.community-heading .section-subtitle{max-width:620px;text-align:left;margin:0}
+.community-actions{display:flex;flex-wrap:wrap;gap:12px;flex-shrink:0}
+.community-actions .btn{font-size:.78rem;padding:12px 18px;gap:10px}
+.community-note{color:var(--text-muted);font-size:.75rem;line-height:1.7;margin-top:22px}
+.community-projects{background:var(--bg-body)}
+.community-upload-invite{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:25px 30px;margin-top:32px;border:1px solid var(--border-color);background:var(--bg-card);border-radius:5px}
+.community-upload-invite h3{font-family:var(--font-serif);font-size:1.7rem;font-weight:500;line-height:1.15;margin-bottom:7px}
+.community-upload-invite p{color:var(--text-muted);font-size:.82rem}
+.community-upload-invite .btn{flex-shrink:0;font-size:.82rem;gap:10px}
+.community-section a:focus-visible,.community-shortcuts a:focus-visible{outline:3px solid var(--primary);outline-offset:5px}
+@media(min-width:1121px) and (max-width:1350px){.nav-links{gap:16px}.nav-link{font-size:.72rem}.restitution-nav{font-size:.7rem}.nav-container{gap:16px}}
+@media(max-width:760px){.community-section{padding:60px 0}.community-heading{display:block}.community-actions{margin-top:22px}.community-upload-invite{align-items:flex-start;flex-direction:column;padding:23px}.community-upload-invite .btn{width:100%}.community-heading .section-title{font-size:clamp(2.5rem,10vw,3.5rem)}}
+@media(prefers-reduced-motion:reduce){.community-shortcuts a{transition:none}}

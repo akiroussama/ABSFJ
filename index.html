@@ -48,6 +48,9 @@
       rel="stylesheet"
       href="assets/css/style.css?v=20260926-facebook-enit"
     />
+    <link rel="stylesheet" href="assets/css/projects.css?v=20261108" />
+    <link rel="stylesheet" href="assets/css/media.css?v=20261108" />
+    <link rel="stylesheet" href="assets/css/community.css?v=20261108" />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Aller au contenu</a>
@@ -189,12 +192,12 @@
           </li>
           <li>
             <a href="#galerie" class="nav-link"
-              ><span class="nav-link-kanji">写真</span>Galerie</a
+              ><span class="nav-link-kanji">写真</span>Médiathèque</a
             >
           </li>
           <li>
-            <a href="#logo-section" class="nav-link"
-              ><span class="nav-link-kanji">紋章</span>Notre Logo</a
+            <a href="#projets" class="nav-link"
+              ><span class="nav-link-kanji">未来</span>Projets</a
             >
           </li>
           <li>
@@ -304,6 +307,10 @@
               <a href="#evenements" class="text-link"
                 >Explorer nos actions <span aria-hidden="true">→</span></a
               >
+            </div>
+            <div class="community-shortcuts" aria-label="La communauté en action">
+              <a href="mediatheque.html#partager"><span aria-hidden="true">＋</span><span data-community="share">Partager mes photos</span></a>
+              <a href="#projets"><span aria-hidden="true">↗</span><span data-community="discover">Découvrir les projets</span></a>
             </div>
             <div class="hero-signature">
               <span class="hanko-seal" lang="ja" aria-hidden="true"
@@ -1339,6 +1346,22 @@
         </div>
       </section>
 
+      <section id="projets" class="community-section community-projects" aria-labelledby="projects-home-title">
+        <div class="container">
+          <div class="community-heading">
+            <div>
+              <span class="section-tag" data-community="projectTag">ENSEMBLE, SUR LE TERRAIN <span lang="ja">未来</span></span>
+              <h2 class="section-title" id="projects-home-title" data-community="projectTitle">Des idées qui deviennent <em>des projets.</em></h2>
+              <p class="section-subtitle" data-community="projectSubtitle">Santé, environnement, rencontres : trois initiatives pour transformer les savoirs partagés en actions concrètes.</p>
+            </div>
+            <div class="community-actions"><a class="btn btn-secondary" href="projets.html" data-community="allProjects">Explorer les projets <span aria-hidden="true">↗</span></a></div>
+          </div>
+          <div id="project-home-grid" class="project-cards-grid" lang="fr" aria-live="polite"></div>
+          <p class="community-note" data-community="projectNote">Trois projets exemples à discuter ensemble. Responsables, budgets et avancement sont des propositions de démonstration à valider par l’association.</p>
+          <noscript><p><a href="projets.html">Consulter les trois projets et leurs fiches de suivi →</a></p></noscript>
+        </div>
+      </section>
+
       <!-- ==================== EVENTS & ACHIEVEMENTS (OFFICIAL FACEBOOK FEED) ==================== -->
       <section id="evenements" class="section">
         <div class="container">
@@ -2173,607 +2196,21 @@
         </div>
       </section>
 
-      <section id="galerie" class="section">
+      <section id="galerie" class="community-section" aria-labelledby="media-home-title">
         <div class="container">
-          <div class="section-header">
-            <span class="section-tag"
-              >04 / INSTANTS PARTAGÉS <span lang="ja">思い出</span></span
-            >
-            <h2 class="section-title">
-              Les visages de <em>notre histoire.</em>
-            </h2>
-            <p class="section-subtitle">
-              Vingt-deux regards sur une relation qui se construit au
-              quotidien. Explorez les photographies et retrouvez chaque
-              publication originale.
-            </p>
+          <div class="community-heading">
+            <div>
+              <span class="section-tag" data-community="mediaTag">LA MÉMOIRE DE NOS RENCONTRES <span lang="ja">思い出</span></span>
+              <h2 class="section-title" id="media-home-title" data-community="mediaTitle">Vos instants. <em>Notre histoire.</em></h2>
+              <p class="section-subtitle" data-community="mediaSubtitle">Les dernières photos de notre communauté. Journées ensemble, voyages au Japon et souvenirs à partager.</p>
+            </div>
+            <div class="community-actions"><a class="btn btn-secondary" href="mediatheque.html" data-community="allPhotos">Ouvrir la médiathèque <span aria-hidden="true">↗</span></a></div>
           </div>
-
-          <!-- Gallery Filter Buttons -->
-          <div class="filter-nav">
-            <button class="filter-btn gallery-fbtn active" data-gfilter="all">
-              Toutes les Photos (22)
-            </button>
-            <button class="filter-btn gallery-fbtn" data-gfilter="diplomatie">
-              Diplomatie & 70 Ans (8)
-            </button>
-            <button class="filter-btn gallery-fbtn" data-gfilter="talents">
-              Jeunes Talents & IA (8)
-            </button>
-            <button class="filter-btn gallery-fbtn" data-gfilter="kaizen">
-              KAIZEN & Climat (1)
-            </button>
-            <button class="filter-btn gallery-fbtn" data-gfilter="sport">
-              Sport & Convivialité (2)
-            </button>
-            <button class="filter-btn gallery-fbtn" data-gfilter="ecologie">
-              Projets & Béja (1)
-            </button>
-            <button class="filter-btn gallery-fbtn" data-gfilter="afrique">
-              Afrique & Réseau (1)
-            </button>
-            <button class="filter-btn gallery-fbtn" data-gfilter="amitie">
-              Volontaires Japonais (1)
-            </button>
-          </div>
-
-          <!-- 21 Photos Gallery Grid -->
-          <div class="gallery-grid">
-            <!-- Gallery Photo #1: p1 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="talents"
-              data-index="0"
-            >
-              <img
-                src="assets/images/events/photo_122186560898769937.jpg"
-                alt="M. Oussama Akir • 1er Prix International en IA à Tokyo"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">IA & Compétences</span>
-                <div class="gallery-title">
-                  M. Oussama Akir • 1er Prix International en IA à Tokyo
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  09 Septembre 2026 • Accueil d'Honneur de M. Oussama Akir
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #2: p2 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="diplomatie"
-              data-index="1"
-            >
-              <img
-                src="assets/images/events/photo_122185797686769937.jpg"
-                alt="Déjeuner de Travail avec la JICA et les Boursiers ABE"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Initiative ABE & JICA</span>
-                <div class="gallery-title">
-                  Déjeuner de Travail avec la JICA et les Boursiers ABE
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  01 Septembre 2026 • Déjeuner de Travail Initiative ABE
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #3: p3 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="ecologie"
-              data-index="2"
-            >
-              <img
-                src="assets/images/events/photo_1038482885850153.jpg"
-                alt="Projet Pilote Fukuoka à la Décharge de Béja (ANGED & EX Research)"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Méthode Fukuoka</span>
-                <div class="gallery-title">
-                  Projet Pilote Fukuoka à la Décharge de Béja (ANGED & EX
-                  Research)
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  24 Août 2026 • Décharge de Béja - Méthode Fukuoka
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #4: p4 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="afrique"
-              data-index="3"
-            >
-              <img
-                src="assets/images/events/photo_122184892514769937.jpg"
-                alt="Réunion Panafricaine des Associations d'Anciens Stagiaires JICA"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Réseau Alumni Afrique</span>
-                <div class="gallery-title">
-                  Réunion Panafricaine des Associations d'Anciens Stagiaires
-                  JICA
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  22 Août 2026 • Réseau Panafricain Alumni JICA
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #5: p5 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="amitie"
-              data-index="4"
-            >
-              <img
-                src="assets/images/events/photo_122184036554769937.jpg"
-                alt="Accueil Chaleureux des Nouveaux Volontaires Japonais en Tunisie"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Volontaires JICA</span>
-                <div class="gallery-title">
-                  Accueil Chaleureux des Nouveaux Volontaires Japonais en
-                  Tunisie
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  14 Août 2026 • Accueil des Volontaires Japonais
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #6: p6 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="talents"
-              data-index="5"
-            >
-              <img
-                src="assets/images/events/photo_1352334837016043.jpg"
-                alt="Célébration des Lauréats Tunisiens des Sessions JICA"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Félicitations & Fierté</span>
-                <div class="gallery-title">
-                  Célébration des Lauréats Tunisiens des Sessions JICA
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Juillet 2026 • Félicitations aux Lauréats
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #7: p7 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="talents"
-              data-index="6"
-            >
-              <img
-                src="assets/images/events/photo_1352334830349377.jpg"
-                alt="Remise d'Attestations & Honneurs aux Boursiers JICA"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Lauréats JICA</span>
-                <div class="gallery-title">
-                  Remise d'Attestations & Honneurs aux Boursiers JICA
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Juillet 2026 • Félicitations aux Lauréats
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #8: p8 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="talents"
-              data-index="7"
-            >
-              <img
-                src="assets/images/events/photo_1352334820349378.jpg"
-                alt="Certificats Officiels & Validation des Compétences Nipponnes"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Certificats d'Excellence</span>
-                <div class="gallery-title">
-                  Certificats Officiels & Validation des Compétences Nipponnes
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Juillet 2026 • Félicitations aux Lauréats
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #9: p9 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="talents"
-              data-index="8"
-            >
-              <img
-                src="assets/images/events/photo_1352334823682711.jpg"
-                alt="Promotion des Cadres Tunisiens Formés au Japon"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Alumni d'Élite</span>
-                <div class="gallery-title">
-                  Promotion des Cadres Tunisiens Formés au Japon
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Juillet 2026 • Félicitations aux Lauréats
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #10: p10 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="talents"
-              data-index="9"
-            >
-              <img
-                src="assets/images/events/photo_1352334827016044.jpg"
-                alt="Témoignage de Réussite & Rayonnement Bilatéral"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Cérémonie Alumni</span>
-                <div class="gallery-title">
-                  Témoignage de Réussite & Rayonnement Bilatéral
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Juillet 2026 • Félicitations aux Lauréats
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #11: p11 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="talents"
-              data-index="10"
-            >
-              <img
-                src="assets/images/events/photo_122182593866769937.jpg"
-                alt="Hommage de l'ABSFJ aux Boursiers Exemplaires"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Insigne & Fierté</span>
-                <div class="gallery-title">
-                  Hommage de l'ABSFJ aux Boursiers Exemplaires
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Juillet 2026 • Félicitations aux Lauréats
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #12: p12 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="kaizen"
-              data-index="11"
-            >
-              <img
-                src="assets/images/events/photo_122180433800769937.jpg"
-                alt="Tribune Officielle du Séminaire Kaizen & climat"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">KAIZEN & Climat</span>
-                <div class="gallery-title">
-                  Tribune Officielle du Séminaire Kaizen & climat
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  09 Juillet 2026 • Séminaire National The Penthouse
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #13: p13 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="sport"
-              data-index="12"
-            >
-              <img
-                src="assets/images/events/photo_122178574154769937.jpg"
-                alt="Match Footballistique d'Amitié Tuniso-Japonaise (Juventus Academy)"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Sport & Amitié</span>
-                <div class="gallery-title">
-                  Match Footballistique d'Amitié Tuniso-Japonaise (Juventus
-                  Academy)
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  20 Juin 2026 • Rencontre Footballistique Tuniso-Japonaise
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #14: p14 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="sport"
-              data-index="13"
-            >
-              <img
-                src="assets/images/events/photo_122176625234769937.jpg"
-                alt="Affiche Officielle de la Rencontre Sportive Tuniso-Japonaise"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Invitation Jeunesse</span>
-                <div class="gallery-title">
-                  Affiche Officielle de la Rencontre Sportive Tuniso-Japonaise
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  29 Mai 2026 • Rencontre Footballistique Tuniso-Japonaise
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #15: p15 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="diplomatie"
-              data-index="14"
-            >
-              <img
-                src="assets/images/events/photo_122178214784769937.jpg"
-                alt="Déjeuner Stratégique avec Mme Mitsui Yoko, Senior VP JICA Tokyo"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Direction JICA Tokyo</span>
-                <div class="gallery-title">
-                  Déjeuner Stratégique avec Mme Mitsui Yoko, Senior VP JICA
-                  Tokyo
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  16 Juin 2026 • Visite Ministérielle JICA Tokyo
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #16: p16 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="diplomatie"
-              data-index="15"
-            >
-              <img
-                src="assets/images/events/photo_122176323434769937.jpg"
-                alt="Mobilisation & Rayonnement Institutionnel de l'ABSFJ"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Communication Officielle</span>
-                <div class="gallery-title">
-                  Mobilisation & Rayonnement Institutionnel de l'ABSFJ
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  26 Mai 2026 • Visite Ministérielle JICA Tokyo
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #17: p17 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="diplomatie"
-              data-index="16"
-            >
-              <img
-                src="assets/images/events/photo_122170759898769937.jpg"
-                alt="Tribune d'Honneur • Célébration des 70 Ans de Liens Diplomatiques"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">70 Ans de Diplomatie</span>
-                <div class="gallery-title">
-                  Tribune d'Honneur • Célébration des 70 Ans de Liens
-                  Diplomatiques
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Mars 2026 • 70 Ans de Relations Bilatérales
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #18: p18 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="diplomatie"
-              data-index="17"
-            >
-              <img
-                src="assets/images/events/photo_122170760918769937.jpg"
-                alt="Membres du Bureau de l'ABSFJ à la Réception Diplomatique"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Bureau Exécutif ABSFJ</span>
-                <div class="gallery-title">
-                  Membres du Bureau de l'ABSFJ à la Réception Diplomatique
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Mars 2026 • 70 Ans de Relations Bilatérales
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #19: p19 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="diplomatie"
-              data-index="18"
-            >
-              <img
-                src="assets/images/events/photo_122170759646769937.jpg"
-                alt="Représentants de l'ABSFJ et Partenaires Institutionnels"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Délégation Officielle</span>
-                <div class="gallery-title">
-                  Représentants de l'ABSFJ et Partenaires Institutionnels
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Mars 2026 • 70 Ans de Relations Bilatérales
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #20: p20 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="diplomatie"
-              data-index="19"
-            >
-              <img
-                src="assets/images/events/photo_122170759712769937.jpg"
-                alt="Kakemono Solennel de l'ABSFJ à la Cérémonie Diplomatique"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Kakemono Officiel</span>
-                <div class="gallery-title">
-                  Kakemono Solennel de l'ABSFJ à la Cérémonie Diplomatique
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Mars 2026 • 70 Ans de Relations Bilatérales
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #21: p21 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="diplomatie"
-              data-index="20"
-            >
-              <img
-                src="assets/images/events/photo_122170759574769937.jpg"
-                alt="Vue d'Ensemble de la Réception de l'Ambassade du Japon"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Réception Impériale</span>
-                <div class="gallery-title">
-                  Vue d'Ensemble de la Réception de l'Ambassade du Japon
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  30 Mars 2026 • 70 Ans de Relations Bilatérales
-                </div>
-              </div>
-            </div>
-
-            <!-- Gallery Photo #22: p22 -->
-            <div
-              class="gallery-item"
-              role="button"
-              tabindex="0"
-              aria-haspopup="dialog"
-              data-gcategory="talents"
-              data-index="21"
-            >
-              <img
-                src="assets/images/events/photo_122187731948769937.jpg"
-                alt="Mme Yosra Ben Fadhel partage son expérience de formation JICA au Japon"
-                loading="lazy"
-              />
-              <div class="gallery-overlay">
-                <span class="gallery-tag">Restitution JICA</span>
-                <div class="gallery-title">
-                  Mme Yosra Ben Fadhel • Gestion des équipements médicaux
-                </div>
-                <div style="font-size: 0.76rem; opacity: 0.85; margin-top: 4px">
-                  21 Septembre 2026 • Restitution de formation JICA
-                </div>
-              </div>
-            </div>
+          <div id="media-home-grid" class="media-grid media-grid-preview" lang="fr" aria-live="polite"></div>
+          <noscript><p><a href="mediatheque.html">Retrouver les photos dans la médiathèque →</a></p></noscript>
+          <div class="community-upload-invite">
+            <div><h3 data-community="uploadTitle">Vous y étiez aussi ?</h3><p data-community="uploadText">Ajoutez vos photos à un album, sans créer de compte.</p></div>
+            <a href="mediatheque.html#partager" class="btn btn-primary" data-community="uploadButton">Partager mes photos <span aria-hidden="true">＋</span></a>
           </div>
         </div>
       </section>
@@ -3383,6 +2820,8 @@
               <li><a href="#evenements">Actualités & Événements</a></li>
               <li><a href="#restitution">Restitutions des adhérents</a></li>
               <li><a href="#logo-section">Le Logo Officiel</a></li>
+              <li><a href="mediatheque.html">Médiathèque participative</a></li>
+              <li><a href="projets.html">Projets & suivi</a></li>
             </ul>
           </div>
 
@@ -3588,5 +3027,8 @@
     <script src="assets/js/i18n.js?v=20260926-facebook-enit"></script>
     <script src="assets/js/main.js?v=20260926-facebook-enit"></script>
     <script src="assets/js/hero-scene.js?v=20260911-diorama"></script>
+    <script src="assets/js/projects.js?v=20261108"></script>
+    <script src="assets/js/media.js?v=20261108"></script>
+    <script src="assets/js/community.js?v=20261108"></script>
   </body>
 </html>

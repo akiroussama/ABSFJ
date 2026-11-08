@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Médiathèque partagée | ABSFJ Tunisie</title>
+  <meta name="description" content="Les souvenirs de notre communauté entre la Tunisie et le Japon. Explorez les albums de l’ABSFJ et partagez vos photos sans créer de compte." />
+  <link rel="canonical" href="https://absfj.vercel.app/mediatheque.html" />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700;800&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css?v=20261108" />
+  <link rel="stylesheet" href="assets/css/media.css?v=20261108" />
+  <script src="assets/js/media.js?v=20261108" defer></script>
+</head>
+<body class="media-page">
+  <a class="skip-link" href="#media-main">Aller aux photographies</a>
+  <div class="media-ribbon"><span>🇹🇳 &nbsp; 🇯🇵</span> Un lien vivant entre la Tunisie et le Japon <span lang="ja">思い出を、つなぐ。</span></div>
+  <header class="media-header">
+    <a href="/" class="media-brand" aria-label="ABSFJ — retour à l’accueil"><img src="assets/images/logo-absfj-officiel.jpg" alt="" width="50" height="50" /><span><strong>ABSFJ</strong><small>JICA Alumni · Tunisie</small></span></a>
+    <nav class="media-navigation" id="media-navigation" aria-label="Navigation principale"><a href="/">L’association</a><a href="/projets.html">Nos projets</a><a href="/mediatheque.html" aria-current="page">Médiathèque</a></nav>
+    <div class="media-header-actions"><button class="media-theme" id="media-theme" type="button" aria-label="Activer le mode sombre">◐</button><a class="media-button media-button-small" href="#partager">Partager une photo <span aria-hidden="true">＋</span></a><button class="media-menu" id="media-menu" aria-controls="media-navigation" aria-expanded="false" aria-label="Ouvrir le menu" type="button">☰</button></div>
+  </header>
+  <main id="media-main">
+    <section class="media-hero media-shell" aria-labelledby="media-title">
+      <div class="media-hero-copy"><a class="media-back" href="/">← Retour à l’accueil</a><p class="media-eyebrow">LA MÉDIATHÈQUE DE NOTRE COMMUNAUTÉ <span lang="ja">思い出</span></p><h1 id="media-title">Des instants.<br />Des liens.<br /><em>Nos souvenirs.</em></h1><p class="media-intro">D’une journée à Ras Jbel à un voyage au Japon, chaque photo raconte un peu de notre histoire commune.</p><div class="media-hero-actions"><a class="media-button" href="#partager">Ajouter mes photos <span aria-hidden="true">↗</span></a><a class="media-text-link" href="#albums">Explorer les albums ↓</a></div><p class="media-public-note"><span aria-hidden="true">◎</span> Ouvert à tous · Aucun compte nécessaire</p></div>
+      <div class="media-hero-art" aria-hidden="true"><figure class="media-postcard media-postcard-back"><img src="assets/images/gallery-mount-fuji.jpg" alt="" /><figcaption>日本 · Le Japon nous rassemble</figcaption></figure><figure class="media-postcard media-postcard-front"><img src="assets/images/events/photo_122184036554769937.jpg" alt="" /><figcaption>Des rencontres qui font le lien.</figcaption></figure><div class="media-stamp" lang="ja">友<br />好</div><span class="media-art-caption">TUNISIE × JAPON<br />UNE HISTOIRE À PLUSIEURS MAINS</span></div>
+    </section>
+
+    <section class="media-albums-section" id="albums" aria-labelledby="media-albums-title"><div class="media-shell">
+      <div class="media-section-heading"><div><p class="media-eyebrow">L’ALBUM COLLECTIF</p><h2 id="media-albums-title">La mémoire <em>se partage.</em></h2></div><p>Les derniers instants partagés,<br />les premières amitiés retrouvées.</p></div>
+      <div class="media-controls"><div class="media-filter-row" role="group" aria-label="Filtrer les photographies"><button class="media-filter is-active" type="button" data-media-category="all" aria-pressed="true">Tout voir</button><button class="media-filter" type="button" data-media-category="community" aria-pressed="false">Photos de la communauté</button><button class="media-filter" type="button" data-media-category="official" aria-pressed="false">Archives de l’association</button></div><div class="media-search-row"><label class="media-search"><span aria-hidden="true">⌕</span><span class="media-sr-only">Rechercher une photo</span><input id="media-search" type="search" placeholder="Un souvenir, un lieu, une rencontre…" maxlength="120" /></label><label class="media-album-label"><span class="media-sr-only">Choisir un album</span><select id="media-album"><option value="all">Tous les albums</option></select></label></div></div>
+      <div class="media-results-line"><p id="media-results" role="status" aria-live="polite">Chargement des souvenirs…</p><span>DU PLUS RÉCENT AU PLUS ANCIEN</span></div>
+      <p class="media-notice" id="media-network-notice" role="status" hidden></p>
+      <div class="media-grid" id="media-gallery" aria-label="Photographies de la communauté"></div>
+      <div class="media-empty" id="media-empty" hidden><span aria-hidden="true">▧</span><h3>Un album encore à écrire.</h3><p>Aucune photo ne correspond à votre recherche. Essayez un autre album ou partagez le premier souvenir.</p><button class="media-text-link" id="media-reset" type="button">Réinitialiser les filtres ↗</button></div>
+      <div class="media-load-wrap"><button class="media-button media-button-outline" id="media-load" type="button" hidden>Voir plus de souvenirs ↓</button><span id="media-load-sentinel" aria-hidden="true"></span></div>
+    </div></section>
+
+    <section class="media-share-section media-shell" id="partager" aria-labelledby="media-share-title"><div class="media-share-intro"><p class="media-eyebrow">VOTRE REGARD COMPTE <span lang="ja">分かち合う</span></p><h2 id="media-share-title">Et si le prochain<br />souvenir était <em>le vôtre ?</em></h2><p>Une belle rencontre, une journée ensemble, une découverte au Japon… Ajoutez vos photos à l’album commun.</p><ol class="media-share-steps"><li><span>01</span> Choisissez vos photos</li><li><span>02</span> Indiquez l’album et la date</li><li><span>03</span> Partagez-les avec tout le monde</li></ol><p class="media-share-caption">Les photos publiées sont visibles publiquement. Partagez uniquement des images que vous avez le droit de diffuser, avec l’accord des personnes reconnaissables.</p></div>
+      <form id="media-upload-form" class="media-upload-form">
+        <label class="media-dropzone" id="media-dropzone" for="media-files"><span class="media-drop-icon" aria-hidden="true">＋</span><strong>Vos instants, ici.</strong><span>Glissez vos photos ou <u>choisissez des fichiers</u></span><small>JPEG, PNG ou WebP · 8 photos à la fois · 20 Mo maximum par original</small><input id="media-files" name="files" type="file" accept="image/jpeg,image/png,image/webp" multiple /></label>
+        <div class="media-file-previews" id="media-file-previews" aria-label="Photos sélectionnées"></div><p id="media-file-status" class="media-form-help" aria-live="polite"></p>
+        <div class="media-form-row"><label>Album <span aria-hidden="true">*</span><select id="media-upload-album" name="album" required><option value="Team Building · Ras Jbel">Team Building · Ras Jbel</option><option value="Voyages au Japon">Voyages au Japon</option><option value="Rencontres & événements">Rencontres & événements</option><option value="Vie de l’association">Vie de l’association</option><option value="custom">Créer un autre album…</option></select></label><label>Date de l’événement <span aria-hidden="true">*</span><input id="media-event-date" name="eventDate" type="date" required /></label></div>
+        <label id="media-custom-album-wrap" hidden>Nom du nouvel album <span aria-hidden="true">*</span><input id="media-custom-album" type="text" maxlength="80" placeholder="Ex. Voyage à Kyoto · novembre 2026" /></label>
+        <label>Légende <span class="media-optional">facultatif</span><input id="media-title-input" name="title" type="text" maxlength="120" placeholder="Quelques mots pour raconter ce moment…" /></label>
+        <label>Votre prénom ou nom <span class="media-optional">facultatif · affiché publiquement</span><input id="media-author" name="author" type="text" maxlength="80" placeholder="Comment souhaitez-vous signer vos photos ?" autocomplete="name" /></label>
+        <div class="media-honeypot" aria-hidden="true"><label>Site internet<input name="website" id="media-website" type="text" tabindex="-1" autocomplete="off" /></label></div>
+        <label class="media-consent"><input id="media-consent" type="checkbox" required /><span>Je dispose des droits et des accords nécessaires pour ces photos, et j’accepte leur publication dans la médiathèque publique de l’ABSFJ.</span></label>
+        <div class="media-upload-progress" id="media-upload-progress" hidden><progress id="media-progress" value="0" max="100"></progress><span id="media-progress-label" aria-live="polite"></span></div>
+        <p class="media-form-message" id="media-form-message" role="status" aria-live="polite" hidden></p>
+        <button class="media-button media-publish" id="media-publish" type="submit">Publier mes photos <span aria-hidden="true">↗</span></button><p class="media-form-help">Vos images sont optimisées avant l’envoi. Aucun compte ni adresse email ne sont demandés.</p>
+      </form></section>
+    <section class="media-closing"><p lang="ja">一枚の写真から、つながる未来。</p><p>Une photo aujourd’hui. <em>Un lien pour demain.</em></p><a class="media-text-link" href="/projets.html">Découvrir nos projets communs ↗</a></section>
+  </main>
+  <footer class="media-footer media-shell"><a class="media-brand" href="/"><strong>ABSFJ</strong><small>Entre la Tunisie et le Japon.</small></a><p>© 2026 ABSFJ · La communauté en images.</p><a href="https://www.facebook.com/61573098115073/" target="_blank" rel="noopener noreferrer">Nous contacter ↗</a></footer>
+  <dialog class="media-lightbox" id="media-lightbox" aria-labelledby="media-lightbox-title"><button class="media-lightbox-close" type="button" aria-label="Fermer la photo">×</button><button class="media-lightbox-prev" type="button" aria-label="Photo précédente">←</button><div class="media-lightbox-content"><img id="media-lightbox-image" alt="" /><div class="media-lightbox-caption"><p id="media-lightbox-album"></p><h2 id="media-lightbox-title"></h2><p id="media-lightbox-meta"></p><p id="media-lightbox-description"></p><a id="media-lightbox-source" target="_blank" rel="noopener noreferrer" hidden>Publication d’origine ↗</a><span id="media-lightbox-position"></span></div></div><button class="media-lightbox-next" type="button" aria-label="Photo suivante">→</button></dialog>
+</body>
+</html>

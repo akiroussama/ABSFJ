@@ -1,0 +1,12 @@
+.git
+.github
+.env
+.env.*
+!.env.example
+output
+tmp
+node_modules
+ops
+README.md
+public
+*.log
