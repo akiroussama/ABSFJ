@@ -11,8 +11,27 @@
     "api/publication-photos.js": { "maxDuration": 30, "includeFiles": "assets/data/publications-legacy.json" },
     "api/bureau.js": { "maxDuration": 30, "includeFiles": "assets/data/publications-legacy.json" }
   },
-  "rewrites": [{ "source": "/bureau-publications", "destination": "/bureau-publications.html" }],
+  "rewrites": [
+    { "source": "/bureau-publications", "destination": "/bureau-publications.html" },
+    { "source": "/guide-bureau.pdf", "destination": "/assets/guides/guide-bureau.pdf" }
+  ],
   "headers": [
+    {
+      "source": "/guide-bureau.pdf",
+      "headers": [
+        { "key": "Content-Type", "value": "application/pdf" },
+        { "key": "Content-Disposition", "value": "inline; filename=Guide-utilisateur-ABSFJ.pdf" },
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/assets/guides/(.*)",
+      "headers": [
+        { "key": "X-Robots-Tag", "value": "noindex, nofollow" },
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" }
+      ]
+    },
     {
       "source": "/bureau-publications(.*)",
       "headers": [

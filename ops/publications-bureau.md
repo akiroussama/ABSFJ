@@ -2,6 +2,8 @@
 
 ## Utilisation pour Monsieur Jamel
 
+Guide illustré, adapté au téléphone et à l’impression : **https://absfj.vercel.app/guide-bureau.pdf**. Douze pages, une étape par page, captures d’écran et boutons repérés. Le guide ne contient aucun mot de passe ; les coordonnées d’accès sont transmises séparément.
+
 1. Ouvrir **https://absfj.vercel.app/bureau-publications** et conserver ce lien dans ses favoris.
 2. Saisir le mot de passe fourni séparément. La connexion reste ouverte trente jours sur cet appareil.
 3. Appuyer sur **Ajouter une publication**, écrire un titre et le texte, puis choisir les photos. La date, le lieu et les photos sont facultatifs.
